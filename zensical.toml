@@ -12,6 +12,7 @@ dev_addr = "localhost:8300"
 
 [project.extra]
 key = "value"
+hpcsite = "ugent"
 
 [project.theme]
 language = "en"
