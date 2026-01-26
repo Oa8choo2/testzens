@@ -1,17 +1,35 @@
 ---
-title: a title for this page
+hide: "toc"
 ---
-<meta 
-   property="og:image" 
-   content="https://repository-images.githubusercontent.com/1132983980/e6ea321b-625a-4910-8917-82c2186a9c25"/>
+#  Welcome to the {{hpcsite}} documentation
 
-# an index.md with og:image test
+<!-- Yüksek Başarımlı Hesaplama -->
+---
 
-Some words here
 
-somehow this image should be visible:
+![image](img/ch0-hpc.png){: align=left style="height:383px;width:378px;border-radius:6px" }
 
-[image](https://repository-images.githubusercontent.com/1132983980/e6ea321b-625a-4910-8917-82c2186a9c25)
+Use the menu on the left to navigate, or use the search box on the top right.
 
-This can be validated at
-<https://socialsharepreview.com/?url=https%3A%2F%2Foa8choo2.github.io%2Ftestzens%2F>
+You are viewing documentation intended for people using **{{ OS }}**.
+
+Use the OS dropdown in the top bar to switch to a different operating system.
+
+**Quick links**
+
+- [Getting Started](getting_started.md)  | [Getting Access](account.md)
+{%- if site == 'Gent' %}
+- [Recording of HPC-UGent intro](https://www.ugent.be/hpc/en/training/introhpcugent-recording)
+- [Linux Tutorial](linux-tutorial/index.md)
+- [Hardware overview](infrastructure.md)
+- [Available software](./only/gent/available_software/index.md)
+- [Software installation requests](software_installation_requests.md)
+- [Migration of cluster and login nodes to RHEL9 (starting Sept'24)](rhel9.md)
+{%- endif %}
+- [FAQ](FAQ.md) | [Troubleshooting](troubleshooting.md) | [Best practices](./best_practices.md) | [Known issues](known_issues.md)
+
+<br/><br/><br/>
+
+If you find any problems in this documentation, please report them by mail to <{{ hpcinfo }}> or [open a pull request]({{config.repo_url}}).
+
+If you still have any questions, you can [contact the {{ hpcteam }}]({{ hpc_support_url }}).
