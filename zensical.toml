@@ -5,6 +5,14 @@ site_author = "<your name here>"
 copyright = """
 Copyright &copy; 2025 The authors
 """
+docs_dir = "docs"
+site_dir = "site"
+use_directory_urls = false
+dev_addr = "localhost:8300"
+
+[project.extra]
+key = "value"
+
 [project.theme]
 language = "en"
 features = [
@@ -25,10 +33,16 @@ features = [
     "navigation.tracking",
     "search.highlight",
 ]
+palette.primary = "indigo"
+palette.accent = "deep orange"
+
+
 [[project.theme.palette]]
 scheme = "default"
 toggle.icon = "lucide/sun"
 toggle.name = "Switch to dark mode"
+extra_css = ["stylesheets/extra.css"]
+
 [[project.theme.palette]]
 scheme = "slate"
 toggle.icon = "lucide/moon"
