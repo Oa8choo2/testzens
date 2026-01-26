@@ -34,6 +34,7 @@ features = [
     "navigation.tracking",
     "search.highlight",
 ]
+font.text = "Playwrite England Joined Guides"
 palette.primary = "indigo"
 palette.accent = "deep orange"
 
