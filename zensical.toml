@@ -17,6 +17,7 @@ site_author = "<your name here>"
 site_url = "http://localhost:8300"
 copyright = """
 Copyright &copy; 2025 The authors
+| <a href="#__consent">Change cookie settings</a>
 """
 repo_url = "https://github.com/Oa8choo2/testzens"
 edit_uri = "edit/main/docs/" # by default zensical is still using master
@@ -31,6 +32,7 @@ key = "value"
 hpcsite = "ugent"
 
 [project.theme]
+favicon = "images/favicon.png"
 # "Playwrite England Joined Guides"
 #  font.text = "Playwrite GB J Guides"
 font.text = "Libertinus Sans"
@@ -66,4 +68,16 @@ features = [
 [project.theme.icon]
 repo = "fontawesome/brands/git"
 
-
+[project.extra.consent]
+title = "Cookie consent"
+description = """
+    We try not to use any cookies. \n
+    We do not need your consent.  \n
+    Maybe some third-party cookie harvesters will try to get consent from you.  \n
+    Contact cookies@ugent.be for more information.  \n
+"""
+actions = [
+  "reject",
+  "accept",
+  "manage" 
+]
