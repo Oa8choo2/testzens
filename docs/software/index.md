@@ -1,8 +1,8 @@
 ---
 title: Software used by hpc
-description: this should give an overview of all software
-based on what you can use it for. This should form a
-alternative to a alphabetic list.
+description: |
+    This should give an overview of all software based on what you can use it
+    for. This should form a alternative to a alphabetic list.
 ---
 
 # Software
@@ -13,16 +13,16 @@ Software can be classified based on the research it is used for.
 - chemistry:
 - engineering: fluids
 - statistics: R
-•••••••Geosciences: Climate modeling, Weather prediction, Seismic analysis.
-Life Sciences: Drug discovery, Gene analysis.
-
-Physics: Particle physics, Astrophysics.
-Chemistry: Quantum chemistry, Molecular dynamics.
-Engineering: Computational fluid dynamics, Structural mechanics,
+- Geosciences: Climate modeling, Weather prediction, Seismic analysis.
+- Life Sciences: Drug discovery, Gene analysis.
+- Physics: Particle physics, Astrophysics.
+- Chemistry: Quantum chemistry, Molecular dynamics.
+- Engineering: Computational fluid dynamics, Structural mechanics,
 Finite element analysis.
-Finance: Risk modeling, Monte Carlo simulations, Market forecasting.
-Artificial Intelligence, Deep Learning: Large model training, Large-scale
+- Finance: Risk modeling, Monte Carlo simulations, Market forecasting.
+- Artificial Intelligence, Deep Learning: Large model training, Large-scale
 inference.
+
 see <https://hpc.vub.be/hpctraining/intro.pdf>
 
 Some software is used for programming
