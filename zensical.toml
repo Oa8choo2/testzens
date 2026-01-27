@@ -34,18 +34,9 @@ features = [
     "navigation.tracking",
     "search.highlight",
 ]
-font.text = "Playwrite England Joined Guides"
-palette.primary = "indigo"
-palette.accent = "deep orange"
 
+# "Playwrite England Joined Guides"
+#  font.text = "Playwrite GB J Guides"
+font.text = "Libertinus Sans"
+font.code = "Libertinus Mono"
 
-[[project.theme.palette]]
-scheme = "default"
-toggle.icon = "lucide/sun"
-toggle.name = "Switch to dark mode"
-extra_css = ["stylesheets/extra.css"]
-
-[[project.theme.palette]]
-scheme = "slate"
-toggle.icon = "lucide/moon"
-toggle.name = "Switch to light mode"
