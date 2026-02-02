@@ -31,6 +31,10 @@ dev_addr = "localhost:8300"
 key = "value"
 hpcsite = "ugent"
 
+[project.extra.analytics]
+provider = "google"
+property = "G-58TSGT7H2B"
+
 [project.theme]
 favicon = "images/favicon.png"
 # "Playwrite England Joined Guides"
