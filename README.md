@@ -9,6 +9,10 @@ https://oa8choo2.github.io/testzens/
 
 ## gcse
 
-<script async src="https://cse.google.com/cse.js?cx=d3873894b6f614f35">
-</script>
-<div class="gcse-search"></div>
+[gsce](https://cse.google.com/cse?cx=d3873894b6f614f35)
+
+~~~
+  <script async src="https://cse.google.com/cse.js?cx=d3873894b6f614f35">
+  </script>
+  <div class="gcse-search"></div>
+~~~
