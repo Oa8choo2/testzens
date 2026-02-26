@@ -1,1 +1,0 @@
---langdef=markdown --langmap=markdown:.md --regex-markdown=/^#+\s*([^#]*)\s*#+$/\1/h,heading,headings/

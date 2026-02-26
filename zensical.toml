@@ -13,7 +13,9 @@ nav = [
         {"openFOAM" = "software/openFOAM.md"},
         {"Python" = "python.md"},
         {"Apptainer" = "apptainer.md"},
-        {"Getting" = "getting_started_formd.md"}
+        {"Getting" = "getting_started_formd.md"},
+        {"Getting Started" = "getting_started.md"},
+        {"Cookie}" = "cookies.md"}
     ]}
 ]
 site_name = "Documentation"
@@ -40,7 +42,6 @@ hpcsite = "ugent"
 provider = "google"
 property = "G-58TSGT7H2B"
 
-<<<<<<< Updated upstream
 [project.extra.analytics.feedback]
 title = "Was this page helpful?"
 
@@ -58,10 +59,9 @@ note = """
   Thanks for your feedback! Help us improve this page by
   using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
 """
-=======
+
 #    provider: plausible
 #    domain: example.com
->>>>>>> Stashed changes
 
 [project.theme]
 custom_dir = "overrides"
@@ -90,7 +90,7 @@ features = [
     "navigation.tabs",
     "navigation.tabs.sticky",
     "navigation.sections",
-    "navigation.top", # toon to top button
+    "navigation.top", # show to top button
     "navigation.tracking",
     "search.highlight",
     "toc.follow",
@@ -105,10 +105,23 @@ repo = "fontawesome/brands/git"
 [project.extra.consent]
 title = "Cookie consent"
 description = """
+    Legally-required cookie banner
     We try not to use any cookies. \n
     We do not need your consent.  \n
+    We doesn't use third-party cookies, not even a single in-house
+    cookie.
+
+    No data is sent to a third party. (Ursula von der Leyen would be so
+    proud.)
+
+   [1]Ursula von der Leyen, President of the European Commission
+
+Links:
+1. Image: https://res.cloudinary.com/dmukukwp6/image/upload/c_scale,w_180/v1/posthog.com/src/components/EU/images/ursula
+
     Maybe some third-party cookie harvesters will try to get consent from you.  \n
     Contact cookies@ugent.be for more information.  \n
+    ![ursula](ursula.png)
 """
 actions = [
   "reject",

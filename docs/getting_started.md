@@ -1,4 +1,4 @@
-{% set exampleloc="mkdocs/docs/HPC/examples/Getting_Started/tensorflow_mnist" %}
+
 
 # Getting Started
 
@@ -41,7 +41,7 @@ hand-written digits.
 For this we use the MNIST (Modified National Institute of Standards and
 Technology) dataset and [TensorFlow](https://www.tensorflow.org/).
 See the [example
-scripts](https://github.com/hpcugent/vsc_user_docs/tree/main/{{exampleloc}}).
+scripts](https://github.com/hpcugent/vsc_user_docs/tree/main/mkdocs/docs/HPC/examples/Getting_Started/tensorflow_mnist).
 
 ### Getting Connected
 
@@ -61,12 +61,12 @@ Access](#getting-access)), and that they are in a default location, you should
 now be able to login by running the following command:
 
 ```bash
-ssh {{userid}}@{{loginnode}}
+ssh vsc40000@login.hpc.ugent.be
 ```
 
 !!! Warning "User your own VSC account id"
 
-    Replace **{{userid}}** with your VSC account id
+    Replace **vsc40000** with your VSC account id
     (see <https://account.vscentrum.be>)
 
 !!! Tip
@@ -104,8 +104,8 @@ your **home directory** on the UGent HPC infrastructure.
 
 Download following the example scripts to your computer:
 
-- [tensorflow_mnist.py](https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{exampleloc}}/tensorflow_mnist.py)
-- [run.sh](https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{exampleloc}}/run.sh)
+- [tensorflow_mnist.py](https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/mkdocs/docs/HPC/examples/Getting_Started/tensorflow_mnist/tensorflow_mnist.py)
+- [run.sh](https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/mkdocs/docs/HPC/examples/Getting_Started/tensorflow_mnist/run.sh)
 
 You can also find the example scripts in our git repo:
 [https://github.com/hpcugent/vsc_user_docs/](https://github.com/hpcugent/
@@ -127,24 +127,24 @@ directory** and go back to your shell.
 On your local machine you can run:
 
 ```bash
-curl -OL https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{exampleloc}}/tensorflow_mnist.py
-curl -OL https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/{{exampleloc}}/run.sh
+curl -OL https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/mkdocs/docs/HPC/examples/Getting_Started/tensorflow_mnist/tensorflow_mnist.py
+curl -OL https://raw.githubusercontent.com/hpcugent/vsc_user_docs/main/mkdocs/docs/HPC/examples/Getting_Started/tensorflow_mnist/run.sh
 ```
 
 Using the `scp` command, the files can be copied from your local host to your
 *home directory* (`~`) on the remote host (HPC).
 
 ```bash
-scp tensorflow_mnist.py run.sh {{userid}}{{ loginnode }}:~
+scp tensorflow_mnist.py run.sh vsc40000login.hpc.ugent.be:~
 ```
 
 ```bash
-ssh  {{userid}}@{{ loginnode }}
+ssh  vsc40000@login.hpc.ugent.be
 ```
 
 !!! Warning "User your own VSC account id"
 
-    Replace **{{userid}}** with your VSC account id.
+    Replace **vsc40000** with your VSC account id.
     See <https://account.vscentrum.be>
 
 !!! Info
@@ -185,11 +185,11 @@ python tensorflow_mnist.py
 As you can see this job script will run the Python script named
 **tensorflow_mnist.py**.
 
-The jobs you submit are per default executed on **cluster/{{defaultcluster}}**,
+The jobs you submit are per default executed on **cluster/doduo**,
 you can swap to another cluster by issuing the following command.
 
 ```bash
-module swap cluster/{{othercluster}}
+module swap cluster/donphan
 ```
 
 !!! Tip
@@ -206,18 +206,18 @@ using the qsub (**q**ueue **sub**mit) command:
 
 ```bash
 $ qsub run.sh
-{{jobid}}
+123456
 ```
 
-This command returns a job identifier (*{{jobid}}*) on the HPC cluster. This is
+This command returns a job identifier (*123456*) on the HPC cluster. This is
 a unique identifier for the job which can be used to monitor and manage your
 job.
 
 !!! Warning "Make sure you understand what the `module` command does"
 
     Note that the module commands only modify environment variables. For
-    instance, running `module swap cluster/{{othercluster}}` will update your shell
-    environment so that `qsub` submits a job to the `{{othercluster}}` cluster,
+    instance, running `module swap cluster/donphan` will update your shell
+    environment so that `qsub` submits a job to the `donphan` cluster,
     but our active shell session is still running on the login node.
 
     It is important to understand that while `module` commands affect your
@@ -226,7 +226,7 @@ job.
 
     When you submit a job script however, the commands ***in*** the job script
     will be run on a workernode of the cluster the job was submitted to (like
-    `{{othercluster}}`).
+    `donphan`).
 
 For detailed information about `module` commands, read the [running batch
 jobs](running_batch_jobs.md) chapter.
@@ -244,7 +244,7 @@ You can get an overview of the active jobs using the `qstat` command:
 $ qstat
 Job ID     Name             User            Time Use S Queue
 ---------- ---------------- --------------- -------- - -------
-{{jobid}}     run.sh           {{userid}}        0:00:00  Q {{othercluster}}
+123456     run.sh           vsc40000        0:00:00  Q donphan
 ```
 
 Eventually, after entering `qstat` again you should see that your job has started running:
@@ -253,7 +253,7 @@ Eventually, after entering `qstat` again you should see that your job has starte
 $ qstat
 Job ID     Name             User            Time Use S Queue
 ---------- ---------------- --------------- -------- - -------
-{{jobid}}     run.sh           {{userid}}        0:00:01  R {{othercluster}}
+123456     run.sh           vsc40000        0:00:01  R donphan
 ```
 
 If you don't see your job in the output of the `qstat` command anymore, your job
@@ -278,19 +278,19 @@ By default located in the directory where you issued `qsub`.
 
 In our example when running `ls` in the current directory you should see 2 new files:
 
-- **run.sh.o{{jobid}}**, containing *normal output messages* produced by job {{jobid}};
-- **run.sh.e{{jobid}}**, containing *errors and warnings* produced by job {{jobid}}.
+- **run.sh.o123456**, containing *normal output messages* produced by job 123456;
+- **run.sh.e123456**, containing *errors and warnings* produced by job 123456.
 
 !!! Info
 
-    run.sh.e{{jobid}} should be empty (no errors or warnings).
+    run.sh.e123456 should be empty (no errors or warnings).
 
 !!! Warning "Use your own job ID"
 
-    Replace **{{jobid}}** with the jobid you got from the `qstat` command (see
+    Replace **123456** with the jobid you got from the `qstat` command (see
     above) or simply look for added files in your current directory by running `ls`.
 
-When examining the contents of ``run.sh.o{{jobid}}`` you will see something like this:
+When examining the contents of ``run.sh.o123456`` you will see something like this:
 
 ```bash
 Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
