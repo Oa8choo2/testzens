@@ -13,7 +13,7 @@ session](https://www.ugent.be/hpc/en/training/introhpcugent-recording) to be a
 useful resource.
 
 Before proceeding, read [the introduction to HPC](introduction.md) to gain an
-understanding of the {{ hpcinfra }} and related terminology.
+understanding of the UGent HPC infrastructure and related terminology.
 
 ## Getting Access
 
