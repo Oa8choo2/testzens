@@ -1,3 +1,116 @@
+---
+updated_at: 2026-02-05T11:04:43+01:00
+tags:
+  - hpc
+  - accountpage
+  - agat
+  - arcanine
+  - bashrc
+  - bvo
+  - cas
+  - ccache
+  - cdo
+  - chgrp
+  - conda
+  - config
+  - django
+  - eb
+  - ecl
+  - ega
+  - endif
+  - ete
+  - exampledir
+  - examplesdir
+  - exe
+  - getent
+  - gpfs
+  - groupname
+  - gvo
+  - homedir
+  - hoste
+  - hpcinfo
+  - hpcinfra
+  - hpcteam
+  - htm
+  - https
+  - icu
+  - ield
+  - img
+  - ip
+  - irectory
+  - isa
+  - isk
+  - jobid
+  - kdestroy
+  - kinit
+  - klist
+  - krbtgt
+  - krenew
+  - kurt
+  - kyukon
+  - leuven
+  - logfiles
+  - loginnode
+  - matlab
+  - mmlsquota
+  - mput
+  - muk
+  - myquota
+  - nbsp
+  - ndr
+  - nds
+  - nec
+  - netapp
+  - ngs
+  - ntl
+  - ofi
+  - ome
+  - omp
+  - ong
+  - ood
+  - organisation
+  - organisations
+  - ount
+  - pdf
+  - png
+  - py
+  - qstat
+  - qsub
+  - readthedocs
+  - realise
+  - rw
+  - rwx
+  - rwxr
+  - rwxrw
+  - rwxrwxr
+  - shellcmd
+  - spla
+  - ssd
+  - ssds
+  - stderr
+  - stdout
+  - succesfully
+  - sys
+  - tantan
+  - thu
+  - tmp
+  - ua
+  - uantwerp
+  - uantwerpen
+  - ucc
+  - uct
+  - ud
+  - ugent
+  - ugentusername
+  - userid
+  - usr
+  - ve
+  - vsc
+  - vscdocumentation
+  - vscentrum
+  - vub
+  - yourugentusername
+---
 {% set exampledir = 'examples/Running_jobs_with_input_output_data' %}
 
 # Running jobs with input/output data
@@ -929,3 +1042,4 @@ If you put `_USER` after each of these variable names, you can see your
 personal folder in these filesystems. For example: `$VSC_DATA_VO_USER`
 is your personal folder in your VO data filesystem (this is equivalent
 to `$VSC_DATA_VO/$USER`), and analogous for `$VSC_SCRATCH_VO_USER`.{%- endif -%}
+

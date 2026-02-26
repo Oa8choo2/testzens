@@ -1,3 +1,39 @@
+---
+updated_at: 2026-02-05T11:04:43+01:00
+tags:
+  - hpc
+  - apendix
+  - ddr
+  - ete
+  - github
+  - helloworld
+  - hpcugent
+  - https
+  - ip
+  - irectory
+  - jobscript
+  - lls
+  - mpi
+  - mpirun
+  - mympirun
+  - ome
+  - ount
+  - py
+  - qsub
+  - registerd
+  - segv
+  - subsec
+  - testscripts
+  - thu
+  - tmp
+  - tmpdir
+  - ua
+  - ud
+  - ugent
+  - ve
+  - vsc
+  - walltime
+---
 # Job script examples
 
 ## Simple job script template
@@ -78,3 +114,4 @@ sleeps a specified amount of minutes:
 ```shell title="example_program.sh"
 {% include "examples/Job-script-examples/example_program.sh" %}
 ```
+

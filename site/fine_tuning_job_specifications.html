@@ -1,0 +1,1764 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A new project generated from the default template project.">
+      
+      
+        <meta name="author" content="<your name here>">
+      
+      
+        <link rel="canonical" href="http://localhost:8300/fine_tuning_job_specifications.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="images/favicon.png">
+      <meta name="generator" content="zensical-0.0.19">
+    
+    
+<meta name="google-site-verification" content="nJqh3TVb_44fMl2gS61agt_bRNFEaI496UaXYL-wLZI" />
+
+    
+      
+        
+      
+      <link rel="stylesheet" href="assets/stylesheets/modern/main.d4922b3c.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libertinus+Sans:300,300i,400,400i,500,500i,700,700i%7CLibertinus+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Libertinus Sans";--md-code-font:"Libertinus Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+    
+    
+<script>
+  (function() {
+    var cx = 'd3873894b6f614f35';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+<script>
+registerListener('load', setLazy);
+registerListener('load', lazyLoad);
+registerListener('scroll', lazyLoad);
+
+var lazy = [];
+
+function setLazy(){
+    lazy = document.getElementsByClassName('lazy');
+    console.log('Found ' + lazy.length + ' lazy images');
+}
+
+function lazyLoad(){
+    for(var i=0; i<lazy.length; i++){
+        if(isInViewport(lazy[i])){
+            if (lazy[i].getAttribute('data-src')){
+                lazy[i].src = lazy[i].getAttribute('data-src');
+                lazy[i].removeAttribute('data-src');
+            }
+        }
+    }
+
+    cleanLazy();
+}
+
+function cleanLazy(){
+    lazy = Array.prototype.filter.call(lazy, function(l){ return l.getAttribute('data-src');});
+}
+
+function isInViewport(el){
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.bottom >= 0 &&
+        rect.right >= 0 &&
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+     );
+}
+
+function registerListener(event, func) {
+    if (window.addEventListener) {
+        window.addEventListener(event, func)
+    } else {
+        window.attachEvent('on' + event, func)
+    }
+}
+</script>
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fine-tuning-job-specifications" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fine-tuning Job Specifications
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<gcse:searchbox-only>Search enableAutoComplete="true"</gcse:searchbox-only>
+
+<hr>
+<div class="md-search" 
+  data-md-component="search" 
+  role="dialog" 
+  aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+
+<hr>
+
+ <script async src="https://cse.google.com/cse.js?cx=d3873894b6f614f35">
+</script>
+<div class="gcse-search" ></div>
+
+<br><ol>
+  <li>gcse-searchresults-only
+    <li>gcse-search
+</ol>
+Look and feel gsce: https://programmablesearchengine.google.com/controlpanel/lookandfeel?cx=d3873894b6f614f35
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/Oa8choo2/testzens" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M216.3 158.4H137C97 147.9 6.5 150.6 6.5 233.2c0 30.1 15 51.2 35 61-25.1 23-37 33.8-37 49.2 0 11 4.5 21.1 17.9 26.8C8.1 383.6 0 393.3 0 411.6c0 32.1 28 50.8 101.6 50.8 70.8 0 111.8-26.4 111.8-73.2 0-58.7-45.2-56.5-151.6-63l13.4-21.6c27.3 7.6 118.7 10 118.7-67.9 0-18.7-7.7-31.7-15-41.1l37.4-2.8v-34.5zm-63.4 241.9c0 32.1-104.9 32.1-104.9 2.4 0-8.1 5.3-15 10.6-21.5 77.7 5.3 94.3 3.4 94.3 19.1m-50.8-134.6c-52.8 0-50.5-71.2 1.2-71.2 49.5 0 50.8 71.2-1.2 71.2m133.3 100.5v-32.1c26.7-3.7 27.2-2 27.2-11V203.6c0-8.5-2.1-7.4-27.2-16.3l4.5-32.9h84.2v168.7c0 6.5.4 7.3 6.5 8.1l20.7 2.8v32.1H235.4zm52.5-244.3c-23.2 0-36.6-13.4-36.6-36.6s13.4-35.8 36.6-35.8c23.6 0 37 12.6 37 35.8s-13.4 36.6-37 36.6M512 350.5c-17.5 8.5-43.1 16.3-66.3 16.3-48.4 0-66.7-19.5-66.7-65.5V194.8c0-5.4 1-4.1-31.7-4.1v-36.2c35.8-4.1 50-22 54.5-66.3h38.6c0 65.8-1.3 61.8 3.3 61.8H501v40.6h-60.6v97.1c0 6.9-4.9 51.4 60.6 26.8l11 35.8z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="section/index.html" class="md-tabs__link">
+          
+  
+  Section
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="software/index.html" class="md-tabs__link">
+          
+  
+  Software
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Oa8choo2/testzens" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M216.3 158.4H137C97 147.9 6.5 150.6 6.5 233.2c0 30.1 15 51.2 35 61-25.1 23-37 33.8-37 49.2 0 11 4.5 21.1 17.9 26.8C8.1 383.6 0 393.3 0 411.6c0 32.1 28 50.8 101.6 50.8 70.8 0 111.8-26.4 111.8-73.2 0-58.7-45.2-56.5-151.6-63l13.4-21.6c27.3 7.6 118.7 10 118.7-67.9 0-18.7-7.7-31.7-15-41.1l37.4-2.8v-34.5zm-63.4 241.9c0 32.1-104.9 32.1-104.9 2.4 0-8.1 5.3-15 10.6-21.5 77.7 5.3 94.3 3.4 94.3 19.1m-50.8-134.6c-52.8 0-50.5-71.2 1.2-71.2 49.5 0 50.8 71.2-1.2 71.2m133.3 100.5v-32.1c26.7-3.7 27.2-2 27.2-11V203.6c0-8.5-2.1-7.4-27.2-16.3l4.5-32.9h84.2v168.7c0 6.5.4 7.3 6.5 8.1l20.7 2.8v32.1H235.4zm52.5-244.3c-23.2 0-36.6-13.4-36.6-36.6s13.4-35.8 36.6-35.8c23.6 0 37 12.6 37 35.8s-13.4 36.6-37 36.6M512 350.5c-17.5 8.5-43.1 16.3-66.3 16.3-48.4 0-66.7-19.5-66.7-65.5V194.8c0-5.4 1-4.1-31.7-4.1v-36.2c35.8-4.1 50-22 54.5-66.3h38.6c0 65.8-1.3 61.8 3.3 61.8H501v40.6h-60.6v97.1c0 6.9-4.9 51.4 60.6 26.8l11 35.8z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="section/index.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index.md for section
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="software/index.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+    <a href="https://github.com/Oa8choo2/testzens/edit/main/docs/fine_tuning_job_specifications.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/Oa8choo2/testzens/raw/main/docs/fine_tuning_job_specifications.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-code-2" viewBox="0 0 24 24"><path d="M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35"/><path d="M14 2v5a1 1 0 0 0 1 1h5M5 16l-3 3 3 3M9 22l3-3-3-3"/></svg>
+    </a>
+  
+
+
+<h1 id="fine-tuning-job-specifications">Fine-tuning Job Specifications<a class="headerlink" href="#fine-tuning-job-specifications" title="Permanent link">&para;</a></h1>
+<p>As {{hpc}} system administrators, we often observe that the {{hpc}} resources are not
+optimally (or wisely) used. For example, we regularly notice that
+several cores on a computing node are not utilised, due to the fact that
+one sequential program uses only one core on the node. Or users run I/O
+intensive applications on nodes with "slow" network connections.</p>
+<p>Users often tend to run their jobs without specifying specific PBS Job
+parameters. As such, their job will automatically use the default
+parameters, which are not necessarily (or rarely) the optimal ones. This
+can slow down the run time of your application, but also block {{hpc}} resources
+for other users.</p>
+<p>Specifying the "optimal" Job Parameters requires some knowledge of your
+application (e.g., how many parallel threads does my application use,
+is there a lot of inter-process communication, how much memory does my
+application need) and also some knowledge about the {{hpc}} infrastructure
+(e.g., what kind of multi-core processors are available, which nodes
+have InfiniBand).</p>
+<p>There are plenty of monitoring tools on Linux available to the user,
+which are useful to analyse your individual application. The {{hpc}} environment
+as a whole often requires different techniques, metrics and time goals,
+which are not discussed here. We will focus on tools that can help to
+optimise your Job Specifications.</p>
+<p>Determining the optimal computer resource specifications can be broken
+down into different parts. The first is actually determining which
+metrics are needed and then collecting that data from the hosts. Some of
+the most commonly tracked metrics are CPU usage, memory consumption,
+network bandwidth, and disk I/O stats. These provide different
+indications of how well a system is performing, and may indicate where
+there are potential problems or performance bottlenecks. Once the data
+have actually been acquired, the second task is analysing the data and
+adapting your PBS Job Specifications.</p>
+<p>Another different task is to monitor the behaviour of an application at
+run time and detect anomalies or unexpected behaviour. Linux provides a
+large number of utilities to monitor the performance of its components.</p>
+<p>This chapter shows you how to measure:</p>
+<ol>
+<li>Walltime</li>
+<li>Memory usage</li>
+<li>CPU usage</li>
+<li>Disk (storage) needs</li>
+<li>Network bottlenecks</li>
+</ol>
+<p>First, we allocate a compute node and move to our relevant directory:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>qsub -I
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>cd ~/examples/Fine-tuning-Job-Specifications
+</span></code></pre></div>
+<h2 id="specifying-walltime">Specifying Walltime<a class="headerlink" href="#specifying-walltime" title="Permanent link">&para;</a></h2>
+<p>One of the most important and also easiest parameters to measure is the
+duration of your program. This information is needed to specify the
+<em>walltime</em>.</p>
+<p>The <em>time</em> utility <strong>executes</strong> and <strong>times</strong> your application. You can just add the time
+command in front of your normal command line, including your command
+line options. After your executable has finished, <strong>time</strong> writes the total time
+elapsed, the time consumed by system overhead, and the time used to
+execute your executable to the standard error stream. The calculated
+times are reported in seconds.</p>
+<p>Test the time command:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ time sleep 75
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>real 1m15.005s
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>user 0m0.001s
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>sys 0m0.002s
+</span></code></pre></div>
+<p>It is a good practice to correctly estimate and specify the run time
+(duration) of an application. Of course, a margin of 10% to 20% can be
+taken to be on the safe side.</p>
+<p>It is also wise to check the walltime on different compute nodes or to
+select the "slowest" compute node for your walltime tests. Your estimate
+should be appropriate in case your application will run on the "slowest"
+(oldest) compute nodes.</p>
+<p>The walltime can be specified in a job scripts as:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>#PBS -l walltime=3:00:00:00
+</span></code></pre></div>
+<p>or on the command line
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>qsub -l walltime=3:00:00:00
+</span></code></pre></div></p>
+<p>It is recommended to always specify the walltime for a job.</p>
+<h2 id="specifying-memory-requirements">Specifying memory requirements<a class="headerlink" href="#specifying-memory-requirements" title="Permanent link">&para;</a></h2>
+<p>In many situations, it is useful to monitor the amount of memory an
+application is using. You need this information to determine the
+characteristics of the required compute node, where that application
+should run on. Estimating the amount of memory an application will use
+during execution is often non-trivial, especially when one uses
+third-party software.</p>
+<p>{% if site!=gent %}
+The "eat_mem" application in the HPC examples directory just consumes
+and then releases memory, for the purpose of this test. It has one
+parameter, the amount of gigabytes of memory which needs to be
+allocated.</p>
+<p>First compile the program on your machine and then test it for 1 GB:</p>
+<p _="%" endif="endif"><div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ gcc -o eat_mem eat_mem.c
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>$ ./eat_mem 1
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Consuming 1 gigabyte of memory.
+</span></code></pre></div></p>
+<h3 id="available-memory-on-the-machine">Available Memory on the machine<a class="headerlink" href="#available-memory-on-the-machine" title="Permanent link">&para;</a></h3>
+<p>The first point is to be aware of the available free memory in your
+computer. The "<em>free</em>" command displays the total amount of free and
+used physical and swap memory in the system, as well as the buffers used
+by the kernel. We also use the options "-m" to see the results expressed
+in Mega-Bytes and the "-t" option to get totals.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$ free -m -t
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>                total   used   free  shared  buffers  cached
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Mem:            16049   4772  11277       0      107     161
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>-/+ buffers/cache:      4503  11546
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>Swap:           16002   4185  11816
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>Total:          32052   8957  23094
+</span></code></pre></div>
+<p>Important is to note the total amount of memory available in the machine
+(i.e., 16 GB in this example) and the amount of used and free memory
+(i.e., 4.7 GB is used and another 11.2 GB is free here).</p>
+<p _="%" endif="endif">It is not a good practice to use swap-space for your computational
+applications. A lot of "swapping" can increase the execution time of
+your application tremendously.
+{% if site==gent %}
+On the UGent clusters, there is no swap space available for jobs, you
+can only use physical memory, even though "<em>free</em>" will show swap.</p>
+<h3 id="checking-the-memory-consumption">Checking the memory consumption<a class="headerlink" href="#checking-the-memory-consumption" title="Permanent link">&para;</a></h3>
+<p>{% if site!=gent %}
+The "Monitor" tool monitors applications in terms of memory and CPU
+usage, as well as the size of temporary files. Note that currently only
+single node jobs are supported, MPI support may be added in a future
+release.</p>
+<p>To start using monitor, first load the appropriate module. Then we study
+the "eat_mem.c" program and compile it:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$ module load monitor
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>$ cat eat_mem.c
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>$ gcc -o eat_mem eat_mem.c
+</span></code></pre></div>
+<p>Starting a program to monitor is very straightforward; you just add the
+"monitor" command before the regular command line.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$ monitor ./eat_mem 3
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>time (s) size (kb) %mem %cpu
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Consuming 3 gigabyte of memory.
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>5  252900 1.4 0.6
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>10  498592 2.9 0.3
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>15  743256 4.4 0.3
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>20  988948 5.9 0.3
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>25  1233612 7.4 0.3
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>30  1479304 8.9 0.2
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>35  1723968 10.4 0.2
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>40  1969660 11.9 0.2
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>45  2214324 13.4 0.2
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>50  2460016 14.9 0.2
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>55  2704680 16.4 0.2
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>60  2950372 17.9 0.2
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>65  3167280 19.2 0.2
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>70  3167280 19.2 0.2
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>75  9264  0 0.5
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>80  9264  0 0.4
+</span></code></pre></div>
+<p>Whereby:</p>
+<ol>
+<li>The first column shows you the elapsed time in seconds. By default,
+    all values will be displayed every 5&nbsp;seconds.</li>
+<li>The second column shows you the used memory in kb. We note that the
+    memory slowly increases up to just over 3&nbsp;GB (3GB is 3,145,728&nbsp;KB),
+    and is released again.</li>
+<li>The third column shows the memory utilisation, expressed in
+    percentages of the full available memory. At full memory
+    consumption, 19.2% of the memory was being used by our application.
+    With the <code>free</code> command, we have previously seen that we had a
+    node of 16&nbsp;GB in this example. 3&nbsp;GB is indeed more or less 19.2% of
+    the full available memory.</li>
+<li>The fourth column shows you the CPU utilisation, expressed in
+    percentages of a full CPU load. As there are no computations done in
+    our exercise, the value remains very low (i.e.&nbsp;0.2%).</li>
+</ol>
+<p>Monitor will write the CPU usage and memory consumption of simulation to
+standard error.</p>
+<p>This is the rate at which monitor samples the program's metrics. Since
+monitor's output may interfere with that of the program to monitor, it
+is often convenient to use a&nbsp;log file. The latter can be specified as
+follows:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$ monitor -l test1.log eat_mem 2
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Consuming 2 gigabyte of memory.
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>$ cat test1.log
+</span></code></pre></div>
+<p>For long-running programs, it may be convenient to limit the output to,
+e.g., the last minute of the programs' execution. Since monitor provides
+metrics every 5 seconds, this implies we want to limit the output to the
+last 12 values to cover a minute:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$ monitor -l test2.log -n 12 eat_mem 4
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>Consuming 4 gigabyte of memory.
+</span></code></pre></div>
+<p>Note that this option is only available when monitor writes its metrics
+to a&nbsp;log file, not when standard error is used.</p>
+<p>The interval at&nbsp;which monitor will show the metrics can be modified by
+specifying delta, the sample rate:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$ monitor -d 1 ./eat_mem
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>Consuming 3 gigabyte of memory.
+</span></code></pre></div>
+<p _="%" endif="endif">Monitor will now print the program's metrics every second. Note that the&nbsp;minimum delta value is 1&nbsp;second.</p>
+<p _="%" endif="endif">{% if site==gent %}
+To monitor the memory consumption of a running application, you can use the "<em>top</em>" or the "<em>htop</em>" command.
+{% else %}
+Alternative options to monitor the memory consumption are the "<em>top</em>" or the "<em>htop</em>" command.</p>
+<dl>
+<dt>top</dt>
+<dd>
+<p>provides an ongoing look at processor activity in real time. It
+displays a listing of the most CPU-intensive tasks on the system,
+and can provide an interactive interface for manipulating processes.
+It can sort the tasks by memory usage, CPU usage and run time.</p>
+</dd>
+<dt>htop</dt>
+<dd>
+<p>is similar to top, but shows the CPU-utilisation for all the CPUs in
+the machine and allows to scroll the list vertically and
+horizontally to see all processes and their full command lines.</p>
+</dd>
+</dl>
+<h3 id="pbs_mem">Setting the memory parameter<a class="headerlink" href="#pbs_mem" title="Permanent link">&para;</a></h3>
+<p>Once you gathered a good idea of the overall memory consumption of your
+application, you can define it in your job script. It is wise to foresee
+a margin of about 10%.</p>
+<p>{% if site==gent %}
+The maximum amount of physical memory used by the job per node can be
+specified in a job script as:
+{% else %}
+Sequential or single-node applications:</p>
+<p _="%" endif="endif">The maximum amount of physical memory used by the job can be specified in a job script as:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>#PBS -l mem=4gb
+</span></code></pre></div>
+<p>or on the command line</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>qsub -l mem=4gb
+</span></code></pre></div>
+<p _="%" endif="endif">{% if site==gent %}
+If you do not request memory (neither in the job script nor on the command line), the default memory
+that your job will get access is the proportional share of the total avaliable memory on the node:
+If you request a full node, all usable memory will be available.
+If you request <code>N</code> cores on a cluster where nodes have <code>M</code> cores, you will get <code>N/M</code>
+of the total usable memory on the node. For the number of cores and available memory per cluster, please see our
+<a href="https://www.ugent.be/hpc/en/infrastructure">infrastructure</a>, or you can use the <a href="./web_portal.html">web portal</a>, open
+the desktop app and there you can browse it per cluster and core using the
+submission form (there is no need to start an actual desktop).</p>
+<p>{% if site!=gent %}
+This setting is ignored if the number of nodes is not&nbsp;1.</p>
+<p>Parallel or multi-node applications:</p>
+<p>When you are running a parallel application over multiple cores, you can
+also specify the memory requirements per processor (pmem). This
+directive specifies the maximum amount of physical memory used by any
+process in the job.</p>
+<p>For example, if the job would run four processes and each would use up
+to 2 GB (gigabytes) of memory, then the memory directive would read:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>#PBS -l pmem=2gb
+</span></code></pre></div>
+<p>or on the command line</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>$ qsub -l pmem=2gb
+</span></code></pre></div>
+<p _="%" endif="endif">(and of course this would need to be combined with a CPU cores directive
+such as nodes=1:ppn=4). In this example, you request 8&nbsp;GB of memory in
+total on the node.</p>
+<h2 id="specifying-processors-requirements">Specifying processors requirements<a class="headerlink" href="#specifying-processors-requirements" title="Permanent link">&para;</a></h2>
+<p>Users are encouraged to fully utilise all the available cores on a
+certain compute node. Once the required numbers of cores and nodes are
+decently specified, it is also good practice to monitor the CPU
+utilisation on these cores and to make sure that all the assigned nodes
+are working at full load.</p>
+<h3 id="number-of-processors">Number of processors<a class="headerlink" href="#number-of-processors" title="Permanent link">&para;</a></h3>
+<p>The number of core and nodes that a user shall request fully depends on
+the architecture of the application. Developers design their
+applications with a strategy for parallelization in mind. The
+application can be designed for a certain fixed number or for a
+configurable number of nodes and cores. It is wise to target a specific
+set of compute nodes (e.g., Westmere, Harpertown) for your computing
+work and then to configure your software to nicely fill up all
+processors on these compute nodes.</p>
+<p>The <em>/proc/cpuinfo</em> stores info about your CPU architecture like number
+of CPUs, threads, cores, information about CPU caches, CPU family, model
+and much more. So, if you want to detect how many cores are available on
+a specific machine:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$ less /proc/cpuinfo
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>processor       : 0
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>vendor_id       : GenuineIntel
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>cpu family      : 6
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>model           : 23
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>model name      : Intel(R) Xeon(R) CPU  E5420  @ 2.50GHz
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>stepping        : 10
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>cpu MHz         : 2500.088
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>cache size      : 6144 KB
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>...
+</span></code></pre></div>
+<p>Or if you want to see it in a more readable format, execute:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>$ grep processor /proc/cpuinfo
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>processor : 0
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>processor : 1
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>processor : 2
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>processor : 3
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>processor : 4
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>processor : 5
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>processor : 6
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>processor : 7
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unless you want information of the login nodes, you'll have to issue
+these commands on one of the workernodes. This is most easily achieved
+in an interactive job, see <a href="./running_interactive_jobs.html">the chapter on Running interactive jobs</a>.</p>
+</div>
+<p>In order to specify the number of nodes and the number of processors per
+node in your job script, use:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>#PBS -l nodes=N:ppn=M
+</span></code></pre></div>
+<p>or with equivalent parameters on the command line</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>qsub -l nodes=N:ppn=M
+</span></code></pre></div>
+<p>This specifies the number of nodes (nodes=N) and the number of
+processors per node (ppn=M) that the job should use. PBS treats a
+processor core as a processor, so a system with eight cores per compute
+node can have ppn=8 as its maximum ppn request.
+{% if site !=antwerpen %}
+You can also use this statement in your job script:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>#PBS -l nodes=N:ppn=all
+</span></code></pre></div>
+<p>to request all cores of a node, or</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>#PBS -l nodes=N:ppn=half
+</span></code></pre></div>
+<p _="%" endif="endif">to request half of them.</p>
+<p>Note that unless a job has some inherent parallelism of its own through
+something like MPI or OpenMP, requesting more than a single processor on
+a single node is usually wasteful and can impact the job start time.</p>
+<h3 id="monitoring-the-cpu-utilisation">Monitoring the CPU-utilisation<a class="headerlink" href="#monitoring-the-cpu-utilisation" title="Permanent link">&para;</a></h3>
+<p>{% if site != gent %}
+The previously used "monitor" tool also shows the overall CPU-load. The
+"eat_cpu" program performs a multiplication of 2 randomly filled a
+<span class="arithmatex">\(1500 \times 1500\)</span> matrices and is just written to consume a lot of
+"<em>cpu</em>".</p>
+<p>We first load the monitor modules, study the "eat_cpu.c" program and
+compile it:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>$ module load monitor
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>$ cat eat_cpu.c
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>$ gcc -o eat_cpu eat_cpu.c
+</span></code></pre></div>
+<p>And then start to monitor the <em>eat_cpu</em> program:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>$ monitor -d 1 ./eat_cpu
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>time  (s) size (kb) %mem %cpu
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>1  52852  0.3 100
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>2  52852  0.3 100
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>3  52852  0.3 100
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>4  52852  0.3 100
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>5  52852  0.3  99
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>6  52852  0.3 100
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>7  52852  0.3 100
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>8  52852  0.3 100
+</span></code></pre></div>
+<p>We notice that it the program keeps its CPU nicely busy at 100%.</p>
+<p>Some processes spawn one or more sub-processes. In that case, the
+metrics shown by monitor are aggregated over the process and all of its
+sub-processes (recursively). The reported CPU usage is the sum of all
+these processes, and can thus exceed 100%.</p>
+<p>Some (well, since this is a {{hpc}} Cluster, we hope most) programs use more
+than one core to perform their computations. Hence, it should not come
+as a surprise that the CPU usage is reported as larger than 100%. When
+programs of this type are running on a computer with n cores, the CPU
+usage can go up to <span class="arithmatex">\(\text{n} \times 100\%\)</span>.
+{% endif %}
+This could also be monitored with the <em><strong>htop</strong></em> command:</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>htop
+</span></code></pre></div>
+Example output:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>{% include &quot;examples/Fine-tuning-Job-Specifications/htop-output&quot; %}
+</span></code></pre></div></p>
+<p>The advantage of htop is that it shows you the cpu utilisation for all
+processors as well as the details per application. A nice exercise is to
+start 4 instances of the "cpu_eat" program in 4 different terminals, and
+inspect the cpu utilisation per processor with monitor and htop.</p>
+<p>If <em><strong>htop</strong></em> reports that your program is taking 75% CPU on a certain processor,
+it means that 75% of the samples taken by top found your process active
+on the CPU. The rest of the time your application was in a wait. (It is
+important to remember that a CPU is a discrete state machine. It really
+can be at only 100%, executing an instruction, or at 0%, waiting for
+something to do. There is no such thing as using 45% of a CPU. The CPU
+percentage is a function of time.) However, it is likely that your
+application's rest periods include waiting to be dispatched on a CPU and
+not on external devices. That part of the wait percentage is then very
+relevant to understanding your overall CPU usage pattern.</p>
+<h3 id="fine-tuning-your-executable-andor-job-script">Fine-tuning your executable and/or job script<a class="headerlink" href="#fine-tuning-your-executable-andor-job-script" title="Permanent link">&para;</a></h3>
+<p>It is good practice to perform a number of run time stress tests, and to
+check the CPU utilisation of your nodes. We (and all other users of the
+{{hpc}}) would appreciate that you use the maximum of the CPU resources that
+are assigned to you and make sure that there are no CPUs in your node
+who are not utilised without reasons.</p>
+<p>But how can you maximise?</p>
+<ol>
+<li>Configure your software. (e.g., to exactly use the available amount
+    of processors in a node)</li>
+<li>Develop your parallel program in a smart way.</li>
+<li>Demand a specific type of compute node (e.g., Harpertown, Westmere),
+    which have a specific number of cores.</li>
+<li>Correct your request for CPUs in your job script.</li>
+</ol>
+<h2 id="the-system-load">The system load<a class="headerlink" href="#the-system-load" title="Permanent link">&para;</a></h2>
+<p>On top of the CPU utilisation, it is also important to check the <strong>system load</strong>.
+The system <strong>load</strong> is a measure of the amount of computational work that a computer
+system performs.</p>
+<p>The system load is the number of applications running or waiting to run
+on the compute node. In a system with for example four CPUs, a load
+average of 3.61 would indicate that there were, on average, 3.61
+processes ready to run, and each one could be scheduled into a CPU.</p>
+<p>The load averages differ from CPU percentage in two significant ways:</p>
+<ol>
+<li>"<em>load averages</em>" measure the trend of processes waiting to be run
+    (and not only an instantaneous snapshot, as does CPU percentage);
+    and</li>
+<li>"<em>load averages</em>" include all demand for all resources, e.g., CPU
+    and also I/O and network (and not only how much was active at the
+    time of measurement).</li>
+</ol>
+<h3 id="optimal-load">Optimal load<a class="headerlink" href="#optimal-load" title="Permanent link">&para;</a></h3>
+<p>What is the "<em>optimal load</em>" rule of thumb?</p>
+<p>The load averages tell us whether our physical CPUs are over- or
+under-utilised. The <strong>point of perfect utilisation</strong>, meaning that the CPUs are always busy and, yet, no
+process ever waits for one, is <strong>the
+average matching the number of CPUs</strong>. Your load should not exceed the number
+of cores available. E.g., if there are four CPUs on a machine and the
+reported one-minute load average is 4.00, the machine has been utilising
+its processors perfectly for the last 60 seconds. The "100% utilisation"
+mark is 1.0 on a single-core system, 2.0 on a dual-core, 4.0 on a
+quad-core, etc. The optimal load shall be between 0.7 and 1.0 per
+processor.</p>
+<p>In general, the intuitive idea of load averages is the higher they rise
+above the number of processors, the more processes are waiting and doing
+nothing, and the lower they fall below the number of processors, the
+more untapped CPU capacity there is.</p>
+<p><em>Load averages</em> do include any processes or threads waiting on I/O,
+networking, databases or anything else not demanding the CPU. This means
+that the optimal <em>number of applications</em> running on a system at the
+same time, might be more than one per processor.</p>
+<p>The "<strong>optimal number of applications</strong>" running on one machine at the same time depends on the type of
+the applications that you are running.</p>
+<ol>
+<li>When you are running <strong>computational intensive applications</strong>, one application per processor will generate
+    the optimal load.</li>
+<li>For <strong>I/O intensive applications</strong> (e.g., applications which perform a lot of disk-I/O), a higher
+    number of applications can generate the optimal load. While some
+    applications are reading or writing data on disks, the processors
+    can serve other applications.</li>
+</ol>
+<p>The optimal number of applications on a machine could be empirically
+calculated by performing a number of stress tests, whilst checking the
+highest throughput. There is however no manner in the {{hpc}} at the moment to
+specify the maximum number of applications that shall run per core
+dynamically. The {{hpc}} scheduler will not launch more than one process per
+core.</p>
+<p>The manner how the cores are spread out over CPUs does not matter for
+what regards the load. Two quad-cores perform similar to four
+dual-cores, and again perform similar to eight single-cores. It's all
+eight cores for these purposes.</p>
+<h3 id="monitoring-the-load">Monitoring the load<a class="headerlink" href="#monitoring-the-load" title="Permanent link">&para;</a></h3>
+<p>The <strong>load average</strong> represents the average system load over a period of time. It
+conventionally appears in the form of three numbers, which represent the
+system load during the last <strong>one</strong>-, <strong>five</strong>-, and <strong>fifteen</strong>-minute periods.</p>
+<p>The <strong>uptime</strong> command will show us the average load</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>$ uptime
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>10:14:05 up 86 days, 12:01, 11 users, load average: 0.60, 0.41, 0.41
+</span></code></pre></div>
+<p>Now, compile and start a few instances of the "<em>eat_cpu</em>" program in the background,
+and check the effect on the load again:</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>$ gcc -O2 eat_cpu.c -o eat_cpu
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>$ ./eat_cpu&amp;
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>$ ./eat_cpu&amp;
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>$ ./eat_cpu&amp;
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>$ uptime
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>10:14:42 up 86 days, 12:02, 11 users, load average: 2.60, 0.93, 0.58
+</span></code></pre></div>
+You can also read it in the <strong>htop</strong> command.</p>
+<h3 id="fine-tuning-your-executable-andor-job-script_1">Fine-tuning your executable and/or job script<a class="headerlink" href="#fine-tuning-your-executable-andor-job-script_1" title="Permanent link">&para;</a></h3>
+<p>It is good practice to perform a number of run time stress tests, and to
+check the system load of your nodes. We (and all other users of the {{hpc}})
+would appreciate that you use the maximum of the CPU resources that are
+assigned to you and make sure that there are no CPUs in your node who
+are not utilised without reasons.</p>
+<p>But how can you maximise?</p>
+<ol>
+<li>Profile your software to improve its performance.</li>
+<li>Configure your software (e.g., to exactly use the available amount
+    of processors in a node).</li>
+<li>Develop your parallel program in a smart way, so that it fully
+    utilises the available processors.</li>
+<li>Demand a specific type of compute node (e.g., Harpertown, Westmere),
+    which have a specific number of cores.</li>
+<li>Correct your request for CPUs in your job script.</li>
+</ol>
+<p>And then check again.</p>
+<h2 id="checking-file-sizes-disk-io">Checking File sizes &amp; Disk I/O<a class="headerlink" href="#checking-file-sizes-disk-io" title="Permanent link">&para;</a></h2>
+<h3 id="monitoring-file-sizes-during-execution">Monitoring File sizes during execution<a class="headerlink" href="#monitoring-file-sizes-during-execution" title="Permanent link">&para;</a></h3>
+<p>Some programs generate intermediate or output files, the size of which
+may also be a useful metric.</p>
+<p>Remember that your available disk space on the {{hpc}} online storage is
+limited, and that you have environment variables which point to these
+directories available (i.e., <em><span class="arithmatex">\(VSC_DATA*, *\)</span>VSC_SCRATCH</em> and
+<em><span class="arithmatex">\(VSC_DATA*). On top of those, you can also access some temporary
+storage (i.e., the /tmp directory) on the compute node, which is defined
+by the *\)</span>VSC_SCRATCH_NODE</em> environment variable.</p>
+<p>{% if site != gent %}
+We first load the monitor modules, study the "eat_disk.c" program and
+compile it:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>$ module load monitor
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>$ cat eat_disk.c
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>$ gcc -o eat_disk eat_disk.c
+</span></code></pre></div>
+<p>The <em>monitor</em> tool provides an option (-f) to display the size of one or
+more files:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>$ monitor -f $VSC_SCRATCH/test.txt ./eat_disk
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>time (s) size (kb) %mem %cpu
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>5  1276  0 38.6 168820736
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>10  1276  0 24.8 238026752
+</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>15  1276  0 22.8 318767104
+</span><span id="__span-28-6"><a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>20  1276  0 25 456130560
+</span><span id="__span-28-7"><a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>25  1276  0 26.9 614465536
+</span><span id="__span-28-8"><a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>30  1276  0 27.7 760217600
+</span><span id="__span-28-9"><a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>...
+</span></code></pre></div>
+<p _="%" endif="endif">Here, the size of the file "<em>test.txt</em>" in directory $VSC_SCRATCH will
+be monitored. Files can be specified by absolute as well as relative
+path, and multiple files are separated by ",".</p>
+<p>It is important to be aware of the sizes of the file that will be
+generated, as the available disk space for each user is limited. We
+refer to section 
+<a href="running_jobs_with_input_output_data.html#how-much-disk-space-do-i-get">How much disk space do I get?</a> on <a href="running_jobs_with_input_output_data.html#quota">Quotas</a> to check your
+quota and tools to find which files consumed the "quota".</p>
+<p>Several actions can be taken, to avoid storage problems:</p>
+<ol>
+<li>Be aware of all the files that are generated by your program. Also
+    check out the hidden files.</li>
+<li>Check your quota consumption regularly.</li>
+<li>Clean up your files regularly.</li>
+<li>First work (i.e., read and write) with your big files in the local
+    /tmp directory. Once finished, you can move your files once to the
+    VSC_DATA directories.</li>
+<li>Make sure your programs clean up their temporary files after
+    execution.</li>
+<li>Move your output results to your own computer regularly.</li>
+<li>Anyone can request more disk space to the {{hpc}} staff, but you will have
+    to duly justify your request.</li>
+</ol>
+<h2 id="specifying-network-requirements">Specifying network requirements<a class="headerlink" href="#specifying-network-requirements" title="Permanent link">&para;</a></h2>
+<p>Users can examine their network activities with the htop command. When
+your processors are 100% busy, but you see a lot of red bars and only
+limited green bars in the htop screen, it is mostly an indication that
+they lose a lot of time with inter-process communication.</p>
+<p>Whenever your application utilises a lot of inter-process communication
+(as is the case in most parallel programs), we strongly recommend to
+request nodes with an "InfiniBand" network. The InfiniBand is a
+specialised high bandwidth, low latency network that enables large
+parallel jobs to run as efficiently as possible.</p>
+<p>The parameter to add in your job script would be:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>#PBS -l ib
+</span></code></pre></div>
+<p>If for some other reasons, a user is fine with the gigabit Ethernet
+network, he can specify:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>#PBS -l gbe
+</span></code></pre></div>
+<p>{% if site!=gent %}</p>
+<h2 id="some-more-tips-on-the-monitor-tool">Some more tips on the Monitor tool<a class="headerlink" href="#some-more-tips-on-the-monitor-tool" title="Permanent link">&para;</a></h2>
+<h3 id="command-lines-arguments">Command Lines arguments<a class="headerlink" href="#command-lines-arguments" title="Permanent link">&para;</a></h3>
+<p>Many programs, e.g., MATLAB, take command line options. To make sure
+these do not interfere with those of monitor and vice versa, the program
+can for instance be started in the following way:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>$ monitor -delta 60 -- matlab -nojvm -nodisplay computation.m
+</span></code></pre></div>
+<p>The use of <code>--</code> will ensure that monitor does not get confused by
+MATLAB's <code>-nojvm</code> and <code>-nodisplay</code> options.</p>
+<h3 id="exit-code">Exit Code<a class="headerlink" href="#exit-code" title="Permanent link">&para;</a></h3>
+<p>Monitor will propagate the exit code of the program it is watching.
+Suppose the latter ends normally, then monitor's exit code will be 0. On
+the other hand, when the program terminates abnormally with a non-zero
+exit code, e.g., 3, then this will be monitor's exit code as well.</p>
+<p>When monitor terminates in an abnormal state, for instance if it can't
+create the log file, its exit code will be 65. If this interferes with
+an exit code of the program to be monitored, it can be modified by
+setting the environment variable MONITOR_EXIT_ERROR to a more suitable
+value.</p>
+<h3 id="monitoring-a-running-process">Monitoring a running process<a class="headerlink" href="#monitoring-a-running-process" title="Permanent link">&para;</a></h3>
+<p>It is also possible to "attach" monitor to a program or process that is
+already running. One simply determines the relevant process ID using the
+ps command, e.g., 18749, and starts monitor:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>$ monitor -p 18749
+</span></code></pre></div>
+<p _="%" endif="endif">Note that this feature can be (ab)used to monitor specific sub-processes.</p>
+
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">hpc</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">agat</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">amica</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">avaliable</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">behaviour</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">cas</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">config</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">cpuinfo</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">eb</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">edu</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ega</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">endif</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ete</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">exe</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">gbe</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">gcc</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">genuineintel</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">harpertown</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">htop</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">https</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">infiniband</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ip</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">irectory</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">isa</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">isk</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">linux</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">matlab</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">maximise</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mpi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mput</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">nbsp</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">nds</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">nec</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">nodisplay</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">nojvm</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ntl</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ofi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ome</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">omp</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ompi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ong</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ood</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">openmp</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">optimise</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">orte</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ount</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">pmem</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ppn</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">qsub</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">rsa</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">rw</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">specialise</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">specialised</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">spla</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">sys</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">tantan</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">tf</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">thu</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">tmp</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ua</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">uct</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ud</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ugent</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">umi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">upt</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">utilisation</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">utilise</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">utilised</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">utilises</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">utilising</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ve</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">vsc</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">walltime</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">westmere</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">workernode</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">workernodes</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">xeon</span>
+      
+    
+  </nav>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        custom footer
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+<h4>Cookie consent</h4>
+<p>    We try not to use any cookies. 
+
+    We do not need your consent.  
+
+    Maybe some third-party cookie harvesters will try to get consent from you.  
+
+    Contact cookies@ugent.be for more information.  
+
+</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Reject</button>
+    
+    
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":".","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.prune","navigation.path","navigation.tabs","navigation.tabs.sticky","navigation.sections","navigation.top","navigation.tracking","search.highlight","toc.follow","toc.integrate","content.action.edit","content.action.view"],"search":"assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.8ffeb9c9.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1514 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A new project generated from the default template project.">
+      
+      
+        <meta name="author" content="<your name here>">
+      
+      
+        <link rel="canonical" href="http://localhost:8300/useful_linux_commands.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="images/favicon.png">
+      <meta name="generator" content="zensical-0.0.19">
+    
+    
+<meta name="google-site-verification" content="nJqh3TVb_44fMl2gS61agt_bRNFEaI496UaXYL-wLZI" />
+
+    
+      
+        
+      
+      <link rel="stylesheet" href="assets/stylesheets/modern/main.d4922b3c.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libertinus+Sans:300,300i,400,400i,500,500i,700,700i%7CLibertinus+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Libertinus Sans";--md-code-font:"Libertinus Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+    
+    
+<script>
+  (function() {
+    var cx = 'd3873894b6f614f35';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+<script>
+registerListener('load', setLazy);
+registerListener('load', lazyLoad);
+registerListener('scroll', lazyLoad);
+
+var lazy = [];
+
+function setLazy(){
+    lazy = document.getElementsByClassName('lazy');
+    console.log('Found ' + lazy.length + ' lazy images');
+}
+
+function lazyLoad(){
+    for(var i=0; i<lazy.length; i++){
+        if(isInViewport(lazy[i])){
+            if (lazy[i].getAttribute('data-src')){
+                lazy[i].src = lazy[i].getAttribute('data-src');
+                lazy[i].removeAttribute('data-src');
+            }
+        }
+    }
+
+    cleanLazy();
+}
+
+function cleanLazy(){
+    lazy = Array.prototype.filter.call(lazy, function(l){ return l.getAttribute('data-src');});
+}
+
+function isInViewport(el){
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.bottom >= 0 &&
+        rect.right >= 0 &&
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+     );
+}
+
+function registerListener(event, func) {
+    if (window.addEventListener) {
+        window.addEventListener(event, func)
+    } else {
+        window.attachEvent('on' + event, func)
+    }
+}
+</script>
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#useful-linux-commands" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Useful Linux Commands
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<gcse:searchbox-only>Search enableAutoComplete="true"</gcse:searchbox-only>
+
+<hr>
+<div class="md-search" 
+  data-md-component="search" 
+  role="dialog" 
+  aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+
+<hr>
+
+ <script async src="https://cse.google.com/cse.js?cx=d3873894b6f614f35">
+</script>
+<div class="gcse-search" ></div>
+
+<br><ol>
+  <li>gcse-searchresults-only
+    <li>gcse-search
+</ol>
+Look and feel gsce: https://programmablesearchengine.google.com/controlpanel/lookandfeel?cx=d3873894b6f614f35
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/Oa8choo2/testzens" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M216.3 158.4H137C97 147.9 6.5 150.6 6.5 233.2c0 30.1 15 51.2 35 61-25.1 23-37 33.8-37 49.2 0 11 4.5 21.1 17.9 26.8C8.1 383.6 0 393.3 0 411.6c0 32.1 28 50.8 101.6 50.8 70.8 0 111.8-26.4 111.8-73.2 0-58.7-45.2-56.5-151.6-63l13.4-21.6c27.3 7.6 118.7 10 118.7-67.9 0-18.7-7.7-31.7-15-41.1l37.4-2.8v-34.5zm-63.4 241.9c0 32.1-104.9 32.1-104.9 2.4 0-8.1 5.3-15 10.6-21.5 77.7 5.3 94.3 3.4 94.3 19.1m-50.8-134.6c-52.8 0-50.5-71.2 1.2-71.2 49.5 0 50.8 71.2-1.2 71.2m133.3 100.5v-32.1c26.7-3.7 27.2-2 27.2-11V203.6c0-8.5-2.1-7.4-27.2-16.3l4.5-32.9h84.2v168.7c0 6.5.4 7.3 6.5 8.1l20.7 2.8v32.1H235.4zm52.5-244.3c-23.2 0-36.6-13.4-36.6-36.6s13.4-35.8 36.6-35.8c23.6 0 37 12.6 37 35.8s-13.4 36.6-37 36.6M512 350.5c-17.5 8.5-43.1 16.3-66.3 16.3-48.4 0-66.7-19.5-66.7-65.5V194.8c0-5.4 1-4.1-31.7-4.1v-36.2c35.8-4.1 50-22 54.5-66.3h38.6c0 65.8-1.3 61.8 3.3 61.8H501v40.6h-60.6v97.1c0 6.9-4.9 51.4 60.6 26.8l11 35.8z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="section/index.html" class="md-tabs__link">
+          
+  
+  Section
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="software/index.html" class="md-tabs__link">
+          
+  
+  Software
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Oa8choo2/testzens" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M216.3 158.4H137C97 147.9 6.5 150.6 6.5 233.2c0 30.1 15 51.2 35 61-25.1 23-37 33.8-37 49.2 0 11 4.5 21.1 17.9 26.8C8.1 383.6 0 393.3 0 411.6c0 32.1 28 50.8 101.6 50.8 70.8 0 111.8-26.4 111.8-73.2 0-58.7-45.2-56.5-151.6-63l13.4-21.6c27.3 7.6 118.7 10 118.7-67.9 0-18.7-7.7-31.7-15-41.1l37.4-2.8v-34.5zm-63.4 241.9c0 32.1-104.9 32.1-104.9 2.4 0-8.1 5.3-15 10.6-21.5 77.7 5.3 94.3 3.4 94.3 19.1m-50.8-134.6c-52.8 0-50.5-71.2 1.2-71.2 49.5 0 50.8 71.2-1.2 71.2m133.3 100.5v-32.1c26.7-3.7 27.2-2 27.2-11V203.6c0-8.5-2.1-7.4-27.2-16.3l4.5-32.9h84.2v168.7c0 6.5.4 7.3 6.5 8.1l20.7 2.8v32.1H235.4zm52.5-244.3c-23.2 0-36.6-13.4-36.6-36.6s13.4-35.8 36.6-35.8c23.6 0 37 12.6 37 35.8s-13.4 36.6-37 36.6M512 350.5c-17.5 8.5-43.1 16.3-66.3 16.3-48.4 0-66.7-19.5-66.7-65.5V194.8c0-5.4 1-4.1-31.7-4.1v-36.2c35.8-4.1 50-22 54.5-66.3h38.6c0 65.8-1.3 61.8 3.3 61.8H501v40.6h-60.6v97.1c0 6.9-4.9 51.4 60.6 26.8l11 35.8z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="section/index.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index.md for section
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="software/index.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+    <a href="https://github.com/Oa8choo2/testzens/edit/main/docs/useful_linux_commands.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/Oa8choo2/testzens/raw/main/docs/useful_linux_commands.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-code-2" viewBox="0 0 24 24"><path d="M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35"/><path d="M14 2v5a1 1 0 0 0 1 1h5M5 16l-3 3 3 3M9 22l3-3-3-3"/></svg>
+    </a>
+  
+
+
+<h1 id="useful-linux-commands">Useful Linux Commands<a class="headerlink" href="#useful-linux-commands" title="Permanent link">&para;</a></h1>
+<h2 id="basic-linux-usage">Basic Linux Usage<a class="headerlink" href="#basic-linux-usage" title="Permanent link">&para;</a></h2>
+<p>All the {{hpc}} clusters run some variant of the "{{operatingsystembase}}" operating system. This means
+that, when you connect to one of them, you get a command line interface,
+which looks something like this:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{{userid}}@ln01[203] $
+</span></code></pre></div>
+<p>When you see this, we also say you are inside a "shell". The shell will
+accept your commands, and execute them.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ls</code></td>
+<td>Shows you a list of files in the current directory</td>
+</tr>
+<tr>
+<td><code>cd</code></td>
+<td>Change current working directory</td>
+</tr>
+<tr>
+<td><code>rm</code></td>
+<td>Remove file or directory</td>
+</tr>
+<tr>
+<td><code>echo</code></td>
+<td>Prints its parameters to the screen</td>
+</tr>
+<tr>
+<td>{% if site == gent %}</td>
+<td><code>nano</code></td>
+</tr>
+<tr>
+<td>{% else %}</td>
+<td><code>joe</code></td>
+</tr>
+<tr>
+<td>{% endif %}</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Most commands will accept or even need parameters, which are placed
+after the command, separated by spaces. A simple example with the "echo"
+command:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ echo This is a test
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>This is a test
+</span></code></pre></div>
+<p>Important here is the "<span class="arithmatex">\(" sign in front of the first line. This should
+not be typed, but is a convention meaning "the rest of this line should
+be typed at your shell prompt". The lines not starting with the "\)</span>"
+sign are usually the feedback or output from the command.</p>
+<p>More commands will be used in the rest of this text, and will be
+explained then if necessary. If not, you can usually get more
+information about a command, say the item or command "ls", by trying
+either of the following:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ ls --help 
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>$ man ls
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>$ info ls
+</span></code></pre></div>
+<p>(You can exit the last two "manuals" by using the "q" key.) For more
+exhaustive tutorials about Linux usage, please refer to the following
+site: <a href="https://www.geeksforgeeks.org/linux-tutorial/">https://www.geeksforgeeks.org/linux-tutorial/</a></p>
+<h2 id="how-to-get-started-with-shell-scripts">How to get started with shell scripts<a class="headerlink" href="#how-to-get-started-with-shell-scripts" title="Permanent link">&para;</a></h2>
+<p>In a shell script, you will put the commands you would normally type at
+your shell prompt in the same order. This will enable you to execute all
+those commands at any time by only issuing one command: starting the
+script.</p>
+<p>Scripts are basically non-compiled pieces of code: they are just text
+files. Since they don't contain machine code, they are executed by what
+is called a "parser" or an "interpreter". This is another program that
+understands the command in the script, and converts them to machine
+code. There are many kinds of scripting languages, including Perl and
+Python.</p>
+<p>Another very common scripting language is shell scripting. In a shell
+script, you will put the commands you would normally type at your shell
+prompt in the same order. This will enable you to execute all those
+commands at any time by only issuing one command: starting the script.</p>
+<p>Typically in the following examples they'll have on each line the next
+command to be executed although it is possible to put multiple commands
+on one line. A very simple example of a script may be:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello! This is my hostname:&quot;</span><span class="w"> </span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>hostname
+</span></code></pre></div>
+<p>You can type both lines at your shell prompt, and the result will be the
+following:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ echo &quot;Hello! This is my hostname:&quot;
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Hello! This is my hostname:
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>$ hostname
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>{{loginhost}}
+</span></code></pre></div>
+<p>Suppose we want to call this script "foo". You open a new file for
+editing, and name it "foo", and edit it with your favourite editor</p>
+<p _="%" endif="endif">{% if site == gent %}
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>nano foo
+</span></code></pre></div>
+{% else %}
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$ vi foo
+</span></code></pre></div></p>
+<p>or use the following commands:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>echo &quot;echo &#39;Hello! This is my hostname:&#39;&quot; &gt; foo
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>echo hostname &gt;&gt; foo
+</span></code></pre></div>
+<p>The easiest ways to run a script is by starting the interpreter and pass
+the script as parameter. In case of our script, the interpreter may
+either be "sh" or "bash" (which are the same on the cluster). So start
+the script:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$ bash foo
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Hello! This is my hostname:
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>{{loginhost}}
+</span></code></pre></div>
+<p>Congratulations, you just created and started your first shell script!</p>
+<p>A more advanced way of executing your shell scripts is by making them
+executable by their own, so without invoking the interpreter manually.
+The system can not automatically detect which interpreter you want, so
+you need to tell this in some way. The easiest way is by using the so
+called "shebang" notation, explicitly created for this function: you put
+the following line on top of your shell script
+"#!/path/to/your/interpreter".</p>
+<p>You can find this path with the "which" command. In our case, since we
+use bash as an interpreter, we get the following path:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$ which bash
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>/bin/bash
+</span></code></pre></div>
+<p>We edit our script and change it with this information:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello! This is my hostname:&quot;</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>hostname
+</span></code></pre></div>
+<p>Note that the "shebang" must be the first line of your script! Now the
+operating system knows which program should be started to run the
+script.</p>
+<p>Finally, we tell the operating system that this script is now
+executable. For this we change its file attributes:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>chmod +x foo
+</span></code></pre></div>
+<p>Now you can start your script by simply executing it:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>$ ./foo
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>Hello! This is my hostname:
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>{{loginhost}}
+</span></code></pre></div>
+<p>The same technique can be used for all other scripting languages, like
+Perl and Python.</p>
+<p>Most scripting languages understand that lines beginning with "#" are
+comments, and should be ignored. If the language you want to use does
+not ignore these lines, you may get strange results ...</p>
+<h2 id="linux-quick-reference-guide">Linux Quick reference Guide<a class="headerlink" href="#linux-quick-reference-guide" title="Permanent link">&para;</a></h2>
+<h3 id="archive-commands">Archive Commands<a class="headerlink" href="#archive-commands" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tar</code></td>
+<td>An archiving program designed to store and extract files from an archive known as a tar file.</td>
+</tr>
+<tr>
+<td><code>tar -cvf foo.tar foo/</code></td>
+<td>Compress the contents of <code>foo</code> folder to <code>foo.tar</code></td>
+</tr>
+<tr>
+<td><code>tar -xvf foo.tar</code></td>
+<td>Extract <code>foo.tar</code></td>
+</tr>
+<tr>
+<td><code>tar -xvzf foo.tar.gz</code></td>
+<td>Extract gzipped <code>foo.tar.gz</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="basic-commands">Basic Commands<a class="headerlink" href="#basic-commands" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ls</code></td>
+<td>Shows you a list of files in the current directory</td>
+</tr>
+<tr>
+<td><code>cd</code></td>
+<td>Change the current directory</td>
+</tr>
+<tr>
+<td><code>rm</code></td>
+<td>Remove file or directory</td>
+</tr>
+<tr>
+<td><code>mv</code></td>
+<td>Move file or directory</td>
+</tr>
+<tr>
+<td><code>echo</code></td>
+<td>Display a line or text</td>
+</tr>
+<tr>
+<td><code>pwd</code></td>
+<td>Print working directory</td>
+</tr>
+<tr>
+<td><code>mkdir</code></td>
+<td>Create directories</td>
+</tr>
+<tr>
+<td><code>rmdir</code></td>
+<td>Remove directories</td>
+</tr>
+</tbody>
+</table>
+<h3 id="editor">Editor<a class="headerlink" href="#editor" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>emacs</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>nano</code></td>
+<td>Nano's ANOther editor, an enhanced free Pico clone</td>
+</tr>
+<tr>
+<td><code>vi</code></td>
+<td>A programmer's text editor</td>
+</tr>
+</tbody>
+</table>
+<h3 id="file-commands">File Commands<a class="headerlink" href="#file-commands" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cat</code></td>
+<td>Read one or more files and print them to standard output</td>
+</tr>
+<tr>
+<td><code>cmp</code></td>
+<td>Compare two files byte by byte</td>
+</tr>
+<tr>
+<td><code>cp</code></td>
+<td>Copy files from a source to the same or different target(s)</td>
+</tr>
+<tr>
+<td><code>du</code></td>
+<td>Estimate disk usage of each file and recursively for directories</td>
+</tr>
+<tr>
+<td><code>find</code></td>
+<td>Search for files in directory hierarchy</td>
+</tr>
+<tr>
+<td><code>grep</code></td>
+<td>Print lines matching a pattern</td>
+</tr>
+<tr>
+<td><code>ls</code></td>
+<td>List directory contents</td>
+</tr>
+<tr>
+<td><code>mv</code></td>
+<td>Move file to different targets</td>
+</tr>
+<tr>
+<td><code>rm</code></td>
+<td>Remove files</td>
+</tr>
+<tr>
+<td><code>sort</code></td>
+<td>Sort lines of text files</td>
+</tr>
+<tr>
+<td><code>wc</code></td>
+<td>Print the number of new lines, words, and bytes in files</td>
+</tr>
+</tbody>
+</table>
+<h3 id="help-commands">Help Commands<a class="headerlink" href="#help-commands" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>man</code></td>
+<td>Displays the manual page of a command with its name, synopsis, description, author, copyright, etc.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="network-commands">Network Commands<a class="headerlink" href="#network-commands" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hostname</code></td>
+<td>Show or set the system's host name</td>
+</tr>
+<tr>
+<td><code>ifconfig</code></td>
+<td>Display the current configuration of the network interface. It is also useful to get the information about IP address, subnet mask, set remote IP address, netmask, etc.</td>
+</tr>
+<tr>
+<td><code>ping</code></td>
+<td>Send ICMP ECHO_REQUEST to network hosts. You will get back an ICMP packet if the host responds. This command is useful to check whether your computer is connected or not.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="other-commands">Other Commands<a class="headerlink" href="#other-commands" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>logname</code></td>
+<td>Print user's login name</td>
+</tr>
+<tr>
+<td><code>quota</code></td>
+<td>Display disk usage and limits</td>
+</tr>
+<tr>
+<td><code>which</code></td>
+<td>Returns the pathnames of the files that would be executed in the current environment</td>
+</tr>
+<tr>
+<td><code>whoami</code></td>
+<td>Displays the login name of the current effective user</td>
+</tr>
+</tbody>
+</table>
+<h3 id="process-commands">Process Commands<a class="headerlink" href="#process-commands" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;</code></td>
+<td>In order to execute a command in the background, place an ampersand (<code>&amp;</code>) at the end of the command line. A user job number (in brackets) and a system process number are displayed. The system process number identifies the job, while the user job number is used by the user.</td>
+</tr>
+<tr>
+<td><code>at</code></td>
+<td>Executes commands at a specified time</td>
+</tr>
+<tr>
+<td><code>bg</code></td>
+<td>Places a suspended job in the background</td>
+</tr>
+<tr>
+<td><code>crontab</code></td>
+<td>A file which contains the schedule of entries to run at specified times</td>
+</tr>
+<tr>
+<td><code>fg</code></td>
+<td>A process running in the background will be processed in the foreground</td>
+</tr>
+<tr>
+<td><code>jobs</code></td>
+<td>Lists the jobs being run in the background</td>
+</tr>
+<tr>
+<td><code>kill</code></td>
+<td>Cancels a job running in the background; it takes either the user job number or the system process number as an argument</td>
+</tr>
+<tr>
+<td><code>ps</code></td>
+<td>Reports a snapshot of the current processes</td>
+</tr>
+<tr>
+<td><code>top</code></td>
+<td>Displays Linux tasks</td>
+</tr>
+</tbody>
+</table>
+<h3 id="user-account-commands">User Account Commands<a class="headerlink" href="#user-account-commands" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>chmod</code></td>
+<td>Modify properties for users</td>
+</tr>
+</tbody>
+</table>
+
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">hpc</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">attr</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">cas</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">chmod</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">cmp</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">config</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">cron</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">crontab</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">cvf</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ddr</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">eb</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">edu</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">emacs</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">endif</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ete</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">exe</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">favour</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">favourite</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">geeksforgeeks</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">gz</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">gzip</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">gzipped</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">hostname</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">https</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">icmp</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ifconfig</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ip</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">irectory</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">isk</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">linux</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">loginhost</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">logname</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mdi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mkdir</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mpi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mput</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">nano</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">nds</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">nec</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">netmask</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ngs</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ome</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">omp</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ompi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ong</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">operatingsystem</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">operatingsystembase</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ount</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">perl</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">pwd</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">py</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">rmdir</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">rsa</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">spla</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">sys</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ua</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ud</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">userid</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ve</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">whoami</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">xvf</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">xvzf</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">zipp</span>
+      
+    
+  </nav>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        custom footer
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+<h4>Cookie consent</h4>
+<p>    We try not to use any cookies. 
+
+    We do not need your consent.  
+
+    Maybe some third-party cookie harvesters will try to get consent from you.  
+
+    Contact cookies@ugent.be for more information.  
+
+</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Reject</button>
+    
+    
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":".","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.prune","navigation.path","navigation.tabs","navigation.tabs.sticky","navigation.sections","navigation.top","navigation.tracking","search.highlight","toc.follow","toc.integrate","content.action.edit","content.action.view"],"search":"assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.8ffeb9c9.min.js"></script>
+      
+    
+  </body>
+</html>

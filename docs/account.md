@@ -1,4 +1,5 @@
 ---
+<<<<<<< Updated upstream
 title: over python
 subtitle: Nullam urna elit, malesuada eget finibus ut, ac tortor
 description: is deze description ergens zichtbaar?
@@ -10,6 +11,108 @@ tags:
   - donphan
 ---
 
+=======
+updated_at: 2026-02-05T11:04:42+01:00
+tags:
+  - hpc
+  - api
+  - appdata
+  - authorise
+  - cas
+  - centre
+  - chiark
+  - config
+  - ddr
+  - django
+  - dropdown
+  - dsa
+  - eb
+  - edirect
+  - edu
+  - ega
+  - emphasised
+  - endif
+  - ete
+  - exe
+  - fips
+  - ghent
+  - gnomekeyring
+  - greenend
+  - gssapi
+  - hasselt
+  - hpcinfra
+  - hpcname
+  - htm
+  - https
+  - ict
+  - icu
+  - idsapp
+  - ield
+  - img
+  - ip
+  - irectory
+  - isa
+  - isk
+  - keyex
+  - keygen
+  - leuven
+  - limburg
+  - linux
+  - lls
+  - macos
+  - mpi
+  - mput
+  - nds
+  - nec
+  - netid
+  - nss
+  - ntl
+  - oci
+  - ome
+  - omp
+  - ompi
+  - ong
+  - ood
+  - openssh
+  - openssl
+  - organisation
+  - ount
+  - pintra
+  - png
+  - ppk
+  - proj
+  - publickey
+  - publicprivate
+  - puttygen
+  - py
+  - rcp
+  - recognise
+  - rsa
+  - rw
+  - scp
+  - sftp
+  - sgtatham
+  - soci
+  - spla
+  - sys
+  - ua
+  - ucc
+  - uct
+  - ud
+  - ueue
+  - ugent
+  - unauthorised
+  - userid
+  - ve
+  - visualise
+  - vpn
+  - vsc
+  - vscentrum
+  - vub
+  - wayf
+  - winscp
+---
+>>>>>>> Stashed changes
 # Getting an HPC Account
 
 ## Getting ready to request an account
@@ -541,3 +644,4 @@ A typical Computation workflow will be:
 
 We'll take you through the different tasks one by one in the following
 chapters.
+

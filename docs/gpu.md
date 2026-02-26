@@ -1,3 +1,87 @@
+---
+updated_at: 2026-02-05T11:04:42+01:00
+tags:
+  - hpc
+  - accelgor
+  - accouting
+  - alphafold
+  - atools
+  - autodetect
+  - behaviour
+  - blocktime
+  - cas
+  - config
+  - deeplearning
+  - eb
+  - edu
+  - elearning
+  - ete
+  - flavour
+  - gdr
+  - github
+  - gpu
+  - gpus
+  - gromacs
+  - horovod
+  - horovodrun
+  - hpcinfo
+  - hpcteam
+  - htm
+  - https
+  - initialised
+  - inode
+  - intelmpi
+  - ip
+  - jobscript
+  - joltik
+  - keras
+  - kmp
+  - mpi
+  - mpirun
+  - mps
+  - mxnet
+  - mympirun
+  - mypmirun
+  - nccl
+  - nchw
+  - nds
+  - ngs
+  - ntl
+  - nvidia
+  - ome
+  - omp
+  - ong
+  - optimise
+  - optimised
+  - ount
+  - params
+  - pdf
+  - perl
+  - pmi
+  - ppn
+  - py
+  - pytorch
+  - qstat
+  - qsub
+  - sdk
+  - slurm
+  - subsec
+  - tensorcores
+  - tensorflow
+  - thu
+  - todo
+  - ua
+  - uct
+  - ud
+  - ugent
+  - utilise
+  - ve
+  - vib
+  - vsc
+  - workernode
+  - wrt
+  - wurker
+---
 # GPU clusters
 
 ## Submitting jobs
@@ -188,3 +272,4 @@ VIB-UGent course available at
 In case of questions or problems, please contact the {{hpcteam}} via {{hpcinfo}}, and clearly
 indicate that your question relates to the `joltik` cluster by adding
 `[joltik]` in the email subject.
+

@@ -1,3 +1,70 @@
+---
+updated_at: 2026-02-05T11:04:43+01:00
+tags:
+  - hpc
+  - attr
+  - cas
+  - chmod
+  - cmp
+  - config
+  - cron
+  - crontab
+  - cvf
+  - ddr
+  - eb
+  - edu
+  - emacs
+  - endif
+  - ete
+  - exe
+  - favour
+  - favourite
+  - geeksforgeeks
+  - gz
+  - gzip
+  - gzipped
+  - hostname
+  - https
+  - icmp
+  - ifconfig
+  - ip
+  - irectory
+  - isk
+  - linux
+  - loginhost
+  - logname
+  - mdi
+  - mkdir
+  - mpi
+  - mput
+  - nano
+  - nds
+  - nec
+  - netmask
+  - ngs
+  - ome
+  - omp
+  - ompi
+  - ong
+  - operatingsystem
+  - operatingsystembase
+  - ount
+  - perl
+  - pwd
+  - py
+  - rmdir
+  - rsa
+  - spla
+  - sys
+  - ua
+  - ud
+  - userid
+  - ve
+  - whoami
+  - xvf
+  - xvzf
+  - zipp
+---
 # Useful Linux Commands
 
 ## Basic Linux Usage
@@ -274,3 +341,4 @@ not ignore these lines, you may get strange results ...
 | Command | Description                        |
 |---------|------------------------------------|
 | `chmod` | Modify properties for users        |
+

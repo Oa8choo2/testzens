@@ -1,3 +1,60 @@
+---
+updated_at: 2026-02-05T11:04:42+01:00
+tags:
+  - hpc
+  - cas
+  - cmake
+  - config
+  - ete
+  - exampledir
+  - exe
+  - gcc
+  - gfortran
+  - icc
+  - icpc
+  - icu
+  - ifort
+  - ip
+  - irectory
+  - jobid
+  - lls
+  - makefiles
+  - mpi
+  - mpicc
+  - mpicxx
+  - mpihello
+  - mpiicc
+  - mpiicpc
+  - mpiifort
+  - mput
+  - nds
+  - ngs
+  - ntl
+  - oci
+  - ome
+  - omp
+  - ompi
+  - ood
+  - operatingsystem
+  - operatingsystembase
+  - posix
+  - proj
+  - py
+  - qsub
+  - rw
+  - rwx
+  - rwxr
+  - rwxrw
+  - rwxrwxr
+  - soci
+  - sys
+  - tf
+  - ua
+  - uct
+  - ud
+  - userid
+  - ve
+---
 {% set exampledir="examples/Compiling-and-testing-your-software-on-the-HPC" %}
 # Compiling and testing your software on the HPC
 
@@ -275,3 +332,4 @@ Fortran compilers.
 | **C**       | gcc                    | icc       | mpicc                           | mpiicc    |
 | **C++**     | g++                    | icpc      | mpicxx                          | mpiicpc   |
 | **Fortran** | gfortran               | ifort     | mpif90                          | mpiifort  |
+

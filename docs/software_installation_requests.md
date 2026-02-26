@@ -1,3 +1,21 @@
+---
+updated_at: 2026-02-05T11:04:43+01:00
+tags:
+  - hpc
+  - eb
+  - https
+  - ip
+  - nds
+  - nec
+  - omp
+  - ount
+  - rw
+  - swreport
+  - sys
+  - ud
+  - ugent
+  - ve
+---
 # Software installation requests
 
 ## Submitting a request
@@ -35,3 +53,4 @@ Take into account the following guidelines:
 * Please submit **one software usage report per ticket** that corresponds to an installation request.
   Do not combine usage reports for multiple requests, unless you requested multiple (related) software installations in
   a single request (single ticket number).
+

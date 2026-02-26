@@ -1,3 +1,76 @@
+---
+updated_at: 2026-02-05T11:04:43+01:00
+tags:
+  - hpc
+  - abricate
+  - arrayid
+  - behaviour
+  - cas
+  - csv
+  - ddr
+  - donphan
+  - dryrun
+  - eb
+  - edr
+  - edu
+  - ega
+  - ete
+  - exe
+  - ict
+  - icu
+  - iimpi
+  - img
+  - ip
+  - irectory
+  - jobid
+  - lua
+  - mapreduce
+  - microsoft
+  - moab
+  - mpi
+  - mpirun
+  - mpiverbose
+  - mput
+  - myprog
+  - nds
+  - ngs
+  - ntl
+  - ome
+  - omp
+  - ong
+  - ood
+  - orte
+  - ount
+  - png
+  - ppn
+  - qstat
+  - qsub
+  - rdbms
+  - rsa
+  - rsat
+  - slurm
+  - specialise
+  - spla
+  - subsec
+  - summarise
+  - summarises
+  - sys
+  - timedrun
+  - toolchain
+  - ua
+  - ucc
+  - uct
+  - ud
+  - ueue
+  - umi
+  - userid
+  - ve
+  - walltime
+  - workdir
+  - wresume
+  - wsub
+  - wsummarize
+---
 # Multi-job submission
 
 A frequent occurring characteristic of scientific computation is their
@@ -522,3 +595,4 @@ $ module avail worker
     function, while "reduce" refers to the reduction pattern which
     condenses or reduces a collection of previously computed results to
     a single value.
+

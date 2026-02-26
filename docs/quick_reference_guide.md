@@ -1,3 +1,39 @@
+---
+updated_at: 2026-02-05T11:04:43+01:00
+tags:
+  - hpc
+  - checkjob
+  - csv
+  - endif
+  - ete
+  - hostname
+  - https
+  - iimpi
+  - ip
+  - irectory
+  - isk
+  - loginnode
+  - mmlsquota
+  - mpi
+  - mput
+  - omp
+  - ount
+  - py
+  - qdel
+  - qstat
+  - qsub
+  - scp
+  - sftp
+  - showq
+  - showstart
+  - ueue
+  - userid
+  - ve
+  - vsc
+  - vscentrum
+  - wq
+  - wsub
+---
 # HPC Quick Reference Guide
 
 Remember to substitute the usernames, login nodes, file names, ...for
@@ -50,3 +86,4 @@ your own.
 | Submit parameter sweep                  | `wsub -batch weather.pbs -data data.csv`                                                                                           |
 | Submit job array                        | `wsub -t 1-100 -batch test_set.pbs`                                                                                                |
 | Submit job array with prolog and epilog | `wsub -prolog pre.sh -batch test_set.pbs -epilog post.sh -t 1-100`                                                                 |
+

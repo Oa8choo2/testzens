@@ -1,0 +1,19 @@
+site_name: "Documentation"
+site_description: "A new project generated from the default template project."
+site_author: "<your name here>"
+site_url: "http://localhost:8300"
+
+plugins:
+  - search
+  - macros
+  - material-plausible
+  - llmstxt:
+      markdown_description: Long description of my project.
+      sections:
+        Usage documentation:
+          - file1.md: Description of file1
+
+# extra:
+#  analytics:
+#    provider: plausible
+#    domain: https://oa8choo2.github.io/testzens/

@@ -1,3 +1,35 @@
+---
+updated_at: 2026-02-05T11:04:42+01:00
+tags:
+  - hpc
+  - cas
+  - checkjob
+  - edu
+  - endif
+  - exe
+  - hpcinfo
+  - infiniband
+  - ip
+  - irectory
+  - isk
+  - mpi
+  - mput
+  - nds
+  - nec
+  - ome
+  - omp
+  - ong
+  - ount
+  - qsub
+  - sys
+  - tmp
+  - ueue
+  - ve
+  - vmstat
+  - vsc
+  - walltime
+  - workdir
+---
 # Best Practices { #ch:best-practices}
 
 ## General Best Practices { #sec:general-best-practices}
@@ -59,3 +91,4 @@
 
 13. And above all, do not hesitate to contact the {{hpc}} staff at {{hpcinfo}}. We're here
     to help you.
+

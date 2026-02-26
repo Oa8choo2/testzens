@@ -1,0 +1,27 @@
+#!/bin/bash
+
+
+cd "$*" | exit
+
+while read f; 
+  do
+    echo -e "\n---------------------------------"
+    grep -E '[ ]+$' "$f" > /dev/null
+    found=$?
+    if [[ ${found} -eq 0 ]]; then 
+      echo $found
+      echo "trailing spaces found in - $f -"
+      i="cat -vET $f"
+      $i  | nl -s " |  "
+      sed -Ee 's/([[:space:]]+)$/=\1=!/' "$f" \
+        | grep -E '=[ ]+=!$'
+    else
+      echo $found
+      echo "$f has no trailing spaces"
+    fi
+    found=
+  done < <(find . \
+    -type f \
+    -iname '*.md' )
+
+  # -printf '%h/%f = =!\n' -exec sed -Ee 's/([[:space:]]+)$/=\1=!/' '{}' \; | grep '=  =!$'

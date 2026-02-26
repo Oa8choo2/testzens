@@ -1,3 +1,84 @@
+---
+updated_at: 2026-02-05T11:04:42+01:00
+tags:
+  - hpc
+  - agat
+  - amica
+  - avaliable
+  - behaviour
+  - cas
+  - config
+  - cpuinfo
+  - eb
+  - edu
+  - ega
+  - endif
+  - ete
+  - exe
+  - gbe
+  - gcc
+  - genuineintel
+  - harpertown
+  - htop
+  - https
+  - infiniband
+  - ip
+  - irectory
+  - isa
+  - isk
+  - linux
+  - matlab
+  - maximise
+  - mpi
+  - mput
+  - nbsp
+  - nds
+  - nec
+  - nodisplay
+  - nojvm
+  - ntl
+  - ofi
+  - ome
+  - omp
+  - ompi
+  - ong
+  - ood
+  - openmp
+  - optimise
+  - orte
+  - ount
+  - pmem
+  - ppn
+  - qsub
+  - rsa
+  - rw
+  - specialise
+  - specialised
+  - spla
+  - sys
+  - tantan
+  - tf
+  - thu
+  - tmp
+  - ua
+  - uct
+  - ud
+  - ugent
+  - umi
+  - upt
+  - utilisation
+  - utilise
+  - utilised
+  - utilises
+  - utilising
+  - ve
+  - vsc
+  - walltime
+  - westmere
+  - workernode
+  - workernodes
+  - xeon
+---
 # Fine-tuning Job Specifications
 [//]: # (ch:fine-tuning-job-specifications)
 
@@ -761,3 +842,4 @@ $ monitor -p 18749
 
 Note that this feature can be (ab)used to monitor specific sub-processes.
 {% endif %}
+

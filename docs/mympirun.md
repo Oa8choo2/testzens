@@ -1,3 +1,33 @@
+---
+updated_at: 2026-02-05T11:04:43+01:00
+tags:
+  - hpc
+  - dapl
+  - doduo
+  - exe
+  - genv
+  - github
+  - helloworld
+  - hpcugent
+  - https
+  - impirun
+  - ip
+  - mpi
+  - mpihello
+  - mpirun
+  - mympirun
+  - ong
+  - ood
+  - ount
+  - shm
+  - sourcecode
+  - testscripts
+  - thu
+  - ud
+  - ugent
+  - ve
+  - vsc
+---
 # Mympirun
 
 `mympirun` is a tool to make it easier for users of HPC clusters to run
@@ -80,3 +110,4 @@ this with the `--dry-run` flag:
 $ mympirun --dry-run ./mpi_hello
 mpirun ... -genv I_MPI_FABRICS shm:dapl ... -np 16 ... ./mpi_hello
 ```
+

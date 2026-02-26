@@ -10,7 +10,10 @@ nav = [
     {"Software" = [
         "software/index.md",
         {"Matlab" = "software/MATLAB.md"},
-        {"openFOAM" = "software/openFOAM.md"}
+        {"openFOAM" = "software/openFOAM.md"},
+        {"Python" = "python.md"},
+        {"Apptainer" = "apptainer.md"},
+        {"Getting" = "getting_started_formd.md"}
     ]}
 ]
 site_name = "Documentation"
@@ -37,6 +40,7 @@ hpcsite = "ugent"
 provider = "google"
 property = "G-58TSGT7H2B"
 
+<<<<<<< Updated upstream
 [project.extra.analytics.feedback]
 title = "Was this page helpful?"
 
@@ -54,8 +58,14 @@ note = """
   Thanks for your feedback! Help us improve this page by
   using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
 """
+=======
+#    provider: plausible
+#    domain: example.com
+>>>>>>> Stashed changes
 
 [project.theme]
+custom_dir = "overrides"
+
 favicon = "images/favicon.png"
 # "Playwrite England Joined Guides"
 #  font.text = "Playwrite GB J Guides"

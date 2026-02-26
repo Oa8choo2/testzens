@@ -1,3 +1,75 @@
+---
+updated_at: 2026-02-05T11:04:43+01:00
+tags:
+  - hpc
+  - blis
+  - bsd
+  - cas
+  - computenode
+  - computenodeshort
+  - config
+  - ddr
+  - eb
+  - edu
+  - endif
+  - enought
+  - exampledir
+  - exe
+  - fibo
+  - fibonacci
+  - fx
+  - guis
+  - hostname
+  - hpcinfra
+  - https
+  - ield
+  - img
+  - ip
+  - irectory
+  - isa
+  - jobid
+  - linux
+  - lls
+  - loginhost
+  - loginnode
+  - macos
+  - macosforge
+  - matlab
+  - mooh
+  - mput
+  - nds
+  - nec
+  - ngs
+  - ntl
+  - ome
+  - omp
+  - ong
+  - orte
+  - osu
+  - paraview
+  - png
+  - py
+  - qsub
+  - rw
+  - spla
+  - straightrunning
+  - sys
+  - tz
+  - ua
+  - ucc
+  - uct
+  - userid
+  - ve
+  - visualisation
+  - vsc
+  - walltime
+  - xclock
+  - xlaunch
+  - xming
+  - xmingnotes
+  - xquartz
+  - xwindow
+---
 {% set exampledir = 'examples/Running_interactive_jobs' %}
 
 # Running interactive jobs
@@ -440,3 +512,4 @@ by entering "" in the command window again.
 fx \>\>
 :::
 {% endif %}
+

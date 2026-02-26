@@ -1,3 +1,52 @@
+---
+updated_at: 2026-02-05T11:04:43+01:00
+tags:
+  - hpc
+  - accountpage
+  - autostart
+  - cae
+  - cas
+  - coursecode
+  - cron
+  - django
+  - eb
+  - edu
+  - ete
+  - gcourse
+  - gpu
+  - gpus
+  - hpcteam
+  - https
+  - indentify
+  - ip
+  - irectory
+  - isa
+  - jupyter
+  - nds
+  - nec
+  - ngs
+  - ntl
+  - ome
+  - omp
+  - ong
+  - ood
+  - otrs
+  - ount
+  - py
+  - recognise
+  - sys
+  - thu
+  - ua
+  - uct
+  - ud
+  - ugent
+  - url
+  - ve
+  - vsc
+  - vscentrum
+  - webportal
+  - zipfile
+---
 # Teaching and training
 
 The HPC infrastructure can be used for teaching and training purposes, and
@@ -239,3 +288,4 @@ This section will briefly explain what happens under the hood of the interactive
 We would recommend that you as a teacher take some time to show and explain this to the students.
 Note that the custom interactive application will disappear for students after the indicated end of your course,
 but the section in the web portal will remain there for several years, for reference.
+

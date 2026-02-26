@@ -1,3 +1,47 @@
+---
+updated_at: 2026-02-05T11:04:43+01:00
+tags:
+  - hpc
+  - accelgor
+  - cas
+  - doduo
+  - donphan
+  - eb
+  - edu
+  - ete
+  - gallade
+  - gcc
+  - gfbf
+  - gligar
+  - gompi
+  - hpcteam
+  - https
+  - ict
+  - iimpi
+  - ip
+  - joltik
+  - linux
+  - mpi
+  - ntl
+  - ome
+  - omp
+  - ompi
+  - ong
+  - ood
+  - ount
+  - rhel
+  - rw
+  - shinx
+  - sys
+  - toolchain
+  - toolchains
+  - ua
+  - uct
+  - ud
+  - ugent
+  - url
+  - ve
+---
 # Migration to RHEL 9 operation system (Tier-2)
 
 Starting September 2024 we will gradually migrate the HPC-UGent Tier-2 clusters that
@@ -156,3 +200,4 @@ We will keep this page up to date when more specific dates have been planned.
 
 If you have any questions related to the migration to the RHEL 9 operating system,
 please [contact the {{ hpcteam }}]({{ hpc_support_url }}).
+

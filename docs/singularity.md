@@ -1,3 +1,54 @@
+---
+updated_at: 2026-02-05T11:04:43+01:00
+tags:
+  - hpc
+  - containerisation
+  - debian
+  - diags
+  - eb
+  - ete
+  - exe
+  - fakeroot
+  - flavour
+  - flavours
+  - github
+  - htm
+  - https
+  - ict
+  - icu
+  - infiniband
+  - ip
+  - isa
+  - isk
+  - linux
+  - lmod
+  - mellanox
+  - mpi
+  - mput
+  - myscript
+  - ome
+  - omp
+  - ompi
+  - ong
+  - py
+  - shm
+  - shub
+  - sylabs
+  - sys
+  - tensorflow
+  - tf
+  - thu
+  - tmp
+  - ua
+  - uct
+  - ud
+  - ugent
+  - url
+  - usr
+  - ve
+  - vsc
+  - workernode
+---
 # Singularity { #ch:singularity}
 
 ## What is Singularity?
@@ -131,3 +182,4 @@ example](https://github.com/open-mpi/ompi/blob/master/examples/ring_c.c):
 :::
 
 Example MPI job script:
+

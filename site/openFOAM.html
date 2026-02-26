@@ -1,0 +1,1548 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A new project generated from the default template project.">
+      
+      
+        <meta name="author" content="<your name here>">
+      
+      
+        <link rel="canonical" href="http://localhost:8300/openFOAM.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="images/favicon.png">
+      <meta name="generator" content="zensical-0.0.19">
+    
+    
+<meta name="google-site-verification" content="nJqh3TVb_44fMl2gS61agt_bRNFEaI496UaXYL-wLZI" />
+
+    
+      
+        
+      
+      <link rel="stylesheet" href="assets/stylesheets/modern/main.d4922b3c.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libertinus+Sans:300,300i,400,400i,500,500i,700,700i%7CLibertinus+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Libertinus Sans";--md-code-font:"Libertinus Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+    
+    
+<script>
+  (function() {
+    var cx = 'd3873894b6f614f35';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+<script>
+registerListener('load', setLazy);
+registerListener('load', lazyLoad);
+registerListener('scroll', lazyLoad);
+
+var lazy = [];
+
+function setLazy(){
+    lazy = document.getElementsByClassName('lazy');
+    console.log('Found ' + lazy.length + ' lazy images');
+}
+
+function lazyLoad(){
+    for(var i=0; i<lazy.length; i++){
+        if(isInViewport(lazy[i])){
+            if (lazy[i].getAttribute('data-src')){
+                lazy[i].src = lazy[i].getAttribute('data-src');
+                lazy[i].removeAttribute('data-src');
+            }
+        }
+    }
+
+    cleanLazy();
+}
+
+function cleanLazy(){
+    lazy = Array.prototype.filter.call(lazy, function(l){ return l.getAttribute('data-src');});
+}
+
+function isInViewport(el){
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.bottom >= 0 &&
+        rect.right >= 0 &&
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+     );
+}
+
+function registerListener(event, func) {
+    if (window.addEventListener) {
+        window.addEventListener(event, func)
+    } else {
+        window.attachEvent('on' + event, func)
+    }
+}
+</script>
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#openfoam" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              OpenFOAM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<gcse:searchbox-only>Search enableAutoComplete="true"</gcse:searchbox-only>
+
+<hr>
+<div class="md-search" 
+  data-md-component="search" 
+  role="dialog" 
+  aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+
+<hr>
+
+ <script async src="https://cse.google.com/cse.js?cx=d3873894b6f614f35">
+</script>
+<div class="gcse-search" ></div>
+
+<br><ol>
+  <li>gcse-searchresults-only
+    <li>gcse-search
+</ol>
+Look and feel gsce: https://programmablesearchengine.google.com/controlpanel/lookandfeel?cx=d3873894b6f614f35
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/Oa8choo2/testzens" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M216.3 158.4H137C97 147.9 6.5 150.6 6.5 233.2c0 30.1 15 51.2 35 61-25.1 23-37 33.8-37 49.2 0 11 4.5 21.1 17.9 26.8C8.1 383.6 0 393.3 0 411.6c0 32.1 28 50.8 101.6 50.8 70.8 0 111.8-26.4 111.8-73.2 0-58.7-45.2-56.5-151.6-63l13.4-21.6c27.3 7.6 118.7 10 118.7-67.9 0-18.7-7.7-31.7-15-41.1l37.4-2.8v-34.5zm-63.4 241.9c0 32.1-104.9 32.1-104.9 2.4 0-8.1 5.3-15 10.6-21.5 77.7 5.3 94.3 3.4 94.3 19.1m-50.8-134.6c-52.8 0-50.5-71.2 1.2-71.2 49.5 0 50.8 71.2-1.2 71.2m133.3 100.5v-32.1c26.7-3.7 27.2-2 27.2-11V203.6c0-8.5-2.1-7.4-27.2-16.3l4.5-32.9h84.2v168.7c0 6.5.4 7.3 6.5 8.1l20.7 2.8v32.1H235.4zm52.5-244.3c-23.2 0-36.6-13.4-36.6-36.6s13.4-35.8 36.6-35.8c23.6 0 37 12.6 37 35.8s-13.4 36.6-37 36.6M512 350.5c-17.5 8.5-43.1 16.3-66.3 16.3-48.4 0-66.7-19.5-66.7-65.5V194.8c0-5.4 1-4.1-31.7-4.1v-36.2c35.8-4.1 50-22 54.5-66.3h38.6c0 65.8-1.3 61.8 3.3 61.8H501v40.6h-60.6v97.1c0 6.9-4.9 51.4 60.6 26.8l11 35.8z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="section/index.html" class="md-tabs__link">
+          
+  
+  Section
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="software/index.html" class="md-tabs__link">
+          
+  
+  Software
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Oa8choo2/testzens" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M216.3 158.4H137C97 147.9 6.5 150.6 6.5 233.2c0 30.1 15 51.2 35 61-25.1 23-37 33.8-37 49.2 0 11 4.5 21.1 17.9 26.8C8.1 383.6 0 393.3 0 411.6c0 32.1 28 50.8 101.6 50.8 70.8 0 111.8-26.4 111.8-73.2 0-58.7-45.2-56.5-151.6-63l13.4-21.6c27.3 7.6 118.7 10 118.7-67.9 0-18.7-7.7-31.7-15-41.1l37.4-2.8v-34.5zm-63.4 241.9c0 32.1-104.9 32.1-104.9 2.4 0-8.1 5.3-15 10.6-21.5 77.7 5.3 94.3 3.4 94.3 19.1m-50.8-134.6c-52.8 0-50.5-71.2 1.2-71.2 49.5 0 50.8 71.2-1.2 71.2m133.3 100.5v-32.1c26.7-3.7 27.2-2 27.2-11V203.6c0-8.5-2.1-7.4-27.2-16.3l4.5-32.9h84.2v168.7c0 6.5.4 7.3 6.5 8.1l20.7 2.8v32.1H235.4zm52.5-244.3c-23.2 0-36.6-13.4-36.6-36.6s13.4-35.8 36.6-35.8c23.6 0 37 12.6 37 35.8s-13.4 36.6-37 36.6M512 350.5c-17.5 8.5-43.1 16.3-66.3 16.3-48.4 0-66.7-19.5-66.7-65.5V194.8c0-5.4 1-4.1-31.7-4.1v-36.2c35.8-4.1 50-22 54.5-66.3h38.6c0 65.8-1.3 61.8 3.3 61.8H501v40.6h-60.6v97.1c0 6.9-4.9 51.4 60.6 26.8l11 35.8z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="section/index.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index.md for section
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="software/index.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+    <a href="https://github.com/Oa8choo2/testzens/edit/main/docs/openFOAM.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/Oa8choo2/testzens/raw/main/docs/openFOAM.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-code-2" viewBox="0 0 24 24"><path d="M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35"/><path d="M14 2v5a1 1 0 0 0 1 1h5M5 16l-3 3 3 3M9 22l3-3-3-3"/></svg>
+    </a>
+  
+
+
+<h1 id="openfoam">OpenFOAM<a class="headerlink" href="#openfoam" title="Permanent link">&para;</a></h1>
+<p>In this chapter, we outline best practices for using the centrally
+provided OpenFOAM installations on the VSC {{hpc}} infrastructure.</p>
+<h2 id="different-openfoam-releases">Different OpenFOAM releases<a class="headerlink" href="#different-openfoam-releases" title="Permanent link">&para;</a></h2>
+<p>There are currently three different sets of versions of OpenFOAM
+available, each with its own versioning scheme:</p>
+<ul>
+<li>
+<p>OpenFOAM versions released via <a href="https://openfoam.com">https://openfoam.com</a>: <code>v3.0+</code>,
+    <code>v1706</code></p>
+<ul>
+<li>see also <a href="https://openfoam.com/history/">https://openfoam.com/history/</a></li>
+</ul>
+</li>
+<li>
+<p>OpenFOAM versions released via <a href="https://openfoam.org">https://openfoam.org</a>: <code>v4.1</code>,
+    <code>v5.0</code></p>
+<ul>
+<li>see also <a href="https://openfoam.org/download/history/">https://openfoam.org/download/history/</a></li>
+</ul>
+</li>
+</ul>
+<p>Make sure you know which flavor of OpenFOAM you want to use, since there
+are important differences between the different versions w.r.t.
+features. If the OpenFOAM version you need is not available yet, see <a href="../FAQ/#i-want-to-use-software-that-is-not-available-on-the-clusters-yet">I want to use software that is not available on the clusters yet</a>.</p>
+<h2 id="documentation-training-material">Documentation &amp; training material<a class="headerlink" href="#documentation-training-material" title="Permanent link">&para;</a></h2>
+<p>The best practices outlined here focus specifically on the use of
+OpenFOAM on the VSC {{hpc}} infrastructure. As such, they are intended to
+augment the existing OpenFOAM documentation rather than replace it. For
+more general information on using OpenFOAM, please refer to:</p>
+<ul>
+<li>
+<p>OpenFOAM websites:</p>
+<ul>
+<li>
+<p><a href="https://openfoam.com">https://openfoam.com</a></p>
+</li>
+<li>
+<p><a href="https://openfoam.org">https://openfoam.org</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>OpenFOAM user guides:</p>
+<ul>
+<li>
+<p><a href="https://www.openfoam.com/documentation/user-guide">https://www.openfoam.com/documentation/user-guide</a></p>
+</li>
+<li>
+<p><a href="https://cfd.direct/openfoam/user-guide/">https://cfd.direct/openfoam/user-guide/</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>OpenFOAM C++ source code guide: <a href="https://cpp.openfoam.org">https://cpp.openfoam.org</a></p>
+</li>
+<li>
+<p>tutorials: <a href="https://wiki.openfoam.com/Tutorials">https://wiki.openfoam.com/Tutorials</a></p>
+</li>
+<li>
+<p>recordings of "<em>Introduction to OpenFOAM</em>" training session at
+    UGent (May 2016):
+    <a href="https://www.youtube.com/playlist?list=PLqxhJj6bcnY9RoIgzeF6xDh5L9bbeK3BL">https://www.youtube.com/playlist?list=PLqxhJj6bcnY9RoIgzeF6xDh5L9bbeK3BL</a></p>
+</li>
+</ul>
+<p>Other useful OpenFOAM documentation:</p>
+<ul>
+<li><a href="https://github.com/ParticulateFlow/OSCCAR-doc/blob/master/openFoamUserManual_PFM.pdf">https://github.com/ParticulateFlow/OSCCAR-doc/blob/master/openFoamUserManual_PFM.pdf</a></li>
+</ul>
+<h2 id="preparing-the-environment">Preparing the environment<a class="headerlink" href="#preparing-the-environment" title="Permanent link">&para;</a></h2>
+<p>To prepare the environment of your shell session or job for using
+OpenFOAM, there are a couple of things to take into account.</p>
+<h3 id="picking-and-loading-an-openfoam-module">Picking and loading an <code>OpenFOAM</code> module<a class="headerlink" href="#picking-and-loading-an-openfoam-module" title="Permanent link">&para;</a></h3>
+<p>First of all, you need to pick and load one of the available <code>OpenFOAM</code>
+modules. To get an overview of the available modules, run
+'<code>module avail OpenFOAM</code>'. For example:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ module avail OpenFOAM
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>-------------------- /apps/gent/RHEL9/zen4-ib/modules/all ---------------------
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>   OpenFOAM-Extend/4.1-20210705-foss-2023a-Python-2.7.18
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>   OpenFOAM/v2312-foss-2023a
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>   OpenFOAM/10-foss-2023a
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>   OpenFOAM/11-foss-2023a
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>   OpenFOAM/12-foss-2023a                                (D)
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  Where:
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>   D:  Default Module
+</span></code></pre></div>
+<p>To pick a module, take into account the differences between the
+different OpenFOAM versions w.r.t. features and API (see also <a href="./#different-openfoam-releases">Different OpenFOAM releases</a>). If
+multiple modules are available that fulfill your requirements, give
+preference to those providing a more recent OpenFOAM version, and to the
+ones that were installed with a more recent compiler toolchain; for
+example, prefer a module that includes <code>intel-{{ current_year}}b</code> in its name over one
+that includes <code>intel-{{ current_year}}a</code>.</p>
+<p>To prepare your environment for using OpenFOAM, load the <code>OpenFOAM</code>
+module you have picked; for example:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>module load OpenFOAM/11-foss-2023a
+</span></code></pre></div>
+<h3 id="sourcing-the-foam_bash-script">Sourcing the <code>$FOAM_BASH</code> script<a class="headerlink" href="#sourcing-the-foam_bash-script" title="Permanent link">&para;</a></h3>
+<p>OpenFOAM provides a script that you should <code>source</code> to further prepare
+the environment. This script will define some additional environment
+variables that are required to use OpenFOAM. The <code>OpenFOAM</code> modules
+define an environment variable named <code>FOAM_BASH</code> that specifies the
+location to this script. Assuming you are using <code>bash</code> in your shell
+session or job script, you should always run the following command after
+loading an <code>OpenFOAM</code> module:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>source $FOAM_BASH
+</span></code></pre></div>
+<h3 id="defining-utility-functions-used-in-tutorial-cases">Defining utility functions used in tutorial cases<a class="headerlink" href="#defining-utility-functions-used-in-tutorial-cases" title="Permanent link">&para;</a></h3>
+<p>If you would like to use the <code>getApplication</code>, <code>runApplication</code>,
+<code>runParallel</code>, <code>cloneCase</code> and/or <code>compileApplication</code> functions that
+are used in OpenFOAM tutorials, you also need to <code>source</code> the
+<code>RunFunctions</code> script:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>source $WM_PROJECT_DIR/bin/tools/RunFunctions
+</span></code></pre></div>
+<p>Note that this needs to be done <strong>after</strong> sourcing <code>$FOAM_BASH</code> to make sure
+<code>$WM_PROJECT_DIR</code> is defined.</p>
+<h3 id="dealing-with-floating-point-errors">Dealing with floating-point errors<a class="headerlink" href="#dealing-with-floating-point-errors" title="Permanent link">&para;</a></h3>
+<p>If you are seeing <code>Floating Point Exception</code> errors, you can undefine
+the <code>$FOAM_SIGFPE</code> environment variable that is defined by the
+<code>$FOAM_BASH</code> script as follows:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>unset $FOAM_SIGFPE
+</span></code></pre></div>
+<p>Note that this only prevents OpenFOAM from propagating floating point
+exceptions, which then results in terminating the simulation. However,
+it does not prevent that illegal operations (like a division by zero)
+are being executed; if <code>NaN</code> values appear in your results, floating
+point errors are occurring.</p>
+<p>As such, *<em>you should *not</em> use this in production runs. Instead, you should track down the root cause of the floating
+point errors, and try to prevent them from occurring at all.</p>
+<h2 id="openfoam-workflow">OpenFOAM workflow<a class="headerlink" href="#openfoam-workflow" title="Permanent link">&para;</a></h2>
+<p>The general workflow for OpenFOAM consists of multiple steps. Prior to
+running the actual simulation, some <em>pre-processing</em> needs to be done:</p>
+<ul>
+<li>
+<p>generate the mesh;</p>
+</li>
+<li>
+<p>decompose the domain into subdomains using <code>decomposePar</code> (only for
+    parallel OpenFOAM simulations);</p>
+</li>
+</ul>
+<p>After running the simulation, some <em>post-processing</em> steps are typically
+performed:</p>
+<ul>
+<li>
+<p>reassemble the decomposed domain using <code>reconstructPar</code> (only for
+    parallel OpenFOAM simulations, and optional since some
+    postprocessing can also be done on decomposed cases);</p>
+</li>
+<li>
+<p>evaluate or further process the simulation results, either visually
+    using ParaView (for example, via the <code>paraFoam</code> tool; use
+    <code>paraFoam -builtin</code> for decomposed cases) or using command-line
+    tools like <code>postProcess</code>; see also
+    <a href="https://cfd.direct/openfoam/user-guide/postprocessing">https://cfd.direct/openfoam/user-guide/postprocessing</a>.</p>
+</li>
+</ul>
+<p>Depending on the size of the domain and the desired format of the
+results, these pre- and post-processing steps can be run either
+before/after the job running the actual simulation, either on the HPC
+infrastructure or elsewhere, or as a part of the job that runs the
+OpenFOAM simulation itself.</p>
+<p>Do make sure you are using the same OpenFOAM version in each of the
+steps. Meshing can be done sequentially (i.e., on a single core) using
+for example <code>blockMesh</code>, or in parallel using more advanced meshing
+tools like <code>snappyHexMesh</code>, which is highly recommended for large cases.
+For more details, see <a href="https://cfd.direct/openfoam/user-guide/mesh/">https://cfd.direct/openfoam/user-guide/mesh/</a>.</p>
+<p>One important aspect to keep in mind for 'offline' pre-processing is
+that the domain decomposition needs to match the number of processor
+cores that are used for the actual simulation, see also <a href="./#domain-decomposition-and-number-of-processor-cores">Domain decomposition and number of processor cores</a>.</p>
+<p>For post-processing you can either download the simulation results to a
+local workstation, or do the post-processing (interactively) on the HPC
+infrastructure, for example on the login nodes or using an interactive
+session on a workernode. This may be interesting to avoid the overhead
+of downloading the results locally.</p>
+<h2 id="running-openfoam-in-parallel">Running OpenFOAM in parallel<a class="headerlink" href="#running-openfoam-in-parallel" title="Permanent link">&para;</a></h2>
+<p>For general information on running OpenFOAM in parallel, see
+<a href="https://cfd.direct/openfoam/user-guide/running-applications-parallel/">https://cfd.direct/openfoam/user-guide/running-applications-parallel/</a>.</p>
+<h3 id="the-parallel-option">The <code>-parallel</code> option<a class="headerlink" href="#the-parallel-option" title="Permanent link">&para;</a></h3>
+<p>When running OpenFOAM in parallel, <strong>do not forget to specify the <code>-parallel</code> option</strong>, to avoid running the same OpenFOAM
+simulation <span class="arithmatex">\(N\)</span> times, rather than running it once using <span class="arithmatex">\(N\)</span> processor
+cores.</p>
+<p>You can check whether OpenFOAM was run in parallel in the output of the
+main command: the OpenFOAM header text should only be included <em>once</em> in
+the output, and it should specify a value different than '<code>1</code>' in the
+<code>nProcs</code> field. Note that most pre- and post-processing utilities like
+<code>blockMesh</code>, <code>decomposePar</code> and <code>reconstructPar</code> can not be run in
+parallel.</p>
+<h3 id="using-mympirun">Using <code>mympirun</code><a class="headerlink" href="#using-mympirun" title="Permanent link">&para;</a></h3>
+<p>It is highly recommended to use the <code>mympirun</code> command when running
+parallel OpenFOAM simulations rather than the standard <code>mpirun</code> command;
+see <a href="../mympirun/#mympirun">Mympiprun</a> for more information on <code>mympirun</code>.</p>
+<p>See <a href="../mympirun/#basic-usage">Basic usage</a> for how to get started with <code>mympirun</code>.</p>
+<p>To pass down the environment variables required to run OpenFOAM (which
+were defined by the <code>$FOAM_BASH</code> script, see <a href="./#preparing-the-environment">Preparing the environment</a>) to each of the MPI
+processes used in a parallel OpenFOAM execution, the
+<code>$MYMPIRUN_VARIABLESPREFIX</code> environment variable must be defined as
+follows, prior to running the OpenFOAM simulation with <code>mympirun</code>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>export MYMPIRUN_VARIABLESPREFIX=WM_PROJECT,FOAM,MPI
+</span></code></pre></div>
+<p>Whenever you are instructed to use a command like <code>mpirun -np &lt;N&gt; ...</code>,
+use <code>mympirun ...</code> instead; <code>mympirun</code> will automatically detect the
+number of processor cores that are available (see also <a href="../mympirun/#controlling-number-of-processes">Controlling number of processes</a>).</p>
+<h3 id="domain-decomposition-and-number-of-processor-cores">Domain decomposition and number of processor cores<a class="headerlink" href="#domain-decomposition-and-number-of-processor-cores" title="Permanent link">&para;</a></h3>
+<p>To run OpenFOAM in parallel, you must decompose the domain into multiple
+subdomains. Each subdomain will be processed by OpenFOAM on one
+processor core.</p>
+<p>Since <code>mympirun</code> will automatically use all available cores, you need to
+make sure that the number of subdomains matches the number of processor
+cores that will be used by <code>mympirun</code>. If not, you may run into an error
+message like:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>number of processor directories = 4 is not equal to the number of processors = 16
+</span></code></pre></div>
+<p>In this case, the case was decomposed in 4 subdomains, while the
+OpenFOAM simulation was started with 16 processes through <code>mympirun</code>. To
+match the number of subdomains and the number of processor cores used by
+<code>mympirun</code>, you should either:</p>
+<ul>
+<li>
+<p>adjust the value for <code>numberOfSubdomains</code> in
+    <code>system/decomposeParDict</code> (and adjust the value for <code>n</code> accordingly
+    in the domain decomposition coefficients), and run <code>decomposePar</code>
+    again; or</p>
+</li>
+<li>
+<p>submit your job requesting exactly the same number of processor
+    cores as there are subdomains (see the number of <code>processor*</code>
+    directories that were created by <code>decomposePar</code>)</p>
+</li>
+</ul>
+<p>See <a href="../mympirun/#controlling-number-of-processes">Controlling number of processes</a> to control the number of process <code>mympirun</code> will start.</p>
+<p>This is interesting if you require more memory per core than is
+available by default. Note that the decomposition method being used
+(which is specified in <code>system/decomposeParDict</code>) has significant impact
+on the performance of a parallel OpenFOAM simulation. Good decomposition
+methods (like <code>metis</code> or <code>scotch</code>) try to limit communication overhead
+by minimising the number of processor boundaries.</p>
+<p>To visualise the processor domains, use the following command:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>mympirun foamToVTK -parallel -constant -time 0 -excludePatches &#39;(&quot;.*.&quot;)&#39;
+</span></code></pre></div>
+<p>and then load the VTK files generated in the <code>VTK</code> folder into ParaView.</p>
+<h2 id="running-openfoam-on-a-shared-filesystem">Running OpenFOAM on a shared filesystem<a class="headerlink" href="#running-openfoam-on-a-shared-filesystem" title="Permanent link">&para;</a></h2>
+<p>OpenFOAM is known to significantly stress shared filesystems, since a
+lot of (small) files are generated during an OpenFOAM simulation. Shared
+filesystems are typically optimised for dealing with (a small number of)
+large files, and are usually a poor match for workloads that involve a
+(very) large number of small files.</p>
+<p>Take into account the following guidelines for your OpenFOAM jobs, which
+all relate to input parameters for the OpenFOAM simulation that you can
+specify in <code>system/controlDict</code> (see also
+<a href="https://cfd.direct/openfoam/user-guide/controldict">https://cfd.direct/openfoam/user-guide/controldict</a>).</p>
+<ul>
+<li>
+<p>instruct OpenFOAM to write out results at a reasonable frequency, <strong>certainly <em>not</em></strong> for every single time step}; you can control this using the <code>writeControl</code>, <code>writeInterval</code>, etc. keywords;</p>
+</li>
+<li>
+<p>consider only retaining results for the last couple of time steps,
+    see the <code>purgeWrite</code> keyword;</p>
+</li>
+<li>
+<p>consider writing results for only part of the domain (e.g., a line
+    of plane) rather than the entire domain;</p>
+</li>
+<li>
+<p>if you do not plan to change the parameters of the OpenFOAM
+    simulation while it is running, set <strong>runTimeModifiable</strong> to <strong>false</strong> to avoid that OpenFOAM re-reads each
+    of the <code>system/*Dict</code> files at every time step;</p>
+</li>
+<li>
+<p>if the results per individual time step are large, consider setting
+    <code>writeCompression</code> to <code>true</code>;</p>
+</li>
+</ul>
+<p>For modest OpenFOAM simulations where a single workernode suffices,
+consider using the local disk of the workernode as working directory
+(accessible via <code>$VSC_SCRATCH_NODE</code>), rather than the shared
+<code>$VSC_SCRATCH</code> filesystem. **Certainly do not use a subdirectory in <code>$VSC_HOME</code> or <code>$VSC_DATA</code>, since these shared filesystems are too slow
+for these types of workloads.</p>
+<p _="%" endif="endif">{% if site == gent %}
+For large parallel OpenFOAM simulations on the {{university}} Tier-2 clusters, consider
+using the alternative shared scratch filesystem <code>$VSC_SCRATCH_ARCANINE</code>
+(see <a href="../running_jobs_with_input_output_data/#pre-defined-user-directories">Pre-defined user directories</a>).</p>
+<p>These guidelines are especially important for large-scale OpenFOAM
+simulations that involve more than a couple of dozen of processor cores.</p>
+<h2 id="using-own-solvers-with-openfoam">Using own solvers with OpenFOAM<a class="headerlink" href="#using-own-solvers-with-openfoam" title="Permanent link">&para;</a></h2>
+<p>See <a href="https://cfd.direct/openfoam/user-guide/compiling-applications/">https://cfd.direct/openfoam/user-guide/compiling-applications/</a>.</p>
+<h2 id="example-openfoam-job-script">Example OpenFOAM job script<a class="headerlink" href="#example-openfoam-job-script" title="Permanent link">&para;</a></h2>
+<p>Example job script for <code>damBreak</code> OpenFOAM tutorial (see also
+<a href="https://cfd.direct/openfoam/user-guide/dambreak">https://cfd.direct/openfoam/user-guide/dambreak</a>):</p>
+<div class="language-bash highlight"><span class="filename">OpenFOAM_damBreak.sh</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="o">{</span>%<span class="w"> </span>include<span class="w"> </span><span class="s2">&quot;./examples/OpenFOAM/OpenFOAM_damBreak.sh&quot;</span><span class="w"> </span>%<span class="o">}</span>
+</span></code></pre></div>
+
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">hpc</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">agat</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">api</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">arcanine</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">blockmesh</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">cas</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">clonecase</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">compileapplication</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">controldict</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">cpp</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">dambreak</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">decomposepar</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">decomposepardict</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">eb</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ega</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">endif</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ete</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">excludepatches</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">exe</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">foamtovtk</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">getapplication</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">github</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">gz</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">https</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ict</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">icu</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ield</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ip</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">irectory</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">isk</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">lua</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">minimising</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mpi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mpirun</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mympiprun</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mympirun</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">nec</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ngs</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">nprocs</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ntl</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">numberofsubdomains</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ome</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">omp</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ompi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ood</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">openfoam</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">openfoamusermanual</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">optimise</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">optimised</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">osc</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">osccar</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ount</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">parafoam</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">paraview</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">particulateflow</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">pdf</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">pfm</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">procs</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">proj</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">purgewrite</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">py</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">reconstructpar</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">rhel</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">runapplication</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">runfunctions</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">runparallel</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">runtimemodifiable</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">sigfpe</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">snappyhexmesh</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">sys</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">thu</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">toolchain</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ua</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">uct</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ud</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ugent</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">umi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">variablesprefix</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ve</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">visualise</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">vsc</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">vtk</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">workernode</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">writecompression</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">writecontrol</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">writeinterval</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">youtube</span>
+      
+    
+  </nav>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        custom footer
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+<h4>Cookie consent</h4>
+<p>    We try not to use any cookies. 
+
+    We do not need your consent.  
+
+    Maybe some third-party cookie harvesters will try to get consent from you.  
+
+    Contact cookies@ugent.be for more information.  
+
+</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Reject</button>
+    
+    
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":".","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.prune","navigation.path","navigation.tabs","navigation.tabs.sticky","navigation.sections","navigation.top","navigation.tracking","search.highlight","toc.follow","toc.integrate","content.action.edit","content.action.view"],"search":"assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.8ffeb9c9.min.js"></script>
+      
+    
+  </body>
+</html>

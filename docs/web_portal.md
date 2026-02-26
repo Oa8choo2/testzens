@@ -1,3 +1,57 @@
+---
+updated_at: 2026-02-05T11:04:43+01:00
+tags:
+  - hpc
+  - abaqus
+  - accountpage
+  - cae
+  - cas
+  - config
+  - dotfiles
+  - eb
+  - edu
+  - ete
+  - exe
+  - firefox
+  - github
+  - https
+  - icu
+  - img
+  - ip
+  - irectory
+  - jupyter
+  - linux
+  - lua
+  - nds
+  - nec
+  - ntl
+  - ome
+  - omp
+  - ondemand
+  - ood
+  - openondemand
+  - orte
+  - osc
+  - ount
+  - png
+  - py
+  - rw
+  - sys
+  - tf
+  - thu
+  - tmux
+  - ua
+  - uct
+  - ud
+  - ueue
+  - ugent
+  - untick
+  - ve
+  - vsc
+  - walkthrough
+  - workernode
+  - youtube
+---
 # Using the HPC-UGent web portal
 
 The HPC-UGent web portal provides "one stop shop" for the HPC-UGent
@@ -296,3 +350,4 @@ or it will add the additional commands and output with every interactive app you
 ## Custom apps
 
 * [ABAQUS for CAE course](web_portal_custom_apps/abaqus_cae.md)
+

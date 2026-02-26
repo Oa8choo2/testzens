@@ -1,3 +1,67 @@
+---
+updated_at: 2026-02-05T11:04:43+01:00
+tags:
+  - hpc
+  - accelgor
+  - alphafold
+  - amd
+  - arcanine
+  - atac
+  - cas
+  - datacenter
+  - debuginteractive
+  - diskspace
+  - doduo
+  - donphan
+  - eb
+  - edr
+  - epyc
+  - ewi
+  - fwo
+  - gallade
+  - ghent
+  - gpu
+  - gpus
+  - gromacs
+  - hdr
+  - hoste
+  - https
+  - ict
+  - infiniband
+  - irectory
+  - isa
+  - isk
+  - joltik
+  - litleo
+  - mput
+  - ndr
+  - nec
+  - ntl
+  - nvidia
+  - nvl
+  - nvme
+  - ome
+  - omp
+  - ong
+  - organisation
+  - organisations
+  - py
+  - pytorch
+  - rhel
+  - shinx
+  - ssd
+  - stevin
+  - sys
+  - tensorflow
+  - ua
+  - uct
+  - ud
+  - ueue
+  - ugent
+  - ve
+  - vsc
+  - xeon
+---
 # Infrastructure
 
 ## Tier2 clusters of Ghent University
@@ -92,3 +156,4 @@ increased significantly on request. For more information, see our
 ## Infrastructure status
 
 [Check the system status](https://www.ugent.be/hpc/en/infrastructure/status)
+

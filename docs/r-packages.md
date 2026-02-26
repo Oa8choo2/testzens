@@ -1,3 +1,29 @@
+---
+updated_at: 2026-02-05T11:04:43+01:00
+tags:
+  - hpc
+  - basedir
+  - cas
+  - eb
+  - hpcinfra
+  - intalled
+  - ip
+  - irectory
+  - isa
+  - libpaths
+  - mpi
+  - nec
+  - ngs
+  - omp
+  - ompi
+  - organisation
+  - sys
+  - toolchain
+  - toolchains
+  - ua
+  - ve
+  - vsc
+---
 # R packages
 
 !!! note
@@ -45,4 +71,5 @@ installed `R` packages if you want to use them:
 - with a different version of `R`
 - with an `R` compiled with a different version of toolchain
 - if the operating system was changed/updated. 
+
 

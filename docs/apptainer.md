@@ -1,3 +1,74 @@
+---
+title: this is a text on apptainer
+subtitle: this subtitle should help you ...
+updated_at: 2026-02-05T11:04:42+01:00
+tags:
+  - hpc
+  - apptainer
+  - apptainermpi
+  - cachedir
+  - containerisation
+  - debian
+  - diags
+  - easybuild
+  - eb
+  - ete
+  - exe
+  - flavour
+  - flavours
+  - github
+  - hpcinfo
+  - hpcinfra
+  - htm
+  - https
+  - icc
+  - ict
+  - icu
+  - img
+  - infiniband
+  - ip
+  - isa
+  - isk
+  - linux
+  - lmod
+  - mellanox
+  - mkdir
+  - mpi
+  - mpiicc
+  - mpirun
+  - mput
+  - mympirun
+  - myscript
+  - nvcr
+  - nvidia
+  - oci
+  - ome
+  - omp
+  - ompi
+  - ong
+  - ppn
+  - py
+  - shm
+  - shub
+  - sys
+  - tensorflow
+  - tf
+  - thu
+  - tmp
+  - tmpdir
+  - ua
+  - uct
+  - ud
+  - ugent
+  - ugentmpi
+  - url
+  - usr
+  - ve
+  - vsc
+  - walltime
+  - workernode
+---
+
 # Apptainer (formally known as Singularity)
 
 ## What is Apptainer?
@@ -184,3 +255,4 @@ Example MPI job script:
 module load intel vsc-mympirun
 mympirun --impi-fallback apptainer exec $VSC_SCRATCH/Debian8_UGentMPI.img ~/ring_debian
 ```
+

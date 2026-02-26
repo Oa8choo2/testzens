@@ -1,0 +1,2017 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A new project generated from the default template project.">
+      
+      
+        <meta name="author" content="<your name here>">
+      
+      
+        <link rel="canonical" href="http://localhost:8300/introduction.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="images/favicon.png">
+      <meta name="generator" content="zensical-0.0.19">
+    
+    
+<meta name="google-site-verification" content="nJqh3TVb_44fMl2gS61agt_bRNFEaI496UaXYL-wLZI" />
+
+    
+      
+        
+      
+      <link rel="stylesheet" href="assets/stylesheets/modern/main.d4922b3c.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libertinus+Sans:300,300i,400,400i,500,500i,700,700i%7CLibertinus+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Libertinus Sans";--md-code-font:"Libertinus Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+    
+    
+<script>
+  (function() {
+    var cx = 'd3873894b6f614f35';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+<script>
+registerListener('load', setLazy);
+registerListener('load', lazyLoad);
+registerListener('scroll', lazyLoad);
+
+var lazy = [];
+
+function setLazy(){
+    lazy = document.getElementsByClassName('lazy');
+    console.log('Found ' + lazy.length + ' lazy images');
+}
+
+function lazyLoad(){
+    for(var i=0; i<lazy.length; i++){
+        if(isInViewport(lazy[i])){
+            if (lazy[i].getAttribute('data-src')){
+                lazy[i].src = lazy[i].getAttribute('data-src');
+                lazy[i].removeAttribute('data-src');
+            }
+        }
+    }
+
+    cleanLazy();
+}
+
+function cleanLazy(){
+    lazy = Array.prototype.filter.call(lazy, function(l){ return l.getAttribute('data-src');});
+}
+
+function isInViewport(el){
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.bottom >= 0 &&
+        rect.right >= 0 &&
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+     );
+}
+
+function registerListener(event, func) {
+    if (window.addEventListener) {
+        window.addEventListener(event, func)
+    } else {
+        window.attachEvent('on' + event, func)
+    }
+}
+</script>
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction-to-hpc" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction to HPC
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<gcse:searchbox-only>Search enableAutoComplete="true"</gcse:searchbox-only>
+
+<hr>
+<div class="md-search" 
+  data-md-component="search" 
+  role="dialog" 
+  aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+
+<hr>
+
+ <script async src="https://cse.google.com/cse.js?cx=d3873894b6f614f35">
+</script>
+<div class="gcse-search" ></div>
+
+<br><ol>
+  <li>gcse-searchresults-only
+    <li>gcse-search
+</ol>
+Look and feel gsce: https://programmablesearchengine.google.com/controlpanel/lookandfeel?cx=d3873894b6f614f35
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/Oa8choo2/testzens" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M216.3 158.4H137C97 147.9 6.5 150.6 6.5 233.2c0 30.1 15 51.2 35 61-25.1 23-37 33.8-37 49.2 0 11 4.5 21.1 17.9 26.8C8.1 383.6 0 393.3 0 411.6c0 32.1 28 50.8 101.6 50.8 70.8 0 111.8-26.4 111.8-73.2 0-58.7-45.2-56.5-151.6-63l13.4-21.6c27.3 7.6 118.7 10 118.7-67.9 0-18.7-7.7-31.7-15-41.1l37.4-2.8v-34.5zm-63.4 241.9c0 32.1-104.9 32.1-104.9 2.4 0-8.1 5.3-15 10.6-21.5 77.7 5.3 94.3 3.4 94.3 19.1m-50.8-134.6c-52.8 0-50.5-71.2 1.2-71.2 49.5 0 50.8 71.2-1.2 71.2m133.3 100.5v-32.1c26.7-3.7 27.2-2 27.2-11V203.6c0-8.5-2.1-7.4-27.2-16.3l4.5-32.9h84.2v168.7c0 6.5.4 7.3 6.5 8.1l20.7 2.8v32.1H235.4zm52.5-244.3c-23.2 0-36.6-13.4-36.6-36.6s13.4-35.8 36.6-35.8c23.6 0 37 12.6 37 35.8s-13.4 36.6-37 36.6M512 350.5c-17.5 8.5-43.1 16.3-66.3 16.3-48.4 0-66.7-19.5-66.7-65.5V194.8c0-5.4 1-4.1-31.7-4.1v-36.2c35.8-4.1 50-22 54.5-66.3h38.6c0 65.8-1.3 61.8 3.3 61.8H501v40.6h-60.6v97.1c0 6.9-4.9 51.4 60.6 26.8l11 35.8z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="section/index.html" class="md-tabs__link">
+          
+  
+  Section
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="software/index.html" class="md-tabs__link">
+          
+  
+  Software
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Oa8choo2/testzens" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M216.3 158.4H137C97 147.9 6.5 150.6 6.5 233.2c0 30.1 15 51.2 35 61-25.1 23-37 33.8-37 49.2 0 11 4.5 21.1 17.9 26.8C8.1 383.6 0 393.3 0 411.6c0 32.1 28 50.8 101.6 50.8 70.8 0 111.8-26.4 111.8-73.2 0-58.7-45.2-56.5-151.6-63l13.4-21.6c27.3 7.6 118.7 10 118.7-67.9 0-18.7-7.7-31.7-15-41.1l37.4-2.8v-34.5zm-63.4 241.9c0 32.1-104.9 32.1-104.9 2.4 0-8.1 5.3-15 10.6-21.5 77.7 5.3 94.3 3.4 94.3 19.1m-50.8-134.6c-52.8 0-50.5-71.2 1.2-71.2 49.5 0 50.8 71.2-1.2 71.2m133.3 100.5v-32.1c26.7-3.7 27.2-2 27.2-11V203.6c0-8.5-2.1-7.4-27.2-16.3l4.5-32.9h84.2v168.7c0 6.5.4 7.3 6.5 8.1l20.7 2.8v32.1H235.4zm52.5-244.3c-23.2 0-36.6-13.4-36.6-36.6s13.4-35.8 36.6-35.8c23.6 0 37 12.6 37 35.8s-13.4 36.6-37 36.6M512 350.5c-17.5 8.5-43.1 16.3-66.3 16.3-48.4 0-66.7-19.5-66.7-65.5V194.8c0-5.4 1-4.1-31.7-4.1v-36.2c35.8-4.1 50-22 54.5-66.3h38.6c0 65.8-1.3 61.8 3.3 61.8H501v40.6h-60.6v97.1c0 6.9-4.9 51.4 60.6 26.8l11 35.8z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="section/index.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index.md for section
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="software/index.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+    <a href="https://github.com/Oa8choo2/testzens/edit/main/docs/introduction.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/Oa8choo2/testzens/raw/main/docs/introduction.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-code-2" viewBox="0 0 24 24"><path d="M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35"/><path d="M14 2v5a1 1 0 0 0 1 1h5M5 16l-3 3 3 3M9 22l3-3-3-3"/></svg>
+    </a>
+  
+
+
+<h1 id="introduction-to-hpc">Introduction to HPC<a class="headerlink" href="#introduction-to-hpc" title="Permanent link">&para;</a></h1>
+<h2 id="what-is-hpc">What is HPC?<a class="headerlink" href="#what-is-hpc" title="Permanent link">&para;</a></h2>
+<p>"<strong>High Performance Computing</strong>" (HPC) is computing on a "<em>Supercomputer</em>", a computer with at the
+frontline of contemporary processing capacity -- particularly speed of
+calculation and available memory.</p>
+<p>While the supercomputers in the early days (around 1970) used only a few
+processors, in the 1990s machines with thousands of processors began to
+appear and, by the end of the 20<sup>th</sup> century, massively parallel
+supercomputers with tens of thousands of "off-the-shelf" processors were
+the norm. A large number of dedicated processors are placed in close
+proximity to each other in a computer cluster.</p>
+<p>A <strong>computer cluster</strong> consists of a set of loosely or tightly connected computers that work
+together so that in many respects they can be viewed as a single system.</p>
+<p>The components of a cluster are usually connected to each other through
+fast local area networks ("LAN") with each <em>node</em> (computer used as a
+server) running its own instance of an operating system. Computer
+clusters emerged as a result of convergence of a number of computing
+trends including the availability of low cost microprocessors,
+high-speed networks, and software for high performance distributed
+computing.</p>
+<p>Compute clusters are usually deployed to improve performance and
+availability over that of a single computer, while typically being more
+cost-effective than single computers of comparable speed or
+availability.</p>
+<p>Supercomputers play an important role in the field of computational
+science, and are used for a wide range of computationally intensive
+tasks in various fields, including quantum mechanics, weather
+forecasting, climate research, oil and gas exploration, molecular
+modelling (computing the structures and properties of chemical
+compounds, biological macromolecules, polymers, and crystals), and
+physical simulations (such as simulations of the early moments of the
+universe, airplane and spacecraft aerodynamics, the detonation of
+nuclear weapons, and nuclear fusion). <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<h2 id="what-is-the-hpcinfra">What is the {{ hpcinfra }}?<a class="headerlink" href="#what-is-the-hpcinfra" title="Permanent link">&para;</a></h2>
+<p>The {{ hpc }} is a collection of computers with AMD and/or Intel CPUs, running a
+Linux operating system, shaped like pizza boxes and stored above and
+next to each other in racks, interconnected with copper and fiber
+cables. Their number crunching power is (presently) measured in hundreds
+of billions of floating point operations (gigaflops) and even in
+teraflops.</p>
+<p><img alt="" src="img/ch1-cables1.png" width="245px" />
+<img alt="" src="img/ch1-cables2.png" width="245px" />
+<img alt="" src="img/ch1-cables3.png" width="245px" /></p>
+<p>The {{ hpcinfra }} relies on parallel-processing technology to offer {{ university }} researchers an
+extremely fast solution for all their data processing needs.</p>
+<p>{% if site == antwerpen -%}</p>
+<p>The {{ hpc }} consists of:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">In technical terms</th>
+<th style="text-align: left;">... in human terms</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">over 280 nodes and over 11000 cores</td>
+<td style="text-align: left;">... or the equivalent of 2750 quad-core PCs</td>
+</tr>
+<tr>
+<td style="text-align: left;">over 500 Terabyte of online storage</td>
+<td style="text-align: left;">... or the equivalent of over 60000 DVDs</td>
+</tr>
+<tr>
+<td style="text-align: left;">up to 100 Gbit InfiniBand fiber connections</td>
+<td style="text-align: left;">... or allowing to transfer 3 DVDs per second</td>
+</tr>
+</tbody>
+</table>
+<p>{%- endif %}</p>
+<p>The {{ hpc }} currently consists of:</p>
+<p>{% if site == antwerpen -%}
+Leibniz:</p>
+<ol>
+<li>
+<p>144 compute nodes with 2 14-core Intel E5-2680v4 CPUs (Broadwell
+    generation, 2.4 GHz) and 128 GB RAM, 120 GB local disk</p>
+</li>
+<li>
+<p>8 compute nodes with 2 14-core Intel E5-2680v4 CPUs (Broadwell
+    generation, 2.4 GHz) and 256 GB RAM, 120 GB local disk</p>
+</li>
+<li>
+<p>24 "hopper" compute nodes (recovered from the former Hopper cluster)
+    with 2 ten core Intel E5-2680v2 CPUs (Ivy Bridge generation, 2.8
+    GHz), 256 GB memory, 500 GB local disk</p>
+</li>
+<li>
+<p>2 GPGPU nodes with 2 14-core Intel E5-2680v4 CPUs (Broadwell
+    generation, 2.4 GHz), 128 GB RAM and two NVIDIA Tesla P100 GPUs with
+    16 GB HBM2 memory per GPU, 120 GB local disk</p>
+</li>
+<li>
+<p>1 vector computing node with 1 12-core Intel Xeon Gold 6126 (Skylake
+    generation, 2.6 GHz), 96 GB RAM and 2 NEC SX-Aurora Vector Engines
+    type 10B (per card 8 cores @1.4 GHz, 48 GB HBM2), 240 GB local disk</p>
+</li>
+<li>
+<p>1 Xeon Phi node with 2 14-core Intel E5-2680v4 CPUs (Broadwell
+    generation, 2.4 GHz), 128 GB RAM and Intel Xeon Phi 7220P PCIe card
+    with 16 GB of RAM, 120 GB local disk</p>
+</li>
+<li>
+<p>1 visualisation node with 2 14-core Intel E5-2680v4 CPUs (Broadwell
+    generation, 2.4 GHz), 256 GB RAM and with a NVIDIA P5000 GPU, 120 GB
+    local disk</p>
+</li>
+</ol>
+<p>The nodes are connected using an InfiniBand EDR network except for the
+"hopper" compute nodes that utilize FDR10 InfiniBand.</p>
+<p>Vaughan:</p>
+<ol>
+<li>104 compute nodes with 2 32-core AMD Epyc 7452 (2.35 GHz) and 256 GB
+    RAM, 240 GB local disk</li>
+</ol>
+<p _="%" _-="%-" endif="endif">The nodes are connected using an InfiniBand HDR100 network.</p>
+<p>{% if site == leuven -%}
+1.  ThinKing (thin node cluster)</p>
+<div class="language-text highlight"><pre><span></span><code>-   176 compute nodes with 2 10-core Ivy Bridge processors, 64 GB
+    memory, 300 GB local disk, QDR-IB network
+
+-   32 compute nodes with 2 10-core Ivy Bridge processors, 128 GB
+    memory, 300 GB local disk, QDR-IB network
+
+-   48 compute nodes with 2 12-core Ivy Bridge processors, 64 GB
+    memory, 300 GB local disk, QDR-IB network
+</code></pre></div>
+<ol>
+<li>
+<p>Accelerator partition</p>
+<ul>
+<li>
+<p>8 nodes with 2 8-core Sandy Bridge processors, 64 GB memory, 300
+    GB local disk, DDR-IB network, 2 K20 NVIDIA GPGPUs</p>
+</li>
+<li>
+<p>8 nodes with 2 8-core Sandy Bridge processors, 64 GB memory, 300
+    GB local disk, DDR-IB network, 2 Intel Xeon Phis</p>
+</li>
+<li>
+<p>4 nodes with 2 6-core Xeon 5650 Westmere processors, 24 GB
+    memory, 300 GB local disk, DDR-IB network, 2 Tesla M2070 GPGPUs</p>
+</li>
+<li>
+<p>5 nodes with 2 10-core Haswell Xeon E5-2650v3 processors, 64 GB
+    memory, 300 GB local disk, DDR-IB network, 2 Tesla K40 GPGPUs</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Visualization partition</p>
+<ul>
+<li>2 nodes with 2 10-core Haswell Xeon E5-2650v3 processors, 128 GB
+    memory, 300 GB local disk, DDR-IB network, 2 NVIDIA Quadro K5200
+    GPUs (visualization nodes)</li>
+</ul>
+</li>
+<li>
+<p>Cerebro (shared memory SMP section)</p>
+<ul>
+<li _="%" _-="%-" endif="endif">64 sockets with 10-core Xeon E5-4650 processors, total 14 TB
+    memory, SGI-proprietary NUMAlink6 interconnect, 1 partition has
+    480 cores and 12 TB RAM and another partition has 160 cores and
+    2 TB RAM, both partitions have 10TB local scratch space</li>
+</ul>
+</li>
+</ol>
+<p _="%" _-="%-" endif="endif">{% if site == brussel -%}
+a mix of nodes with AMD and Intel CPUs and different interconnects in
+different sections of the cluster. The cluster also contains a number of
+nodes with NVIDIA GPGPUs. For an up to date list of all clusters and
+their hardware, see 
+<a href="https://vscdocumentation.readthedocs.io/en/latest/brussels/tier2_hardware.html">https://vscdocumentation.readthedocs.io/en/latest/brussels/tier2_hardware.html</a>.</p>
+<p _="%" _-="%-" endif="endif">{% if site == gent -%}
+a set of different compute clusters. For an up to date list of all
+clusters and their hardware, see <a href="https://vscdocumentation.readthedocs.io/en/latest/gent/tier2_hardware.html">https://vscdocumentation.readthedocs.io/en/latest/gent/tier2_hardware.html</a>.</p>
+<p _="%" _-="%-" endif="endif">{% if site == antwerpen -%}
+All the nodes in the {{ hpc }} run under the "{{ operatingsystem }}" operating system, which is a clone
+of "{{ operatingsystembase }}", with <em>cgroups</em> support. </p>
+<p _="%" _-="%-" endif="endif">{% if site == leuven %}
+All the nodes in the run under the "{{ operatingsystem }}"
+operating system. </p>
+<p _="%" _-="%-" endif="endif">{% if site == brussel -%}
+All the nodes in the run under the "{{ operatingsystem }}" operating
+system, which is a clone of "{{ operatingsystembase }}", with <em>cpuset</em> support.</p>
+<p _="%" _-="%-" endif="endif">{% if site == gent -%}
+<strong>Job management</strong> and <strong>job scheduling</strong> are performed by Slurm with a Torque frontend. We advise users to
+adhere to Torque commands mentioned in this document. </p>
+<p>{% if site != gent -%}
+Two tools perform the <strong>Job management</strong> and <strong>job scheduling</strong>:</p>
+<ol>
+<li>
+<p>TORQUE: a resource manager (based on PBS);</p>
+</li>
+<li>
+<p _="%" _-="%-" endif="endif">Moab: job scheduler and management tools.</p>
+</li>
+</ol>
+<p _="%" _-="%-" endif="endif">{% if site == leuven -%}
+<strong>Accounting</strong> is handled by a third tool, i.e., MAM (Moab Accounting Manager).</p>
+<p>{% if site == antwerpen -%}
+For maintenance and monitoring, we use:</p>
+<ol>
+<li>
+<p>Ganglia: monitoring software;</p>
+</li>
+<li>
+<p _="%" _-="%-" endif="endif">Icinga and Nagios: alert manager.</p>
+</li>
+</ol>
+<p>{% if site == leuven -%}
+For maintenance and monitoring, we use:</p>
+<ol>
+<li>
+<p>Ganglia: monitoring software;</p>
+</li>
+<li>
+<p _="%" _-="%-" endif="endif">HP Insight Cluster Management Utility.</p>
+</li>
+</ol>
+<p>{% if site == leuven -%}
+For maintenance and monitoring, we use:</p>
+<ol>
+<li>
+<p>Bright Cluster Manager;</p>
+</li>
+<li>
+<p _="%" _-="%-" endif="endif">Zabbix: monitoring system.</p>
+</li>
+</ol>
+<h2 id="what-the-hpc-infrastucture-is-not">What the HPC infrastucture is <em>not</em><a class="headerlink" href="#what-the-hpc-infrastucture-is-not" title="Permanent link">&para;</a></h2>
+<p>The HPC infrastructure is <em>not</em> a magic computer that automatically:</p>
+<ol>
+<li>
+<p>runs your PC-applications much faster for bigger problems;</p>
+</li>
+<li>
+<p>develops your applications;</p>
+</li>
+<li>
+<p>solves your bugs;</p>
+</li>
+<li>
+<p>does your thinking;</p>
+</li>
+<li>
+<p>...</p>
+</li>
+<li>
+<p>allows you to play games even faster.</p>
+</li>
+</ol>
+<p>The {{ hpc }} does not replace your desktop computer.</p>
+<h2 id="is-the-hpc-a-solution-for-my-computational-needs">Is the {{ hpc }} a solution for my computational needs?<a class="headerlink" href="#is-the-hpc-a-solution-for-my-computational-needs" title="Permanent link">&para;</a></h2>
+<h3 id="batch-or-interactive-mode">Batch or interactive mode?<a class="headerlink" href="#batch-or-interactive-mode" title="Permanent link">&para;</a></h3>
+<p>Typically, the strength of a supercomputer comes from its ability to run
+a huge number of programs (i.e., executables) in parallel without any
+user interaction in real time. This is what is called "running in batch
+mode".</p>
+<p>It is also possible to run programs at the {{ hpc }}, which require user
+interaction. (pushing buttons, entering input data, etc.). Although
+technically possible, the use of the {{ hpc }} might not always be the best and
+smartest option to run those interactive programs. Each time some user
+interaction is needed, the computer will wait for user input. The
+available computer resources (CPU, storage, network, etc.) might not be
+optimally used in those cases. A more in-depth analysis with the {{ hpc }} staff
+can unveil whether the {{ hpc }} is the desired solution to run interactive
+programs. Interactive mode is typically only useful for creating quick
+visualisations of your data without having to copy your data to your
+desktop and back.</p>
+<h3 id="what-are-cores-processors-and-nodes">What are cores, processors and nodes?<a class="headerlink" href="#what-are-cores-processors-and-nodes" title="Permanent link">&para;</a></h3>
+<p>In this manual, the terms core, processor and node will be frequently
+used, so it's useful to understand what they are.</p>
+<p>Modern servers, also referred to as <em>(worker)nodes</em> in the context of
+HPC, include one or more sockets, each housing a multi-<em>core</em>
+<em>processor</em> (next to memory, disk(s), network cards, ...). A modern
+<em>processor</em> consists of multiple CPUs or <em>cores</em> that are used to
+execute <em>computations</em>.</p>
+<h3 id="parallel-or-sequential-programs">Parallel or sequential programs?<a class="headerlink" href="#parallel-or-sequential-programs" title="Permanent link">&para;</a></h3>
+<h4 id="parallel-programs">Parallel programs<a class="headerlink" href="#parallel-programs" title="Permanent link">&para;</a></h4>
+<p><strong>Parallel computing</strong> is a form of computation in which many calculations are carried out
+simultaneously. They are based on the principle that large problems can
+often be divided into smaller ones, which are then solved concurrently
+("in parallel").</p>
+<p>Parallel computers can be roughly classified according to the level at
+which the hardware supports parallelism, with multicore computers having
+multiple processing elements within a single machine, while clusters use
+multiple computers to work on the same task. Parallel computing has
+become the dominant computer architecture, mainly in the form of
+multicore processors.</p>
+<p>The two parallel programming paradigms most used in HPC are:</p>
+<ul>
+<li>
+<p>OpenMP for shared memory systems (multithreading): on multiple cores
+    of a single node</p>
+</li>
+<li>
+<p>MPI for distributed memory systems (multiprocessing): on multiple
+    nodes</p>
+</li>
+</ul>
+<p><strong>Parallel programs</strong> are more difficult to write than sequential ones, because concurrency
+introduces several new classes of potential software bugs, of which race
+conditions are the most common. Communication and synchronisation
+between the different subtasks are typically some of the greatest
+obstacles to getting good parallel program performance.</p>
+<h4 id="sequential-programs">Sequential programs<a class="headerlink" href="#sequential-programs" title="Permanent link">&para;</a></h4>
+<p>Sequential software does not do calculations in parallel, i.e., it only
+uses <em>one single core of a single workernode</em>. <strong>It does not become faster by just throwing more cores at it</strong>: it can only use one
+core.</p>
+<p>It is perfectly possible to also run purely <strong>sequential programs</strong> on the {{ hpc }}.</p>
+<p>Running your sequential programs on the most modern and fastest
+computers in the {{ hpc }} can save you a lot of time. But it also might be
+possible to run multiple instances of your program (e.g., with different
+input parameters) on the {{ hpc }}, in order to solve one overall problem (e.g.,
+to perform a parameter sweep). This is another form of running your
+sequential programs in parallel.</p>
+<h3 id="what-programming-languages-can-i-use">What programming languages can I use?<a class="headerlink" href="#what-programming-languages-can-i-use" title="Permanent link">&para;</a></h3>
+<p>You can use <em>any</em> programming language, <em>any</em> software package and <em>any</em>
+library provided it has a version that runs on Linux, specifically, on
+the version of Linux that is installed on the compute nodes, {{ operatingsystem }}.</p>
+<p>For the most common <strong>programming languages</strong>, a compiler is available on {{ operatingsystem }}. Supported and common
+programming languages on the {{ hpc }} are C/C++, FORTRAN, Java, Perl, Python,
+MATLAB, R, etc.</p>
+<p>Supported and commonly used compilers are 
+{%- if site == antwerpen %} GCC, clang, J2EE and Intel {%- endif %}
+{%- if site == leuven %} Cluster Studio. GCC, Intel and PGI. {%- endif %}
+{%- if site == brussel %} GCC, clang, J2EE and Intel Cluster Studio.{%- endif %}
+{%- if site == gent %} GCC and Intel.{%- endif %}</p>
+<p>{% if site == antwerpen -%}
+Commonly used software packages are:</p>
+<ul>
+<li>
+<p>in bioinformatics: beagle, Beast, bowtie, MrBayes, SAMtools</p>
+</li>
+<li>
+<p>in chemistry: ABINIT, CP2K, Gaussian, Gromacs, LAMMPS, NWChem,
+    Quantum Espresso, Siesta, VASP</p>
+</li>
+<li>
+<p>in engineering: COMSOL, OpenFOAM, Telemac</p>
+</li>
+<li>
+<p>in mathematics: JAGS, MATLAB, R</p>
+</li>
+<li>
+<p>for visuzalization: Gnuplot, ParaView.</p>
+</li>
+</ul>
+<p _="%" _-="%-" endif="endif">Commonly used libraries are Intel MKL, FFTW, HDF5, PETSc and Intel MPI,
+OpenMPI. </p>
+<p>{%- if site == leuven -%}
+Commonly used software packages are:</p>
+<ul>
+<li>
+<p>in bioinformatics: beagle, Beast, bedtools, bowtie, BWA, Mr. Bayes,
+    TopHat, TRIQS,</p>
+</li>
+<li>
+<p>in chemistry: CP2K, Gaussian, GROMACS, Molpro, NAMD, NWChem, Siesta,
+    Turbomole, VASP, VMD,</p>
+</li>
+<li>
+<p>in engineering: Abaqus, Ansys, Comsol, OpenFOAM,</p>
+</li>
+<li>
+<p>in mathematics: JAGS, MATLAB, R, SAS,</p>
+</li>
+<li>
+<p>for visuzalization: Gnuplot, IDL, Paraview, Tecplot, VisIt.</p>
+</li>
+</ul>
+<p>Commonly used libraries are: Intel MKL, FFTW, HDF5, PETSc, Intel MPI,
+M(VA)PICH, OpenMPI, Qt, VTK and Mesa. 
+{%- endif %}
+{%- if site == brussel -%}
+Commonly used software packages are CP2K, Gaussian, MATLAB, NWChem, R, ...</p>
+<p>Commonly used Libraries are Intel MKL, FFTW, HDF5, netCDF, PETSc and
+Intel MPI, OpenMPI.
+{%- endif %}
+Additional software can be installed "<em>on demand</em>". Please contact the {{ hpc }}
+staff to see whether the {{ hpc }} can handle your specific requirements.</p>
+<h3 id="what-operating-systems-can-i-use">What operating systems can I use?<a class="headerlink" href="#what-operating-systems-can-i-use" title="Permanent link">&para;</a></h3>
+<p>All nodes in the {{ hpc }} cluster run under {{ operatingsystem }}, which is a specific version of {{ operatingsystembase }}.
+This means that all programs (executables) should be compiled for {{ operatingsystem }}.</p>
+<p>Users can connect from any computer in the {{ university }} network to the {{ hpc }}, regardless
+of the Operating System that they are using on their personal computer.
+Users can use any of the common Operating Systems (such as Windows,
+macOS or any version of Linux/Unix/BSD) and run and control their
+programs on the {{ hpc }}.</p>
+<p>A user does not need to have prior knowledge about Linux; all of the
+required knowledge is explained in this tutorial.</p>
+<h3 id="what-does-a-typical-workflow-look-like">What does a typical workflow look like?<a class="headerlink" href="#what-does-a-typical-workflow-look-like" title="Permanent link">&para;</a></h3>
+<p>A typical workflow looks like:</p>
+<ol>
+<li>
+<p>Connect to the login nodes with SSH (see <a href="../connecting/#first-time-connection-to-the-hpc-infrastructure">First Time connection to the HPC infrastructure</a>)</p>
+</li>
+<li>
+<p>Transfer your files to the cluster (see <a href="../connecting/#transfer-files-tofrom-the-hpc">Transfer Files to/from the HPC</a>)</p>
+</li>
+<li>
+<p>Optional: compile your code and test it (for compiling, see <a href="">Compiling and testing your software on the HPC</a>)</p>
+</li>
+<li>
+<p>Create a job script and submit your job (see <a href="">Running batch jobs</a>)</p>
+</li>
+<li>
+<p>Get some coffee and be patient:</p>
+<ol>
+<li>
+<p>Your job gets into the queue</p>
+</li>
+<li>
+<p>Your job gets executed</p>
+</li>
+<li>
+<p>Your job finishes</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Study the results generated by your jobs, either on the cluster or
+    after downloading them locally.</p>
+</li>
+</ol>
+<h3 id="what-is-the-next-step">What is the next step?<a class="headerlink" href="#what-is-the-next-step" title="Permanent link">&para;</a></h3>
+<p>When you think that the {{ hpc }} is a useful tool to support your computational
+needs, we encourage you to acquire a VSC-account (as explained in <a href="../account">Getting a HPC Account</a>),
+read <a href="../connecting">Connecting to the HPC infrastructure</a>, "Setting up the environment", and explore
+chapters <a href="">Running interactive jobs</a> to <a href="">Fine-tuning Job Specifications</a> which will help you to transfer and run your programs on the {{ hpc }} cluster.</p>
+<p>Do not hesitate to contact the {{ hpc }} staff for any help.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Wikipedia: <a href="https://en.wikipedia.org/wiki/Supercomputer">https://en.wikipedia.org/wiki/Supercomputer</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">hpc</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">abaqus</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">abinit</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">acl</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">amd</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ansys</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">bedtools</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">bioinformatics</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">broadwell</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">bsd</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">bwa</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">cas</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">cdo</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">cerebro</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">cgroups</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">comsol</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">cpuset</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ddr</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">dvds</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">eb</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">edr</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">edu</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ega</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">endif</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">epyc</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">esa</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ete</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">exe</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">fft</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">fftw</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">frontend</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">gbit</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">gcc</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">gnuplot</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">gpgpu</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">gpgpus</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">gpu</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">gpus</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">gromacs</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">haswell</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">hdf</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">hdr</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">hpcinfra</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">htm</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">https</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">icinga</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">icu</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">idl</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ield</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">img</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">infiniband</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">infrastucture</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ip</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">isa</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">isk</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">lammps</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">leuven</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">linux</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">macos</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">matlab</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mkl</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">moab</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">molpro</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mpi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mps</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mput</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mrbayes</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">nagios</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">namd</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ndr</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">nds</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">nec</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">netcdf</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ngs</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ntl</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">nvidia</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">nwchem</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ome</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">omp</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ompi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ood</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">openfoam</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">openmp</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">openmpi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">operatingsystem</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">operatingsystembase</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">orte</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ount</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">paraview</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">pcie</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">pcs</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">perl</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">petsc</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">pgi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">png</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">py</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">qdr</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">quadro</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">readthedocs</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">samtools</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">sas</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">sgi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">skylake</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">slurm</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">smp</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">sx</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">synchronisation</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">sys</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">tecplot</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">telemac</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">tofrom</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">tophat</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">triqs</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">turbomole</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ua</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">uct</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ud</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ueue</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">vasp</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">vaughan</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ve</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">visualisation</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">visualisations</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">visuzalization</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">vmd</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">vsc</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">vscdocumentation</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">vtk</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">westmere</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">wikipedia</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">workernode</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">xeon</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">zabbix</span>
+      
+    
+  </nav>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        custom footer
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+<h4>Cookie consent</h4>
+<p>    We try not to use any cookies. 
+
+    We do not need your consent.  
+
+    Maybe some third-party cookie harvesters will try to get consent from you.  
+
+    Contact cookies@ugent.be for more information.  
+
+</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Reject</button>
+    
+    
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":".","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.prune","navigation.path","navigation.tabs","navigation.tabs.sticky","navigation.sections","navigation.top","navigation.tracking","search.highlight","toc.follow","toc.integrate","content.action.edit","content.action.view"],"search":"assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.8ffeb9c9.min.js"></script>
+      
+    
+  </body>
+</html>

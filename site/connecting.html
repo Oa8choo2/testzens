@@ -1,0 +1,2311 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A new project generated from the default template project.">
+      
+      
+        <meta name="author" content="<your name here>">
+      
+      
+        <link rel="canonical" href="http://localhost:8300/connecting.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="images/favicon.png">
+      <meta name="generator" content="zensical-0.0.19">
+    
+    
+<meta name="google-site-verification" content="nJqh3TVb_44fMl2gS61agt_bRNFEaI496UaXYL-wLZI" />
+
+    
+      
+        
+      
+      <link rel="stylesheet" href="assets/stylesheets/modern/main.d4922b3c.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libertinus+Sans:300,300i,400,400i,500,500i,700,700i%7CLibertinus+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Libertinus Sans";--md-code-font:"Libertinus Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+    
+    
+<script>
+  (function() {
+    var cx = 'd3873894b6f614f35';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+<script>
+registerListener('load', setLazy);
+registerListener('load', lazyLoad);
+registerListener('scroll', lazyLoad);
+
+var lazy = [];
+
+function setLazy(){
+    lazy = document.getElementsByClassName('lazy');
+    console.log('Found ' + lazy.length + ' lazy images');
+}
+
+function lazyLoad(){
+    for(var i=0; i<lazy.length; i++){
+        if(isInViewport(lazy[i])){
+            if (lazy[i].getAttribute('data-src')){
+                lazy[i].src = lazy[i].getAttribute('data-src');
+                lazy[i].removeAttribute('data-src');
+            }
+        }
+    }
+
+    cleanLazy();
+}
+
+function cleanLazy(){
+    lazy = Array.prototype.filter.call(lazy, function(l){ return l.getAttribute('data-src');});
+}
+
+function isInViewport(el){
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.bottom >= 0 &&
+        rect.right >= 0 &&
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+     );
+}
+
+function registerListener(event, func) {
+    if (window.addEventListener) {
+        window.addEventListener(event, func)
+    } else {
+        window.attachEvent('on' + event, func)
+    }
+}
+</script>
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#connecting-to-the-hpc-infrastructure" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Connecting to the HPC infrastructure
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<gcse:searchbox-only>Search enableAutoComplete="true"</gcse:searchbox-only>
+
+<hr>
+<div class="md-search" 
+  data-md-component="search" 
+  role="dialog" 
+  aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+
+<hr>
+
+ <script async src="https://cse.google.com/cse.js?cx=d3873894b6f614f35">
+</script>
+<div class="gcse-search" ></div>
+
+<br><ol>
+  <li>gcse-searchresults-only
+    <li>gcse-search
+</ol>
+Look and feel gsce: https://programmablesearchengine.google.com/controlpanel/lookandfeel?cx=d3873894b6f614f35
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/Oa8choo2/testzens" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M216.3 158.4H137C97 147.9 6.5 150.6 6.5 233.2c0 30.1 15 51.2 35 61-25.1 23-37 33.8-37 49.2 0 11 4.5 21.1 17.9 26.8C8.1 383.6 0 393.3 0 411.6c0 32.1 28 50.8 101.6 50.8 70.8 0 111.8-26.4 111.8-73.2 0-58.7-45.2-56.5-151.6-63l13.4-21.6c27.3 7.6 118.7 10 118.7-67.9 0-18.7-7.7-31.7-15-41.1l37.4-2.8v-34.5zm-63.4 241.9c0 32.1-104.9 32.1-104.9 2.4 0-8.1 5.3-15 10.6-21.5 77.7 5.3 94.3 3.4 94.3 19.1m-50.8-134.6c-52.8 0-50.5-71.2 1.2-71.2 49.5 0 50.8 71.2-1.2 71.2m133.3 100.5v-32.1c26.7-3.7 27.2-2 27.2-11V203.6c0-8.5-2.1-7.4-27.2-16.3l4.5-32.9h84.2v168.7c0 6.5.4 7.3 6.5 8.1l20.7 2.8v32.1H235.4zm52.5-244.3c-23.2 0-36.6-13.4-36.6-36.6s13.4-35.8 36.6-35.8c23.6 0 37 12.6 37 35.8s-13.4 36.6-37 36.6M512 350.5c-17.5 8.5-43.1 16.3-66.3 16.3-48.4 0-66.7-19.5-66.7-65.5V194.8c0-5.4 1-4.1-31.7-4.1v-36.2c35.8-4.1 50-22 54.5-66.3h38.6c0 65.8-1.3 61.8 3.3 61.8H501v40.6h-60.6v97.1c0 6.9-4.9 51.4 60.6 26.8l11 35.8z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="section/index.html" class="md-tabs__link">
+          
+  
+  Section
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="software/index.html" class="md-tabs__link">
+          
+  
+  Software
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Oa8choo2/testzens" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M216.3 158.4H137C97 147.9 6.5 150.6 6.5 233.2c0 30.1 15 51.2 35 61-25.1 23-37 33.8-37 49.2 0 11 4.5 21.1 17.9 26.8C8.1 383.6 0 393.3 0 411.6c0 32.1 28 50.8 101.6 50.8 70.8 0 111.8-26.4 111.8-73.2 0-58.7-45.2-56.5-151.6-63l13.4-21.6c27.3 7.6 118.7 10 118.7-67.9 0-18.7-7.7-31.7-15-41.1l37.4-2.8v-34.5zm-63.4 241.9c0 32.1-104.9 32.1-104.9 2.4 0-8.1 5.3-15 10.6-21.5 77.7 5.3 94.3 3.4 94.3 19.1m-50.8-134.6c-52.8 0-50.5-71.2 1.2-71.2 49.5 0 50.8 71.2-1.2 71.2m133.3 100.5v-32.1c26.7-3.7 27.2-2 27.2-11V203.6c0-8.5-2.1-7.4-27.2-16.3l4.5-32.9h84.2v168.7c0 6.5.4 7.3 6.5 8.1l20.7 2.8v32.1H235.4zm52.5-244.3c-23.2 0-36.6-13.4-36.6-36.6s13.4-35.8 36.6-35.8c23.6 0 37 12.6 37 35.8s-13.4 36.6-37 36.6M512 350.5c-17.5 8.5-43.1 16.3-66.3 16.3-48.4 0-66.7-19.5-66.7-65.5V194.8c0-5.4 1-4.1-31.7-4.1v-36.2c35.8-4.1 50-22 54.5-66.3h38.6c0 65.8-1.3 61.8 3.3 61.8H501v40.6h-60.6v97.1c0 6.9-4.9 51.4 60.6 26.8l11 35.8z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="section/index.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index.md for section
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="software/index.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+    <a href="https://github.com/Oa8choo2/testzens/edit/main/docs/connecting.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/Oa8choo2/testzens/raw/main/docs/connecting.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-code-2" viewBox="0 0 24 24"><path d="M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35"/><path d="M14 2v5a1 1 0 0 0 1 1h5M5 16l-3 3 3 3M9 22l3-3-3-3"/></svg>
+    </a>
+  
+
+
+<p>{% import 'macros/LinuxManualURL.md' as LinuxManualURL %}</p>
+<h1 id="connecting-to-the-hpc-infrastructure">Connecting to the HPC infrastructure<a class="headerlink" href="#connecting-to-the-hpc-infrastructure" title="Permanent link">&para;</a></h1>
+<p>Before you can really start using the {{ hpc }} clusters, there are several things
+you need to do or know:</p>
+<ol>
+<li>
+<p>You need to <strong>log on to the cluster</strong> using an SSH client to one of
+    the login nodes or by using the <a href="web_portal.html">HPC web portal</a>.
+    This will give you command-line access.
+    A standard web browser like Firefox or Chrome for the web portal will suffice.</p>
+</li>
+<li>
+<p>Before you can do some work, you'll have to <strong>transfer the files</strong>
+    that you need from your desktop computer to the cluster. At the end
+    of a job, you might want to transfer some files back.</p>
+</li>
+<li>
+<p>Optionally, if you wish to use programs with a <strong>graphical user
+    interface</strong>, you will need an X-server on your client system and log
+    in to the login nodes with X-forwarding enabled.</p>
+</li>
+<li>
+<p>Often several versions of <strong>software packages and libraries</strong> are
+    installed, so you need to select the ones you need. To manage
+    different versions efficiently, the VSC clusters use so-called
+    <strong>modules</strong>, so you will need to select and load the modules that
+    you need.</p>
+</li>
+</ol>
+<h2 id="connection-restrictions">Connection restrictions<a class="headerlink" href="#connection-restrictions" title="Permanent link">&para;</a></h2>
+<p>Since March 20<sup>th</sup> 2020, restrictions are in place that limit from where
+you can connect to the VSC HPC infrastructure, in response to security
+incidents involving several European HPC centres.</p>
+<p>VSC login nodes are only directly accessible from within university
+networks, and from (most) Belgian commercial internet providers.</p>
+<p>All other IP domains are blocked by default. If you are connecting from
+an IP address that is not allowed direct access, you have the following
+options to get access to VSC login nodes:</p>
+<ul>
+<li>
+<p>Use an VPN connection to connect to {{ university }} the network (recommended).
+    {%- if site == gent %} See <a href="https://helpdesk.ugent.be/vpn/en/">https://helpdesk.ugent.be/vpn/en/</a> for more information. {% endif %}</p>
+</li>
+<li>
+<p>Whitelist your IP address automatically by accessing
+    <a href="https://firewall.vscentrum.be">https://firewall.vscentrum.be</a> and log in with your {{ university }} account.</p>
+<ul>
+<li>
+<p>While this web connection is active new SSH sessions can be
+    started.</p>
+</li>
+<li>
+<p>Active SSH sessions will remain active even when this web page
+    is closed.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Contact your HPC support team (via {{ hpcinfo }}) and ask them to whitelist your
+    IP range (e.g., for industry access, automated processes).</p>
+</li>
+</ul>
+<p>Trying to establish an SSH connection from an IP address that does not
+adhere to these restrictions will result in an immediate failure to
+connect, with an error message like:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ssh_exchange_identification: read: Connection reset by peer
+</span></code></pre></div>
+<h2 id="first-time-connection-to-the-hpc-infrastructure">First Time connection to the HPC infrastructure<a class="headerlink" href="#first-time-connection-to-the-hpc-infrastructure" title="Permanent link">&para;</a></h2>
+<p>The remaining content in this chapter is primarily focused for people utilizing a terminal with SSH.
+If you are instead using the web portal, the corresponding chapter might be more helpful: <a href="web_portal.html">Using the HPC-UGent web portal</a>.</p>
+<p>If you have any issues connecting to the {{ hpc }} after you've followed these
+steps, see <a href="../troubleshooting/#issues-connecting-to-login-node">Issues connecting to login node</a> to troubleshoot.</p>
+<p _="%" endif="endif">{%- if site == antwerpen %}
+When connecting from outside Belgium, you need a VPN client to connect
+to the network first.</p>
+<p>{%- if OS == windows %}</p>
+<h3 id="open-a-terminal">Open a Terminal<a class="headerlink" href="#open-a-terminal" title="Permanent link">&para;</a></h3>
+<p>You've generated a public/private key pair with PuTTYgen and have an
+approved account on the VSC clusters. The next step is to setup the
+connection to (one of) the {{ hpc }}.</p>
+<p>In the screenshots, we show the setup for user
+{%- if site == antwerpen %}
+"<strong><em>vsc20167</em></strong>"
+{% endif %}
+{%- if site == brussel %}
+"<strong><em>vsc20167</em></strong>"
+{% endif %}
+{%- if site == gent %}
+"<strong><em>vsc20167</em></strong>"
+{% endif %}
+{%- if site == leuven %}
+"<strong><em>vsc30468</em></strong>"
+{% endif %}
+to the {{ hpc }} cluster via the login node "<strong><em>{{ loginnode }}</em></strong>".</p>
+<ol>
+<li>
+<p>Start the PuTTY executable <code>putty.exe</code> in your directory
+    <code>C:\Program Files (x86)\PuTTY</code> and the configuration screen will pop
+    up. As you will often use the PuTTY tool, we recommend adding a
+    shortcut on your desktop.</p>
+</li>
+<li>
+<p>Within the category &lt;<strong><em>Session</em></strong>&gt;, in the field &lt;<strong><em>Host Name</em></strong>&gt;, enter the name of the
+    login node of the cluster (i.e., "<strong><em>{{ loginnode }}</em></strong>") you want to connect to.</p>
+<p _="%" endif="endif">{%- if site != leuven %}
+<img alt="image" src="img/ch2-putty-configuration.png" style="display: block; margin: 0 auto" /></p>
+<p _="%" endif="endif">{%- if site == leuven %}
+<img alt="image" src="img/ch2-putty-configuration-leuven.png" style="display: block; margin: 0 auto" /></p>
+</li>
+<li>
+<p>In the category <span class="keys"><kbd>Connection &gt; Data</kbd></span>, in the field <span class="keys"><kbd>Auto-login username</kbd></span>, put in &lt;<em>{{ userid }}</em>&gt; , which is your VSC
+    username that you have received by e-mail after your request was
+    approved.</p>
+<p _="%" endif="endif">{%- if site != leuven %}
+<img alt="image" src="img/ch2-putty-configuration2.png" style="display: block; margin: 0 auto" /></p>
+<p _="%" endif="endif">{%- if site == leuven %}
+<img alt="image" src="img/ch2-putty-configuration2-leuven.png" style="display: block; margin: 0 auto" /></p>
+</li>
+<li>
+<p>In the category <span class="keys"><kbd>Connection &gt; SSH &gt; Auth</kbd></span>, in the field <span class="keys"><kbd>Private key file for authentication</kbd></span> click on <span class="keys"><kbd>Browse</kbd></span> and select the private key
+    (i.e., "id_rsa.ppk") that you generated and saved above.</p>
+<p><img alt="image" src="img/ch2-putty-key-setup.png" style="display: block; margin: 0 auto" /></p>
+</li>
+<li>
+<p>In the category <span class="keys"><kbd>Connection &gt; SSH &gt; X11</kbd></span>, click the <span class="keys"><kbd>Enable X11 Forwarding</kbd></span> checkbox.</p>
+<p><img alt="image" src="img/ch2-putty-x-forwarding.png" style="display: block; margin: 0 auto" /></p>
+</li>
+<li>
+<p>Now go back to &lt;Session&gt;, and fill in "<strong>{{ hpcname }}</strong>" in the <span class="keys"><kbd>Saved Sessions</kbd></span> field and press <span class="keys"><kbd>Save</kbd></span> to
+    store the session information.</p>
+<p _="%" endif="endif">{%- if site != leuven %}
+<img alt="image" src="img/ch2-putty-saved-session.png" style="display: block; margin: 0 auto" /></p>
+<p _="%" endif="endif">{%- if site == leuven %}
+<img alt="image" src="img/ch2-putty-saved-session-leuven.png" style="display: block; margin: 0 auto" /></p>
+</li>
+<li>
+<p _="%" endif="endif">Now pressing <span class="keys"><kbd>Open</kbd></span>, will open a terminal window and asks for you
+    passphrase.
+    {%- if site != leuven %}
+    <img alt="image" src="img/ch2-putty-enter-password.png" style="display: block; margin: 0 auto" /></p>
+<p _="%" endif="endif">{%- if site == leuven %}
+<img alt="image" src="img/ch2-putty-enter-password-leuven.png" style="display: block; margin: 0 auto" /></p>
+</li>
+<li>
+<p>If this is your first time connecting, you will be asked to verify
+    the authenticity of the login node. Please see
+    section <a href="../troubleshooting/#warning-message-when-first-connecting-to-new-host">Warning message when first connecting to new host</a>
+    on how to do this.</p>
+</li>
+<li>
+<p>After entering your correct passphrase, you will be connected to the
+    login-node of the {{ hpc }}.</p>
+</li>
+<li>
+<p>To check you can now "Print the Working Directory" (pwd) and check
+    the name of the computer, where you have logged in (hostname):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ pwd
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>{{ homedir }}
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>$ hostname -f
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>{{ loginhost }}
+</span></code></pre></div>
+</li>
+<li>
+<p _="%" endif="endif">For future PuTTY sessions, just select your saved session (i.e. "<strong>{{ hpcname }}</strong>")
+    from the list, <span class="keys"><kbd>Load</kbd></span> it and press <span class="keys"><kbd>Open</kbd></span>.</p>
+</li>
+</ol>
+<p>{%- if OS != windows %}</p>
+<h3 id="connect">Connect<a class="headerlink" href="#connect" title="Permanent link">&para;</a></h3>
+<p>Open up a terminal and enter the following command to connect to the {{ hpc }}.</p>
+<p _="%" endif="endif">{%- if OS == macos %}
+You can open a terminal by navigation to Applications and then Utilities in the finder and open Terminal.app, or enter Terminal in Spotlight Search.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ssh {{ userid }}@{{ loginnode }}
+</span></code></pre></div>
+<p>Here, user {{ userid }} wants to make a connection to the "{{ hpcname }}" cluster at {{ university }} via the login
+node "{{ loginnode }}", so replace {{ userid }} with your own VSC id in the above command.</p>
+<p>The first time you make a connection to the login node, you will be
+asked to verify the authenticity of the login node. Please check
+<a href="../troubleshooting/#warning-message-when-first-connecting-to-new-host">Warning message when first connecting to new host</a> on how to do this.</p>
+<p>A possible error message you can get if you previously saved your
+private key somewhere else than the default location
+(<code>$HOME/.ssh/id_rsa</code>):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+</span></code></pre></div>
+<p>In this case, use the <code>-i</code> option for the <code>ssh</code> command to specify the
+location of your private key. For example:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ssh -i /home/example/my_keys
+</span></code></pre></div>
+<p>{% endif %}</p>
+<p><strong>Congratulations, you're on the {{ hpc }} infrastructure now!</strong>
+To find out where you have landed you can print the current working directory:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$ pwd
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>{{ homedir }}
+</span></code></pre></div>
+<p>Your new private home directory is "{{ homedir }}". Here you can create your own
+subdirectory structure, copy and prepare your applications, compile and
+test them and submit your jobs on the {{ hpc }}.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$ cd {{ tutorialdir }}
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>$ ls
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Intro-HPC/
+</span></code></pre></div>
+<p>This directory currently contains all training material for the <strong><em>Introduction to the {{ hpc }}</em></strong>. More
+relevant training material to work with the {{ hpc }} can always be added later in
+this directory.</p>
+<p>You can now explore the content of this directory with the "ls --l" (<strong>l</strong>ist<strong>s</strong> <strong>l</strong>ong) and the "cd" (<strong>c</strong>hange <strong>d</strong>irectory) commands:</p>
+<p>As we are interested in the use of the <strong><em>HPC</em></strong>, move further to <strong><em>Intro-HPC</em></strong> and explore the
+contents up to 2 levels deep:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$ cd Intro-HPC
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>$ tree -L 2
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>.
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>&#39;-- examples
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    |-- Compiling-and-testing-your-software-on-the-HPC
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    |-- Fine-tuning-Job-Specifications
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    |-- Multi-core-jobs-Parallel-Computing
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    |-- Multi-job-submission
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    |-- Program-examples
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    |-- Running-batch-jobs
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    |-- Running-jobs-with-input
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    |-- Running-jobs-with-input-output-data
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    |-- example.pbs
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    &#39;-- example.sh
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>9 directories, 5 files
+</span></code></pre></div>
+<p>This directory contains:</p>
+<ol>
+<li>
+<p>This <strong><em>HPC Tutorial</em></strong> (in either a Mac, Linux or      Windows version).</p>
+</li>
+<li>
+<p>An <strong><em>examples</em></strong> subdirectory, containing all the examples that you need in this
+    Tutorial, as well as examples that might be useful for your specific applications.</p>
+</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>cd examples
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Typing <code>cd ex</code> followed by <span class="keys"><kbd class="key-tab">Tab</kbd></span> (the Tab-key) will generate the <code>cd examples</code>
+command. <strong>Command-line completion</strong> (also tab completion) is a common feature of the bash command
+line interpreter, in which the program automatically fills in partially
+typed commands.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For more exhaustive tutorials about Linux usage, see Appendix <a href="../useful_linux_commands">Useful Linux Commands</a></p>
+</div>
+<p>The first action is to copy the contents of the {{ hpc }} examples directory to
+your home directory, so that you have your own personal copy and that
+you can start using the examples. The "-r" option of the copy command
+will also copy the contents of the sub-directories "<em>recursively</em>".</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>cp -r {{ examplesdir }} ~/
+</span></code></pre></div>
+<p>{%- if site == gent %}</p>
+<p>Go to your home directory, check your own private examples directory, ... and start working.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>cd
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>ls -l
+</span></code></pre></div>
+<p>Upon connecting you will see a login message containing your last login time stamp and a basic overview of the current cluster utilisation.</p>
+<p _="%" endif="endif"><div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Last login: Thu Mar 18 13:15:09 2021 from gligarha02.gastly.os
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a> STEVIN HPC-UGent infrastructure status on Mon, 19 Feb 2024 10:00:01
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>      cluster         - full - free -  part - total - running - queued
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>                        nodes  nodes   free   nodes   jobs      jobs
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a> -------------------------------------------------------------------------
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>           joltik           6      0      1      10        29       18
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>            doduo          22      0     75     128      1397    11933
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>         accelgor           4      3      2       9        18        1
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>          donphan           0      0     16      16        16       13
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>          gallade           2      0      5      16        19      136
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>For a full view of the current loads and queues see:
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>https://hpc.ugent.be/clusterstate/
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>Updates on current system status and planned maintenance can be found on https://www.ugent.be/hpc/en/infrastructure/status
+</span></code></pre></div></p>
+<p>{%- if site == brussel %}
+Upon connecting you will see a login message containing your last login time stamp, some useful environment variable definitions and the message
+of the day (MOTD).</p>
+<p _="%" endif="endif"><div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Last login: Thu Nov  6 16:05:21 2014 from example.vub.ac.be
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>Initialising your working environment...
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>System variables to use in your scripts/programs:
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>  Temporary directory:   \$TMPDIR as /tmp/vsc40485
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>  Temporary work directory:    \$WORKDIR as /work/vsc40485
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>  Home directory:              \$HOME as /user/home/gent/vsc404/vsc40485
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>Message of the day:
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>  --------------------------------------------------------------------
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>  Welcome to the Hydra cluster.
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>  The old work directory access has been closed.
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>  The Hydra Team
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>  --------------------------------------------------------------------
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>       \   ,__,
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>        \  (oo)____
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>           (__)    )\
+</span><span id="__span-12-21"><a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>              ||--||
+</span></code></pre></div></p>
+<p>{%- if site == leuven %}
+Upon connecting you will see a login message containing your last login time stamp and some useful links.</p>
+<p _="%" endif="endif"><div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Last login: Mon Jan 12 18:52:20 2015 from example.kuleuven.be
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>**********************************************
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>*                                            *
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>* Please check the following site for        *
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>* status messages concerning KU Leuven       *
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>* services (incl. HPC):                      *
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>*                                            *
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>*   https://status.kuleuven.be/               *
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>*                                            *
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>* For VSC user documentation:                *
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>*                                            *
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>*  https://www.vscentrum.be/en/user-portal   *
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>*                                            *
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>*                                            *
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>**********************************************
+</span></code></pre></div></p>
+<p>{%- if site == antwerpen %}
+Upon connection, you will get a welcome message containing your last login timestamp and some pointers to information about the system. On Leibniz, the system will also show your disk quota.</p>
+<p _="%" endif="endif"><div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Last login: Mon Feb  2 17:58:13 2015 from mylaptop.uantwerpen.be
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>---------------------------------------------------------------
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>Welcome to LEIBNIZ !
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>Useful links:
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>  https://vscdocumentation.readthedocs.io
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>  https://vscdocumentation.readthedocs.io/en/latest/antwerp/tier2_hardware.html
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>  https://www.uantwerpen.be/hpc
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>Questions or problems? Do not hesitate and contact us:
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>  hpc@uantwerpen.be
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>Happy computing!
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>
+</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>---------------------------------------------------------------
+</span><span id="__span-14-18"><a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>
+</span><span id="__span-14-19"><a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>Your quota is:
+</span><span id="__span-14-20"><a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>
+</span><span id="__span-14-21"><a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>                   Block Limits
+</span><span id="__span-14-22"><a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a>   Filesystem       used      quota      limit    grace
+</span><span id="__span-14-23"><a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>   user             740M         3G       3.3G     none
+</span><span id="__span-14-24"><a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a>   data           3.153G        25G      27.5G     none
+</span><span id="__span-14-25"><a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a>   scratch        12.38M        25G      27.5G     none
+</span><span id="__span-14-26"><a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a>   small          20.09M        25G      27.5G     none
+</span><span id="__span-14-27"><a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a>
+</span><span id="__span-14-28"><a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a>                   File Limits
+</span><span id="__span-14-29"><a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a>   Filesystem      files      quota      limit    grace
+</span><span id="__span-14-30"><a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a>   user            14471      20000      25000     none
+</span><span id="__span-14-31"><a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a>   data             5183     100000     150000     none
+</span><span id="__span-14-32"><a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a>   scratch            59     100000     150000     none
+</span><span id="__span-14-33"><a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a>   small            1389     100000     110000     none
+</span><span id="__span-14-34"><a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a>
+</span><span id="__span-14-35"><a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a>---------------------------------------------------------------
+</span></code></pre></div></p>
+<p>You can exit the connection at anytime by entering:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$ exit
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>logout
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>Connection to {{ loginnode }} closed.
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">tip: Setting your Language right</p>
+<p>You may encounter a warning message similar to the following one during connecting:</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>perl: warning: Setting locale failed.
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>perl: warning: Please check that your locale settings:
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>LANGUAGE = (unset),
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>LC_ALL = (unset),
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>LC_CTYPE = &quot;UTF-8&quot;,
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>LANG = (unset)
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>    are supported and installed on your system.
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>perl: warning: Falling back to the standard locale (&quot;C&quot;).
+</span></code></pre></div>
+or any other error message complaining about the locale.</p>
+<p>This means that the correct "locale" has not yet been properly specified on your local machine. Try:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>LANG=
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>LC_COLLATE=&quot;C&quot;
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>LC_CTYPE=&quot;UTF-8&quot;
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>LC_MESSAGES=&quot;C&quot;
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>LC_MONETARY=&quot;C&quot;
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>LC_NUMERIC=&quot;C&quot;
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>LC_TIME=&quot;C&quot;
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>LC_ALL=
+</span></code></pre></div></p>
+<p>A <strong>locale</strong> is a set of parameters that defines the user's language, country and
+any special variant preferences that the user wants to see in their user
+interface. Usually a locale identifier consists of at least a language
+identifier and a region identifier.</p>
+<p>{%- if site == gent %}</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you try to set a non-supported locale, then it will be automatically
+set to the default. Currently the default is <code>en_US.UFT-8</code> or <code>en_US</code>,
+depending on whether your originally (non-supported) locale was <code>UTF-8</code> or not.</p>
+</div>
+<p>{% endif %}</p>
+<p>{%- if OS != windows %}
+Open the <code>.bashrc</code> on your local machine with your favourite editor and
+add the following lines:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>$ nano ~/.bashrc
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>...
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>export LANGUAGE=&quot;en_US.UTF-8&quot;
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>export LC_ALL=&quot;en_US.UTF-8&quot;
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>export LC_CTYPE=&quot;en_US.UTF-8&quot;
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>export LANG=&quot;en_US.UTF-8&quot;
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>...
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">tip: vi</p>
+<p>To start entering text in vi: move to the place you want to start
+entering text with the arrow keys and type "i" to switch to insert mode. You can easily exit vi by entering: "<span class="keys"><kbd>ESC</kbd></span> :wq"
+To exit vi without saving your changes, enter "<span class="keys"><kbd>ESC</kbd></span>:q!"</p>
+</div>
+<p>or alternatively (if you are not comfortable with the Linux editors),
+again on your local machine:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>echo &quot;export LANGUAGE=\&quot;en_US.UTF-8\&quot;&quot; &gt;&gt; ~/.profile
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>echo &quot;export LC_ALL=\&quot;en_US.UTF-8\&quot;&quot; &gt;&gt; ~/.profile
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>echo &quot;export LC_CTYPE=\&quot;en_US.UTF-8\&quot;&quot; &gt;&gt; ~/.profile
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>echo &quot;export LANG=\&quot;en_US.UTF-8\&quot;&quot; &gt;&gt; ~/.profile
+</span></code></pre></div>
+<p _="%" endif="endif">You can now log out, open a new terminal/shell on your local machine and
+reconnect to the login node, and you should not get these warnings anymore.</p>
+</div>
+<h2 id="transfer-files-tofrom-the-hpc">Transfer Files to/from the HPC<a class="headerlink" href="#transfer-files-tofrom-the-hpc" title="Permanent link">&para;</a></h2>
+<p>Before you can do some work, you'll have to <strong>transfer the files</strong> you need from your desktop or department to the cluster. At the end of a job, you might want to transfer some files back.</p>
+<p _="%" endif="endif">{%- if OS != windows %}
+The preferred way to transfer files is by using an scp or sftp via the
+secure OpenSSH protocol. {{ OS }} ships with an implementation of OpenSSH, so you
+don't need to install any third-party software to use it. Just open a
+terminal window and jump in!</p>
+<p>{%- if OS == windows %}</p>
+<h3 id="winscp">WinSCP<a class="headerlink" href="#winscp" title="Permanent link">&para;</a></h3>
+<p>To transfer files to and from the cluster, we recommend the use of
+WinSCP, a graphical file management tool which can transfer files using
+secure protocols such as SFTP and SCP. WinSCP is freely available from
+<a href="https://www.winscp.net">https://www.winscp.net</a>.</p>
+<p>To transfer your files using WinSCP,</p>
+<ol>
+<li>
+<p>Open the program</p>
+</li>
+<li>
+<p>The <span class="keys"><kbd>Login</kbd></span> menu is shown automatically (if it is closed, click <span class="keys"><kbd>New Session</kbd></span> to open it again). Fill in the necessary fields under <span class="keys"><kbd>Session</kbd></span></p>
+<ol>
+<li>
+<p>Click <span class="keys"><kbd>New Site</kbd></span>.</p>
+</li>
+<li>
+<p>Enter "<em>{{ loginnode }}</em>" in the <span class="keys"><kbd>Host name</kbd></span> field.</p>
+</li>
+<li>
+<p>Enter your "<em>vsc-account</em>" in the <span class="keys"><kbd>User name</kbd></span> field.</p>
+</li>
+<li>
+<p>Select <span class="keys"><kbd>SCP</kbd></span> as the <span class="keys"><kbd>file</kbd></span> protocol.</p>
+</li>
+<li>
+<p>Note that the password field remains empty.</p>
+</li>
+</ol>
+<p _="%" endif="endif">{%- if site == antwerpen %}
+<img alt="image" src="img/img0214.png" style="display: block; margin: 0 auto" />
+{% endif %}
+{%- if site == brussel %}
+<img alt="image" src="img/img0214.png" style="display: block; margin: 0 auto" />
+{% endif %}
+{%- if site == gent %}
+<img alt="image" src="img/img0214-gent.png" style="display: block; margin: 0 auto" />
+{% endif %}
+{%- if site == leuven %}
+<img alt="image" src="img/img0214-leuven.png" style="display: block; margin: 0 auto" /></p>
+<p><img alt="image" src="img/img0214b.png" style="display: block; margin: 0 auto" /></p>
+<ol>
+<li>
+<p>Click <span class="keys"><kbd>Advanced...</kbd></span>.</p>
+</li>
+<li>
+<p>Click <span class="keys"><kbd>SSH &gt; Authentication</kbd></span>.</p>
+</li>
+<li>
+<p>Select your private key in the field <span class="keys"><kbd>Private key file</kbd></span>.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Press the <span class="keys"><kbd>Save</kbd></span> button, to save the session under <span class="keys"><kbd>Session &gt; Sites</kbd></span> for future access.</p>
+</li>
+<li>
+<p>Finally, when clicking on <span class="keys"><kbd>Login</kbd></span>, you will be asked for your key passphrase.</p>
+<p _="%" endif="endif">{%- if site == antwerpen %}
+<img alt="image" src="img/img0215.png" style="display: block; margin: 0 auto" />
+{% endif %}
+{%- if site == brussel %}
+<img alt="image" src="img/img0215.png" style="display: block; margin: 0 auto" />
+{% endif %}
+{%- if site == gent %}
+<img alt="image" src="img/img0215.png" style="display: block; margin: 0 auto" />
+{% endif %}
+{%- if site == leuven %}
+<img alt="image" src="img/img0215-leuven.png" style="display: block; margin: 0 auto" /></p>
+</li>
+</ol>
+<p>{% include "../macros/firsttimeconnection.md" %}</p>
+<p _="%" endif="endif">{%- if site == antwerpen %}
+<img alt="image" src="img/img0216.png" style="display: block; margin: 0 auto" />
+{% endif %}
+{%- if site == brussel %}
+<img alt="image" src="img/img0216.png" style="display: block; margin: 0 auto" />
+{% endif %}
+{%- if site == gent %}
+<img alt="image" src="img/img0216.png" style="display: block; margin: 0 auto" />
+{% endif %}
+{%- if site == leuven %}
+<img alt="image" src="img/img0216-leuven.png" style="display: block; margin: 0 auto" /></p>
+<p>Now, try out whether you can transfer an arbitrary file from your local
+machine to the HPC and back.</p>
+<p>{% endif %}</p>
+<p>{%- if OS != windows %}</p>
+<h3 id="using-scp">Using scp<a class="headerlink" href="#using-scp" title="Permanent link">&para;</a></h3>
+<p><strong>Secure copy</strong> or <strong>SCP</strong> is a tool (command) for securely transferring files between a local
+host (= your computer) and a remote host (the {{ hpc }}). It is based on the
+Secure Shell (SSH) protocol. The <strong>scp</strong> command is the equivalent of the <strong>cp</strong> (i.e.,
+<strong>c</strong>o<strong>p</strong>y) command, but can copy files to or from remote machines.</p>
+<p>It's easier to copy files directly to <code>$VSC_DATA</code> and <code>$VSC_SCRATCH</code> if
+you have symlinks to them in your home directory. See {{ LinuxManualURL.LinuxManualURL(OS, site) }} for how to do this.</p>
+<p>Open an additional terminal window and check that you're working on your
+local machine.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>$ hostname
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>&lt;local-machine-name&gt;
+</span></code></pre></div>
+<p>If you're still using the terminal that is connected to the {{ hpc }}, close the
+connection by typing "exit" in the terminal window.</p>
+<p>For example, we will copy the (local) file "<em>localfile.txt</em>" to your
+home directory on the {{ hpc }} cluster. We first generate a small dummy
+"<em>localfile.txt</em>", which contains the word "Hello". Use your own VSC
+account, which is something like "{{ userid }}". Don't forget the colon (<code>:</code>) at the
+end: if you forget it, it will just create a file named {{ userid }}@{{ loginnode }} on your
+local filesystem. You can even specify where to save the file on the
+remote filesystem by putting a path after the colon.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>$ echo &quot;Hello&quot; &gt; localfile.txt
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>$ ls -l 
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>...
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>-rw-r--r-- 1 user  staff   6 Sep 18 09:37 localfile.txt
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>$ scp localfile.txt {{ userid }}@{{ loginnode }}:
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>localfile.txt     100%   6     0.0KB/s     00:00
+</span></code></pre></div>
+<p>Connect to the {{ hpc }} via another terminal, print the working directory (to
+make sure you're in the home directory) and check whether the file has
+arrived:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>$ pwd
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>{{ homedir }}
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>$ ls -l 
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>total 1536
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>drwxrwxr-x 2
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>drwxrwxr-x 2
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>drwxrwxr-x 10
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>-rw-r--r-- 1
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>$ cat localfile.txt
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>Hello
+</span></code></pre></div>
+<p>The <strong>scp</strong> command can also be used to copy files from the cluster to your
+local machine. Let us copy the remote file "intro-HPC-{{ OS }}-{{ site }}.pdf" from your "docs"
+subdirectory on the cluster to your local computer.</p>
+<p>First, we will confirm that the file is indeed in the "docs"
+subdirectory. In the terminal on the login node, enter:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>$ cd ~/docs
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>$ ls -l
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>total 1536
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>-rw-r--r-- 1 {{ userid }} Sep 11 09:53 intro-HPC-{{ OS }}-{{ site }}.pdf
+</span></code></pre></div>
+<p>Now we will copy the file to the local machine. On the terminal on your
+own local computer, enter:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>$ scp {{ userid }}@{{ loginnode }}:./docs/intro-HPC-{{ OS }}-{{ site }}.pdf .
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>intro-HPC-{{ OS }}-{{ site }}.pdf 100% 725KB 724.6KB/s 00:01
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>$ ls -l
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>total 899
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>-rw-r--r-- 1 user staff 741995 Sep 18 09:53
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>-rw-r--r-- 1 user staff      6 Sep 18 09:37 localfile.txt
+</span></code></pre></div>
+<p>The file has been copied from the HPC to your local computer.</p>
+<p>It's also possible to copy entire directories (and their contents) with
+the <code>-r</code> flag. For example, if we want to copy the local directory
+<code>dataset</code> to <code>$VSC_SCRATCH</code>, we can use the following command (assuming
+you've created the <code>scratch</code> symlink):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>scp -r dataset {{ userid }}@{{ loginnode }}:scratch
+</span></code></pre></div>
+<p>If you don't use the <code>-r</code> option to copy a directory, you will run into
+the following error:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>$ scp dataset {{ userid }}@{{ loginnode }}:scratch
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>dataset: not a regular file
+</span></code></pre></div>
+<h3 id="using-sftp">Using sftp<a class="headerlink" href="#using-sftp" title="Permanent link">&para;</a></h3>
+<p>The <strong>SSH File Transfer Protocol</strong> (also <strong>Secure File Transfer Protocol</strong>, or <strong>SFTP</strong>) is a network protocol that provides file access, file
+transfer and file management functionalities over any reliable data
+stream. It was designed as an extension of the Secure Shell protocol
+(SSH) version 2.0. This protocol assumes that it is run over a secure
+channel, such as SSH, that the server has already authenticated the
+client, and that the identity of the client user is available to the
+protocol.</p>
+<p>The sftp is an equivalent of the ftp command, with the difference that
+it uses the secure ssh protocol to connect to the clusters.</p>
+<p>One easy way of starting a sftp session is</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>sftp {{ userid }}@{{ loginnode }}
+</span></code></pre></div>
+<p>Typical and popular commands inside an sftp session are:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href=""></a></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>cd ~/exmples/fibo</strong></td>
+<td style="text-align: left;">Move to the examples/fibo subdirectory on the (i.e., the {{ hpc }} remote machine)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ls</strong></td>
+<td style="text-align: left;">Get a list of the files in the current directory on the {{ hpc }}.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>get fibo.py</strong></td>
+<td style="text-align: left;">Copy the file "fibo.py" from the {{ hpc }}</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>get tutorial/HPC.pdf</strong></td>
+<td style="text-align: left;">Copy the file "HPC.pdf" from the {{ hpc }}, which is in the "tutorial" subdirectory.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>lcd test</strong></td>
+<td style="text-align: left;">Move to the "test" subdirectory on your local machine.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>lcd ..</strong></td>
+<td style="text-align: left;">Move up one level in the local directory.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>lls</strong></td>
+<td style="text-align: left;">Get local directory listing.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>put test.py</strong></td>
+<td style="text-align: left;">Copy the local file test.py to the {{ hpc }}.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>put test1.py test2.py</strong></td>
+<td style="text-align: left;">Copy the local file test1.py to the and rename it to test2.py.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>bye</strong></td>
+<td style="text-align: left;">Quit the sftp session</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>mget *.cc</strong></td>
+<td style="text-align: left;">Copy all the remote files with extension ".cc" to the local directory.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>mput *.h</strong></td>
+<td style="text-align: left;">Copy all the local files with extension ".h" to the {{ hpc }}.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href=""></a></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>{% endif %}</p>
+<p>{%- if OS == linux %}</p>
+<h3 id="using-a-gui">Using a GUI<a class="headerlink" href="#using-a-gui" title="Permanent link">&para;</a></h3>
+<p>If you prefer a GUI to transfer files back and forth to the {{ hpc }}, you can
+use your file browser. Open your file browser and press</p>
+<p _="%" endif="endif">{%- if OS == linux %}
+<span class="keys"><kbd>Ctrl</kbd><span>+</span><kbd>l</kbd></span></p>
+<p _="%" endif="endif">{%- if OS == macos %}
+<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd>k</kbd></span></p>
+<p>This should open up a address bar where you can enter a URL.
+Alternatively, look for the "connect to server" option in your file
+browsers menu.</p>
+<p>Enter: <em>sftp://{{ userid }}@{{ loginnode}}/</em> and press enter.</p>
+<p _="%" endif="endif">You should now be able to browse files on the {{ hpc }} in your file browser.</p>
+<p>{%- if OS == macos %}</p>
+<h3 id="using-a-gui-cyberduck">Using a GUI (Cyberduck)<a class="headerlink" href="#using-a-gui-cyberduck" title="Permanent link">&para;</a></h3>
+<p>Cyberduck is a graphical alternative to the <code>scp</code> command. It can be
+installed from <a href="https://cyberduck.io">https://cyberduck.io</a>.</p>
+<p>This is the one-time setup you will need to do before connecting:</p>
+<ol>
+<li>
+<p>After starting Cyberduck, the Bookmark tab will show up. To add a
+    new bookmark, click on the "+" sign on the bottom left of the
+    window. A new window will open.</p>
+</li>
+<li>
+<p>In the drop-down menu on top, select "SFTP (SSH File Transfer Protocol)".</p>
+</li>
+<li>
+<p>In the "Server" field, type in <code>{{ loginnode }}</code>. In the "Username" field, type in
+    your VSC account id (this looks like <code>{{ userid }}</code>).</p>
+</li>
+<li>
+<p>Select the location of your SSH <em>private</em> key in the "SSH Private Key" field.</p>
+</li>
+<li>
+<p>Finally, type in a name for the bookmark in the "Nickname" field and
+    close the window by pressing on the red circle in the top left
+    corner of the window.</p>
+</li>
+</ol>
+<p _="%" endif="endif">To open the connection, click on the "Bookmarks" icon (which
+resembles an open book) and double-click on the bookmark you just
+created.</p>
+<h3 id="fast-file-transfer-for-large-datasets">Fast file transfer for large datasets<a class="headerlink" href="#fast-file-transfer-for-large-datasets" title="Permanent link">&para;</a></h3>
+<p>See <a href="../linux-tutorial/uploading_files/#copying-faster-with-rsync">the section on <code>rsync</code> in chapter 5 of the Linux intro manual</a>.</p>
+<h2 id="changing-login-nodes">Changing login nodes<a class="headerlink" href="#changing-login-nodes" title="Permanent link">&para;</a></h2>
+<p>It can be useful to have control over which login node you are on. However, when you connect to the HPC (High-Performance Computing) system, you are directed to a random login node, which might not be the one where you already have an active session. To address this, there is a way to manually switch your active login node.</p>
+<p>For instance, if you want to switch to the login node named <code>{{loginhost}}</code>, you can use the following command while you are connected to the <code>{{altloginhost}}</code> login node on the HPC:
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>ssh<span class="w"> </span><span class="o">{{</span>loginhost<span class="o">}}</span>
+</span></code></pre></div>
+This is also possible the other way around.</p>
+<p>If you want to find out which login host you are connected to, you can use the <code>hostname</code> command.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>$ hostname
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>{{loginhost}}
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>$ ssh {{altloginhost}}
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>
+</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>$ hostname
+</span><span id="__span-29-6"><a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>{{altloginhost}}
+</span></code></pre></div></p>
+<p>Rather than always starting a new session on the HPC, you can also use a terminal multiplexer like <code>screen</code> or <code>tmux</code>.
+These can make sessions that 'survives' across disconnects.
+You can find more information on how to use these tools here (or on other online sources):</p>
+<ul>
+<li><a href="https://www.howtogeek.com/662422/how-to-use-linuxs-screen-command/">screen</a></li>
+<li><a href="https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/">tmux</a></li>
+</ul>
+
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">hpc</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">accelgor</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">altloginhost</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">api</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">bashrc</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">blis</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">cas</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">cdo</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">centre</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">centres</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">clusterstate</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">config</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ctype</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">cyberduck</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ddr</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">doduo</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">donphan</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">drwx</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">drwxr</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">drwxrwx</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">drwxrwxr</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">eb</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">endif</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ete</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">examplesdir</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">exe</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">exmples</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">favour</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">favourite</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">fibo</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">firefox</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">firsttimeconnection</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">gallade</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">gligar</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">gssapi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">homedir</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">hostname</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">howtogeek</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">hpcinfo</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">hpcname</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">htm</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">https</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ict</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ield</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">imec</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">img</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">initialising</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ip</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">irectory</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">isa</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">isk</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">joltik</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">keyex</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">kuleuven</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">leuven</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">linux</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">linuxmanualurl</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">linuxs</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">lls</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">localfile</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">loginhost</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">loginnode</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">macos</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mget</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">motd</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mpi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mput</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mylaptop</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">nano</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">nds</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">nec</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ngs</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">nss</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ntl</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ofi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ome</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">omp</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ompi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ong</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">openssh</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">orte</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ount</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">pdf</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">perl</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">png</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ppk</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">publickey</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">puttygen</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">pwd</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">py</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">readthedocs</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">rsa</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">rsync</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">rw</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">rwx</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">rwxr</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">rwxrw</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">rwxrwxr</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">scp</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">sftp</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">spla</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">stevin</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">symlink</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">symlinks</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">sys</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">tf</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">thu</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">tmp</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">tmpdir</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">tmux</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">tutorialdir</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ua</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">uantwerp</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">uantwerpen</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">uct</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ud</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ueue</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">uft</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ugent</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">umi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">url</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">userid</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">utf</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">utilisation</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ve</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">vpn</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">vsc</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">vscdocumentation</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">vscentrum</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">vub</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">winscp</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">workdir</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">wq</span>
+      
+    
+  </nav>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        custom footer
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+<h4>Cookie consent</h4>
+<p>    We try not to use any cookies. 
+
+    We do not need your consent.  
+
+    Maybe some third-party cookie harvesters will try to get consent from you.  
+
+    Contact cookies@ugent.be for more information.  
+
+</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Reject</button>
+    
+    
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":".","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.prune","navigation.path","navigation.tabs","navigation.tabs.sticky","navigation.sections","navigation.top","navigation.tracking","search.highlight","toc.follow","toc.integrate","content.action.edit","content.action.view"],"search":"assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.8ffeb9c9.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,3 +1,51 @@
+---
+updated_at: 2026-02-05T11:04:42+01:00
+tags:
+  - hpc
+  - bashrc
+  - buildpath
+  - config
+  - easybuild
+  - easybuilders
+  - easyconfig
+  - easyconfigs
+  - eb
+  - ete
+  - github
+  - https
+  - icu
+  - installpath
+  - ip
+  - irectory
+  - ldp
+  - linux
+  - lua
+  - modulepath
+  - mpi
+  - mput
+  - nds
+  - ntl
+  - omp
+  - ompi
+  - ong
+  - ood
+  - orte
+  - ount
+  - py
+  - sandybridge
+  - shm
+  - sourcepath
+  - sys
+  - thu
+  - tmp
+  - tmpdir
+  - toolchain
+  - ua
+  - ud
+  - ugent
+  - ve
+  - vsc
+---
 # Easybuild
 
 ## What is Easybuild?
@@ -157,4 +205,5 @@ modules generated with EasyBuild.
 See also [the section on `.bashrc` in
 the "Beyond the basics" chapter of the intro to
 Linux](../linux-tutorial/beyond_the_basics/#bashrc-login-script)
+
 

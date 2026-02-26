@@ -1,3 +1,94 @@
+---
+updated_at: 2026-02-05T11:04:43+01:00
+tags:
+  - hpc
+  - api
+  - behaviour
+  - behaviours
+  - cameron
+  - cas
+  - cilk
+  - config
+  - ddr
+  - eb
+  - edu
+  - ega
+  - endif
+  - ete
+  - exampledir
+  - examplesdir
+  - exe
+  - fopenmp
+  - gabriele
+  - gcc
+  - ghent
+  - hughes
+  - icc
+  - icu
+  - img
+  - ip
+  - irectory
+  - isa
+  - jobid
+  - jost
+  - kaufmann
+  - lls
+  - lpthread
+  - mpi
+  - mpiexec
+  - mpiicc
+  - mpirun
+  - mput
+  - mympirun
+  - nec
+  - ngs
+  - nloops
+  - nowait
+  - ntl
+  - ome
+  - omp
+  - ompi
+  - ong
+  - ood
+  - openmp
+  - optimisations
+  - ount
+  - pacheo
+  - parallelise
+  - parallelising
+  - petaflop
+  - png
+  - posix
+  - ppn
+  - pragma
+  - pthreads
+  - py
+  - qsub
+  - recognise
+  - recognised
+  - ruud
+  - rw
+  - rwx
+  - rwxr
+  - rwxrw
+  - rwxrwxr
+  - sgi
+  - spla
+  - spm
+  - spmd
+  - synchronisation
+  - synchronise
+  - sys
+  - tbb
+  - thu
+  - tracey
+  - ua
+  - uct
+  - ud
+  - ueue
+  - userid
+  - ve
+---
 {% set exampledir = 'examples/Multi-core-jobs-Parallel-Computing' %}
 
 # Multi core jobs/Parallel Computing 
@@ -468,3 +559,4 @@ absolute amount of concurrency available.
 
 !!! tip
     If you plan engaging in parallel programming using MPI, this book may prove useful: *Parallel Programming with MPI. Peter Pacheo. Morgan Kaufmann. 1996.*
+

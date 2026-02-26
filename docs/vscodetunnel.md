@@ -1,3 +1,33 @@
+---
+updated_at: 2026-02-05T11:04:43+01:00
+tags:
+  - hpc
+  - devicecodeauth
+  - dictselfservice
+  - eb
+  - ete
+  - hpcinfra
+  - https
+  - ict
+  - lfs
+  - microsoft
+  - nec
+  - ome
+  - orte
+  - ount
+  - php
+  - requestform
+  - sys
+  - tf
+  - ua
+  - uct
+  - ud
+  - ugent
+  - url
+  - ve
+  - visualstudio
+  - vsc
+---
 # VS Code Tunnel
 
 Please keep in mind, that this is not a `VS Code` manual,
@@ -54,4 +84,5 @@ for `code-cli`.
 Please do not use `VS Code` to ssh to the login nodes,
 but always use a `VS Code` Tunnel connection,
 preferably using the [interactive and debug cluster](./interactive_debug.md) 
+
 

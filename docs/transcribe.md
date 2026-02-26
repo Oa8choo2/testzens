@@ -1,3 +1,45 @@
+---
+updated_at: 2026-02-05T11:04:43+01:00
+tags:
+  - hpc
+  - api
+  - cas
+  - choosen
+  - config
+  - diarization
+  - eb
+  - ete
+  - flavour
+  - flavours
+  - gpu
+  - ip
+  - irectory
+  - isk
+  - json
+  - nec
+  - ngs
+  - ntl
+  - oci
+  - ome
+  - omp
+  - ong
+  - openai
+  - orte
+  - perl
+  - proj
+  - rx
+  - soci
+  - tf
+  - thereoff
+  - thu
+  - transcritpion
+  - ua
+  - ud
+  - ueue
+  - utf
+  - ve
+  - whisperx
+---
 # Transcribe
 
 ## What is Transcribe
@@ -101,3 +143,4 @@ than it will take to complete the transcription on the default cluster.
 
 Default settings of 4 cores with at least 10GB of RAM and 1 hour (wall)time should be enough for most transcriptions.
 But don't forget that translations and diarization add to the total runtime.
+

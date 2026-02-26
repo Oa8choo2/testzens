@@ -1,3 +1,30 @@
+---
+updated_at: 2026-02-05T11:04:43+01:00
+tags:
+  - hpc
+  - accountpage
+  - authorise
+  - documenation
+  - eb
+  - ete
+  - https
+  - ield
+  - ip
+  - nec
+  - ngs
+  - omp
+  - ount
+  - php
+  - shieldon
+  - ua
+  - uct
+  - ud
+  - ugent
+  - ve
+  - vpn
+  - vsc
+  - xdmod
+---
 # XDMoD portal
 
 The XDMoD web portal provides information about completed jobs, storage
@@ -16,3 +43,4 @@ Located in the upper right corner of the web page is the help button,
 taking you to the XDMoD User Manual. As things may change, we recommend
 checking out the provided documenation for information on XDMoD use 
 <https://shieldon.ugent.be/xdmod/user_manual/index.php>.
+

@@ -1,3 +1,50 @@
+---
+updated_at: 2026-02-05T11:04:43+01:00
+tags:
+  - hpc
+  - cas
+  - eb
+  - edu
+  - ete
+  - exe
+  - fft
+  - fftw
+  - flexiblas
+  - gcc
+  - gcccore
+  - gfbf
+  - https
+  - ict
+  - icu
+  - ield
+  - img
+  - ip
+  - irectory
+  - julia
+  - jupyter
+  - jupyternotebook
+  - lmod
+  - mpi
+  - nec
+  - numpy
+  - omp
+  - ompi
+  - ong
+  - ood
+  - png
+  - py
+  - rhel
+  - scipy
+  - subtoolchain
+  - toolchain
+  - ua
+  - ud
+  - ueue
+  - ugent
+  - ve
+  - whatis
+  - workernode
+---
 # Jupyter notebook
 
 ## What is a Jupyter notebook
@@ -103,3 +150,4 @@ Now that we found the right module for the notebook, add `module load <module_na
 
 
 ![image](img/ood_jupyter_custom_code.png)
+

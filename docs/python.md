@@ -1,3 +1,42 @@
+---
+title: over python
+subtitle: Nullam urna elit, malesuada eget finibus ut, ac tortor
+description: is deze description ergens zichtbaar?
+updated_at: 2026-02-05T11:04:43+01:00
+tags:
+  - hpc
+  - beautifulsoup
+  - cas
+  - donphan
+  - ete
+  - gcc
+  - gcccore
+  - gfbf
+  - icu
+  - ip
+  - irectory
+  - jobid
+  - jobscript
+  - jupyter
+  - matplotlib
+  - ntl
+  - numpy
+  - ome
+  - omp
+  - ong
+  - ppn
+  - py
+  - pypi
+  - qsub
+  - scipy
+  - sys
+  - toolchain
+  - ua
+  - ud
+  - ve
+  - walltime
+  - workdir
+---
 # Python 
 
 This page provides information on how to use Python on the HPC systems.
@@ -194,3 +233,4 @@ The `.o` file contains the output of the job.
 
 - For more info on Python virtual environments, see the [Setting up Python virtual environments](./setting_up_python_virtual_environments.md) page.
 - To use Jupyter on the HPC systems, see the [Jupyter](./jupyter.md) page.
+

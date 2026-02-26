@@ -1,3 +1,49 @@
+---
+updated_at: 2026-02-05T11:04:43+01:00
+tags:
+  - hpc
+  - backend
+  - backends
+  - config
+  - eb
+  - edu
+  - hortense
+  - hpcteam
+  - https
+  - infiniband
+  - ip
+  - lammps
+  - libfabric
+  - mca
+  - mellanox
+  - mpi
+  - mpirun
+  - mps
+  - mtl
+  - mympirun
+  - nds
+  - nec
+  - netcdf
+  - ofed
+  - ofi
+  - omp
+  - ompi
+  - openmp
+  - openmpi
+  - orte
+  - pml
+  - py
+  - toolchain
+  - ua
+  - uct
+  - ucx
+  - ud
+  - ugent
+  - url
+  - ve
+  - vsc
+  - vscentrum
+---
 # Known issues
 
 This page provides details on a couple of known problems, and the workarounds that are available for them.
@@ -70,3 +116,4 @@ We will re-install the affected OpenMPI installations during the scheduled maint
 (see also [VSC status page](https://status.vscentrum.be)).
 
 ---
+

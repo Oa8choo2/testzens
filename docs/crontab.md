@@ -1,3 +1,29 @@
+---
+updated_at: 2026-02-05T11:04:42+01:00
+tags:
+  - hpc
+  - cas
+  - config
+  - cron
+  - crontab
+  - edu
+  - exe
+  - gligar
+  - https
+  - ip
+  - linux
+  - nec
+  - ount
+  - redhat
+  - runscript
+  - sys
+  - ua
+  - uct
+  - ud
+  - ugent
+  - ve
+  - vsc
+---
 # Cron scripts
 
 ## Cron scripts configuration
@@ -50,3 +76,4 @@ always jump from one login node to another with:
 ```
 ssh gligar09    # or gligar10
 ```
+

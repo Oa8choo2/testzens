@@ -1,3 +1,56 @@
+---
+updated_at: 2026-02-05T11:04:43+01:00
+tags:
+  - hpc
+  - beautifulsoup
+  - cas
+  - cascadelake
+  - doduo
+  - donphan
+  - ega
+  - ete
+  - exe
+  - gallade
+  - gcc
+  - gcccore
+  - gfbf
+  - glibc
+  - https
+  - ip
+  - irectory
+  - jobid
+  - jobscript
+  - libc
+  - mpi
+  - myenv
+  - nds
+  - numpy
+  - ome
+  - omp
+  - ompi
+  - ong
+  - ount
+  - poutyne
+  - ppn
+  - proj
+  - py
+  - pypa
+  - pytorch
+  - qsub
+  - rhel
+  - scipy
+  - sys
+  - ua
+  - uct
+  - ud
+  - ugent
+  - ve
+  - venv
+  - venvs
+  - vsc
+  - walltime
+  - workdir
+---
 # Python Virtual Environments (venv's)
 
 ## Introduction
@@ -433,3 +486,4 @@ python: error while loading shared libraries: libpython3.10.so.1.0: cannot open 
 ```
 
 The solution is to only modify modules when not in a virtual environment.
+

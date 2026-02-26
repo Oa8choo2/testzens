@@ -1,3 +1,31 @@
+---
+updated_at: 2026-02-05T11:04:43+01:00
+tags:
+  - hpc
+  - donphan
+  - eb
+  - exe
+  - fairshare
+  - gpu
+  - gpus
+  - ict
+  - ip
+  - mput
+  - nds
+  - ome
+  - omp
+  - opengl
+  - qstat
+  - qsub
+  - thu
+  - ua
+  - uct
+  - ud
+  - ueue
+  - ugent
+  - ve
+  - webportal
+---
 # Interactive and debug cluster
 
 ## Purpose
@@ -78,3 +106,4 @@ any preset fairshare and there is no guarantee one job cannot access another job
 
 All software should behave the same as on the dedicated GPU clusters (e.g. using CUDA or OpenGL acceleration
 from a cluster desktop via the webportal).
+

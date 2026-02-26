@@ -1,3 +1,34 @@
+---
+updated_at: 2026-02-05T11:04:43+01:00
+tags:
+  - hpc
+  - edu
+  - ete
+  - exampledir
+  - examplesdir
+  - fopenmp
+  - gcc
+  - getenvinfo
+  - gfortran
+  - icc
+  - ifort
+  - ip
+  - irectory
+  - matlab
+  - mpi
+  - nds
+  - nwchem
+  - ome
+  - omp
+  - ompi
+  - openmp
+  - pgcc
+  - pqs
+  - py
+  - ua
+  - uct
+  - ve
+---
 {% set exampledir="examples/Program-examples" %}
 # Program examples { #ch:program-examples}
 
@@ -64,3 +95,4 @@ Compile by any of the following commands:
 |              | gfortran -fopenmp omp_hello.f -o hello |
 
 Be invited to explore the examples.
+

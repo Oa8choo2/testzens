@@ -1,3 +1,126 @@
+---
+updated_at: 2026-02-05T11:04:42+01:00
+tags:
+  - hpc
+  - acl
+  - alphafold
+  - bbcswebdav
+  - bioconductor
+  - chmod
+  - codeofconduct
+  - coresnodes
+  - donphan
+  - easybuild
+  - eb
+  - edu
+  - ega
+  - egrep
+  - endif
+  - ete
+  - exe
+  - fosscuda
+  - gcc
+  - gcccore
+  - gebruik
+  - ghent
+  - gpu
+  - gpus
+  - gunzip
+  - gz
+  - gzip
+  - gzipgunzip
+  - hasselt
+  - hpcinfo
+  - hpcugent
+  - hrdepartment
+  - htm
+  - https
+  - ict
+  - icu
+  - infrastructuur
+  - inode
+  - inodes
+  - introhpcugent
+  - ip
+  - irectory
+  - isa
+  - ivc
+  - joltik
+  - kinit
+  - kuleuven
+  - leuven
+  - linux
+  - lmod
+  - matlab
+  - matplotlib
+  - mpi
+  - mpirun
+  - mput
+  - mygroup
+  - mympirun
+  - nds
+  - nec
+  - nextflow
+  - ngs
+  - ntl
+  - numpy
+  - ome
+  - omp
+  - ompi
+  - ong
+  - openmp
+  - openmpi
+  - organisation
+  - organisations
+  - orte
+  - otheruser
+  - ount
+  - parallelizable
+  - pdf
+  - personeel
+  - php
+  - pintra
+  - ppn
+  - py
+  - pythonpath
+  - qsub
+  - questionproblem
+  - regels
+  - rw
+  - rwx
+  - rwxr
+  - sbatch
+  - scipy
+  - segv
+  - setfacl
+  - squeue
+  - sudo
+  - sys
+  - tf
+  - thu
+  - toolchain
+  - toolchains
+  - tqdm
+  - ua
+  - uantwerp
+  - uantwerpen
+  - uct
+  - ud
+  - ueue
+  - ugent
+  - uhasselt
+  - ulimit
+  - url
+  - userid
+  - ve
+  - vsc
+  - vscentrum
+  - vub
+  - walltime
+  - xid
+  - zipp
+  - zipunzip
+---
 # Frequently Asked Questions (FAQ)
 
 {% if site == gent %}
@@ -420,3 +543,4 @@ Who can I contact?
 *   VSC Tier-1 compute: <compute@vscentrum.be>
 
 *   VSC Tier-1 cloud: <cloud@vscentrum.be>
+

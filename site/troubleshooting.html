@@ -1,0 +1,2217 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A new project generated from the default template project.">
+      
+      
+        <meta name="author" content="<your name here>">
+      
+      
+        <link rel="canonical" href="http://localhost:8300/troubleshooting.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="images/favicon.png">
+      <meta name="generator" content="zensical-0.0.19">
+    
+    
+<meta name="google-site-verification" content="nJqh3TVb_44fMl2gS61agt_bRNFEaI496UaXYL-wLZI" />
+
+    
+      
+        
+      
+      <link rel="stylesheet" href="assets/stylesheets/modern/main.d4922b3c.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libertinus+Sans:300,300i,400,400i,500,500i,700,700i%7CLibertinus+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Libertinus Sans";--md-code-font:"Libertinus Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+    
+    
+<script>
+  (function() {
+    var cx = 'd3873894b6f614f35';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+<script>
+registerListener('load', setLazy);
+registerListener('load', lazyLoad);
+registerListener('scroll', lazyLoad);
+
+var lazy = [];
+
+function setLazy(){
+    lazy = document.getElementsByClassName('lazy');
+    console.log('Found ' + lazy.length + ' lazy images');
+}
+
+function lazyLoad(){
+    for(var i=0; i<lazy.length; i++){
+        if(isInViewport(lazy[i])){
+            if (lazy[i].getAttribute('data-src')){
+                lazy[i].src = lazy[i].getAttribute('data-src');
+                lazy[i].removeAttribute('data-src');
+            }
+        }
+    }
+
+    cleanLazy();
+}
+
+function cleanLazy(){
+    lazy = Array.prototype.filter.call(lazy, function(l){ return l.getAttribute('data-src');});
+}
+
+function isInViewport(el){
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.bottom >= 0 &&
+        rect.right >= 0 &&
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+     );
+}
+
+function registerListener(event, func) {
+    if (window.addEventListener) {
+        window.addEventListener(event, func)
+    } else {
+        window.attachEvent('on' + event, func)
+    }
+}
+</script>
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#troubleshooting" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Troubleshooting
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<gcse:searchbox-only>Search enableAutoComplete="true"</gcse:searchbox-only>
+
+<hr>
+<div class="md-search" 
+  data-md-component="search" 
+  role="dialog" 
+  aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+
+<hr>
+
+ <script async src="https://cse.google.com/cse.js?cx=d3873894b6f614f35">
+</script>
+<div class="gcse-search" ></div>
+
+<br><ol>
+  <li>gcse-searchresults-only
+    <li>gcse-search
+</ol>
+Look and feel gsce: https://programmablesearchengine.google.com/controlpanel/lookandfeel?cx=d3873894b6f614f35
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/Oa8choo2/testzens" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M216.3 158.4H137C97 147.9 6.5 150.6 6.5 233.2c0 30.1 15 51.2 35 61-25.1 23-37 33.8-37 49.2 0 11 4.5 21.1 17.9 26.8C8.1 383.6 0 393.3 0 411.6c0 32.1 28 50.8 101.6 50.8 70.8 0 111.8-26.4 111.8-73.2 0-58.7-45.2-56.5-151.6-63l13.4-21.6c27.3 7.6 118.7 10 118.7-67.9 0-18.7-7.7-31.7-15-41.1l37.4-2.8v-34.5zm-63.4 241.9c0 32.1-104.9 32.1-104.9 2.4 0-8.1 5.3-15 10.6-21.5 77.7 5.3 94.3 3.4 94.3 19.1m-50.8-134.6c-52.8 0-50.5-71.2 1.2-71.2 49.5 0 50.8 71.2-1.2 71.2m133.3 100.5v-32.1c26.7-3.7 27.2-2 27.2-11V203.6c0-8.5-2.1-7.4-27.2-16.3l4.5-32.9h84.2v168.7c0 6.5.4 7.3 6.5 8.1l20.7 2.8v32.1H235.4zm52.5-244.3c-23.2 0-36.6-13.4-36.6-36.6s13.4-35.8 36.6-35.8c23.6 0 37 12.6 37 35.8s-13.4 36.6-37 36.6M512 350.5c-17.5 8.5-43.1 16.3-66.3 16.3-48.4 0-66.7-19.5-66.7-65.5V194.8c0-5.4 1-4.1-31.7-4.1v-36.2c35.8-4.1 50-22 54.5-66.3h38.6c0 65.8-1.3 61.8 3.3 61.8H501v40.6h-60.6v97.1c0 6.9-4.9 51.4 60.6 26.8l11 35.8z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="section/index.html" class="md-tabs__link">
+          
+  
+  Section
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="software/index.html" class="md-tabs__link">
+          
+  
+  Software
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Oa8choo2/testzens" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M216.3 158.4H137C97 147.9 6.5 150.6 6.5 233.2c0 30.1 15 51.2 35 61-25.1 23-37 33.8-37 49.2 0 11 4.5 21.1 17.9 26.8C8.1 383.6 0 393.3 0 411.6c0 32.1 28 50.8 101.6 50.8 70.8 0 111.8-26.4 111.8-73.2 0-58.7-45.2-56.5-151.6-63l13.4-21.6c27.3 7.6 118.7 10 118.7-67.9 0-18.7-7.7-31.7-15-41.1l37.4-2.8v-34.5zm-63.4 241.9c0 32.1-104.9 32.1-104.9 2.4 0-8.1 5.3-15 10.6-21.5 77.7 5.3 94.3 3.4 94.3 19.1m-50.8-134.6c-52.8 0-50.5-71.2 1.2-71.2 49.5 0 50.8 71.2-1.2 71.2m133.3 100.5v-32.1c26.7-3.7 27.2-2 27.2-11V203.6c0-8.5-2.1-7.4-27.2-16.3l4.5-32.9h84.2v168.7c0 6.5.4 7.3 6.5 8.1l20.7 2.8v32.1H235.4zm52.5-244.3c-23.2 0-36.6-13.4-36.6-36.6s13.4-35.8 36.6-35.8c23.6 0 37 12.6 37 35.8s-13.4 36.6-37 36.6M512 350.5c-17.5 8.5-43.1 16.3-66.3 16.3-48.4 0-66.7-19.5-66.7-65.5V194.8c0-5.4 1-4.1-31.7-4.1v-36.2c35.8-4.1 50-22 54.5-66.3h38.6c0 65.8-1.3 61.8 3.3 61.8H501v40.6h-60.6v97.1c0 6.9-4.9 51.4 60.6 26.8l11 35.8z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="section/index.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index.md for section
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="software/index.html" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+    <a href="https://github.com/Oa8choo2/testzens/edit/main/docs/troubleshooting.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/Oa8choo2/testzens/raw/main/docs/troubleshooting.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-code-2" viewBox="0 0 24 24"><path d="M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35"/><path d="M14 2v5a1 1 0 0 0 1 1h5M5 16l-3 3 3 3M9 22l3-3-3-3"/></svg>
+    </a>
+  
+
+
+<h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h1>
+<h2 id="job_does_not_run_faster">Why does my job not run faster when using more nodes and/or cores?<a class="headerlink" href="#job_does_not_run_faster" title="Permanent link">&para;</a></h2>
+<p>Requesting more resources for your job, more specifically using multiple cores and/or nodes, 
+does not automatically imply that your job will run faster. 
+There are various factors that determine to what extent these extra resources can be used and how efficiently they can be used. 
+More information on this in the subsections below.</p>
+<h3 id="using-multiple-cores">Using multiple cores<a class="headerlink" href="#using-multiple-cores" title="Permanent link">&para;</a></h3>
+<p>When you want to speed up your jobs by requesting multiple cores, you also need to use software that is actually capable of 
+using them (and use them efficiently, ideally).
+Unless a particular parallel programming paradigm like <a href="https://www.openmp.org/about/openmp-faq/#WhatIs">OpenMP</a> threading 
+(shared memory) or <a href="https://en.wikipedia.org/wiki/Message_Passing_Interface">MPI</a> (distributed memory) is used, 
+software will run sequentially (on a single core).</p>
+<p>To use multiple cores, the software needs to be able to create, manage, and synchronize multiple threads or processes. 
+More on how to implement parallelization for you exact programming language can be found online.
+Note that when using software that only uses <em>threads</em> to use multiple cores, there is no point in asking for multiple <em>nodes</em>, 
+since with a multi-threading (shared memory) approach you can only use the resources (cores, memory) of a <em>single</em> node.</p>
+<p>Even if your software is able to use multiple cores, maybe there is no point in going beyond a single core or a handful of cores, 
+for example because the workload you are running is too small or does not parallelize well.
+You can test this by increasing the amount of cores step-wise, and look at the speedup you gain. For example, 
+test with 2, 4, 16, a quarter of, half of, and all available cores.</p>
+<p>Other reasons why using more cores may not lead to a (significant) speedup include:</p>
+<ul>
+<li>
+<p><strong>Overhead:</strong> When you use multi-threading (OpenMP) or multi-processing (MPI), 
+you should <em>not</em> expect that doubling the amount of cores will result in a 2x speedup. 
+This is due to the fact that time is needed to create, manage and synchronize the threads/processes.
+When this "bookkeeping" overhead exceeds the time gained by parallelization, you will not observe any speedup (or even see slower runs).
+For example, this can happen when you split your program in too many (tiny) tasks to run in parallel - 
+creating a thread/process for each task may even take longer than actually running the task itself.</p>
+</li>
+<li>
+<p><strong><a href="https://en.wikipedia.org/wiki/Amdahl%27s_law">Amdahl's Law</a></strong> is often used in parallel computing to predict the maximum achievable (theoretical) speedup when using multiple cores. 
+It states that "<em>the overall performance improvement gained by optimizing a single part of a system is limited by the fraction of time that the improved part is actually used</em>". 
+For example, if a program needs 20 hours to complete using a single core, but a one-hour portion of the program can not be parallelized, 
+only the remaining 19 hours of execution time can be sped up using parallelization. 
+Regardless of how many cores are devoted to a parallelized execution of this program, the minimum execution time is always more than 1 hour. 
+So when you reach this theoretical limit, using more cores will not help at all to speed up the computational workload.</p>
+</li>
+<li>
+<p><strong>Resource contention:</strong> When two or more threads/processes want to access the same resource, they need to wait on each other - this is called resource contention. 
+As a result, 1 thread/process will need to wait until the other one is finished using that resource. 
+When each thread uses the same resource, it will definitely run slower than if it doesn't need to wait for other threads to finish.</p>
+</li>
+<li>
+<p><strong>Software limitations:</strong> It is possible that the software you are using is just not really optimized for parallelization. 
+An example of a software that is not really optimized for multi-threading is Python (although this has improved over the years).
+This is due to the fact that in Python threads are implemented in a way that multiple threads can not run at the same time, due to the <a href="https://en.wikipedia.org/wiki/Global_interpreter_lock">global interpreter lock (GIL)</a>. 
+Instead of using multi-threading in Python to speedup a CPU bound program, you should use multi-processing instead, 
+which uses multiple processes (multiple instances of the same program) instead of multiple threads in a single program instance.
+Using multiple processes can speed up your CPU bound programs a lot more <em>in Python</em> than threads can do, even though they are much less efficient to create.
+In other programming languages (which don't have a GIL), you would probably still want to use threads.</p>
+</li>
+<li>
+<p><strong><a href="https://www.admin-magazine.com/HPC/Articles/Processor-Affinity-for-OpenMP-and-MPI">Affinity and core pinning</a></strong>: 
+Even when the software you are using is able to efficiently use multiple cores, you may not see any speedup (or even a significant slowdown).
+This could be due to threads or processes that are not pinned to specific cores and keep hopping around between cores, 
+or because the pinning is done incorrectly and several threads/processes are being pinned to the same core(s), and thus keep "fighting" each other.</p>
+</li>
+<li>
+<p><strong>Lack of sufficient memory</strong>: When there is not enough memory available, or not enough memory bandwidth, 
+it is likely that you will not see a significant speedup when using more cores (since each thread or process most likely requires additional memory).</p>
+</li>
+</ul>
+<p>There is more info on <a href="multi_core_jobs.html">running multi-core workloads</a> on the {{ hpcinfra }}.</p>
+<h3 id="using-multiple-nodes">Using multiple nodes<a class="headerlink" href="#using-multiple-nodes" title="Permanent link">&para;</a></h3>
+<p>When trying to use multiple (worker)nodes to improve the performance of your workloads, you may not see (significant) speedup.</p>
+<p>Parallelizing code across nodes is fundamentally different from leveraging multiple cores via multi-threading within a single node.
+The scalability achieved through multi-threading does not extend seamlessly to distributing computations across multiple nodes.
+This means that just changing <code>#PBS -l nodes=1:ppn=10</code> to <code>#PBS -l nodes=2:ppn=10</code> may only increase the waiting time to get your job running (because twice as many resources are requested), and will not improve the execution time.</p>
+<p>Actually using additional nodes is not as straightforward as merely asking for multiple nodes when submitting your job. The resources on these additional nodes often need to discovered, managed, and synchronized. This introduces complexities in distributing work effectively across the nodes. Luckily, there exist some libraries that do this for you.</p>
+<p>Using the resources of multiple nodes is often done using a <a href="https://en.wikipedia.org/wiki/Message_Passing_Interface">Message Passing Interface (MPI)</a> library.
+MPI allows nodes to communicate and coordinate, but it also introduces additional complexity.</p>
+<p>We have an example of <a href="multi_core_jobs.html#parallel-computing-with-mpi">how you can make beneficial use of multiple nodes</a>.</p>
+<p>You can also use MPI in Python, some useful packages that are also available on the HPC are:</p>
+<ul>
+<li><a href="https://mpi4py.readthedocs.io/en/stable/mpi4py.html">mpi4py</a></li>
+<li><a href="https://www.boost.org/doc/libs/1_55_0/doc/html/mpi/python.html">Boost.MPI</a></li>
+</ul>
+<p>We advise to maximize core utilization before considering using multiple nodes.
+Our <a href="https://www.ugent.be/hpc/en/infrastructure">infrastructure</a> has clusters with a lot of cores per node so we suggest that you first try to use all the cores on 1 node before you expand to more nodes.
+In addition, when running MPI software we strongly advise to use our <a href="mympirun.html">mympirun</a> tool.</p>
+<h3 id="how-do-i-know-if-my-software-can-run-in-parallel">How do I know if my software can run in parallel?<a class="headerlink" href="#how-do-i-know-if-my-software-can-run-in-parallel" title="Permanent link">&para;</a></h3>
+<p>If you are not sure if the software you are using can efficiently use multiple cores or run across multiple nodes, 
+you should check its documentation for instructions on how to run in parallel, 
+or check for options that control how many threads/cores/nodes can be used.</p>
+<p>If you can not find any information along those lines, the software you are using can probably only use a single core 
+and thus requesting multiple cores and/or nodes will only result in wasted resources.</p>
+<h2 id="walltime-issues">Walltime issues<a class="headerlink" href="#walltime-issues" title="Permanent link">&para;</a></h2>
+<p>If you get from your job output an error message similar to this:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>=&gt;&gt; PBS: job killed: walltime &lt;value in seconds&gt; exceeded limit  &lt;value in seconds&gt;
+</span></code></pre></div>
+<p>This occurs when your job did not complete within the requested
+walltime. See
+section on <a href="../fine_tuning_job_specifications/#specifying-walltime">Specifying Walltime</a> for more information
+about how to request the walltime.</p>
+<h2 id="out-of-quota-issues">Out of quota issues<a class="headerlink" href="#out-of-quota-issues" title="Permanent link">&para;</a></h2>
+<p _="%" endif="endif">Sometimes a job hangs at some point or it stops writing in the disk.
+These errors are usually related to the quota usage. You may have
+reached your quota limit at some storage endpoint. You should move (or
+remove) the data to a different storage endpoint (or request more quota)
+to be able to write to the disk and then resubmit the jobs. 
+{% if site == gent %}
+Another
+option is to request extra quota for your VO to the VO moderator/s. See
+section on <a href="../running_jobs_with_input_output_data/#pre-defined-user-directories">Pre-defined user directories</a> and <a href="../running_jobs_with_input_output_data/#pre-defined-quotas">Pre-defined quotas</a> for more information about quotas
+and how to use the storage endpoints in an efficient way.</p>
+<h2 id="sec:connecting-issues">Issues connecting to login node<a class="headerlink" href="#sec:connecting-issues" title="Permanent link">&para;</a></h2>
+<p>If you are confused about the SSH public/private key pair concept, maybe
+the key/lock analogy in <a href="../account/#how-do-ssh-keys-work">How do SSH keys work?</a> can help.</p>
+<p>If you have errors that look like:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{{ userid }}@{{ loginnode }}: Permission denied
+</span></code></pre></div>
+<p>or you are experiencing problems with connecting, here is a list of
+things to do that should help:</p>
+<ol>
+<li>
+<p>Keep in mind that it can take up to an hour for your VSC account to
+    become active after it has been <em>approved</em>; until then, logging in
+    to your VSC account will not work.</p>
+</li>
+<li>
+<p OS="OS" _="%" if="if">Make sure you are connecting from an IP address that is allowed to
+    access the VSC login nodes, see
+    section <a href="../connecting/#connection-restrictions">Connection restrictions</a>
+    for more information.</p>
+</li>
+<li>
+<p>Your SSH private key may not be in the default location
+    (<code>$HOME/.ssh/id_rsa</code>). There are several ways to deal with this
+    (using one of these is sufficient):</p>
+<ol>
+<li>Use the <code>ssh -i</code> (see section <a href="../connecting/#connect">Connect</a>) <em>OR;</em></li>
+<li>Use <code>ssh-add</code> (see section <a href="../account/#using-an-ssh-agent-optional">Using an SSH agent</a>) <em>OR;</em></li>
+<li _="%" endif="endif">Specify the location of the key in <code>$HOME/.ssh/config</code>. You will
+            need to replace the VSC login id in the <code>User</code> field with your own:
+            <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Host {{ hpcname }}
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    Hostname {{ loginnode }}
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    IdentityFile /path/to/private/key
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    User {{ userid }}
+</span></code></pre></div>
+    Now you can connect with <code>ssh {{ hpcname }}</code>.</li>
+</ol>
+</li>
+<li>
+<p>Please double/triple check your VSC login ID. It should look
+    something like <em>{{ userid }}</em>: the letters <code>vsc</code>, followed by exactly 5 digits.
+    Make sure it's the same one as the one on
+    <a href="https://account.vscentrum.be/">https://account.vscentrum.be/</a>.</p>
+</li>
+<li>
+<p>You previously connected to the {{ hpc }} from another machine, but now have
+    another machine? Please follow the procedure for adding additional
+    keys in section <a href="../account/#adding-multiple-ssh-public-keys-optional">Adding multiple SSH public keys</a>. You may need to wait for
+    15-20 minutes until the SSH public key(s) you added become active.</p>
+</li>
+<li>
+<p>{% if OS == windows %}</p>
+<p _="%" else="else">Make sure you are using the private key (not the public key) when
+trying to connect: If you followed the manual, the private key
+filename should end in <code>.ppk</code> (not in <code>.pub</code>). </p>
+<p _="%" endif="endif">When using an SSH key
+in a non-default location, make sure you supply the path of the
+private key (and not the path of the public key) to <code>ssh</code>.
+<code>id_rsa.pub</code> is the usual filename of the public key, <code>id_rsa</code> is
+the usual filename of the private key. (See also
+section <a href="../connecting/#connect">Connect</a>)</p>
+</li>
+<li>
+<p>If you have multiple private keys on your machine, please make sure
+    you are using the one that corresponds to (one of) the public key(s)
+    you added on <a href="https://account.vscentrum.be/">https://account.vscentrum.be/</a>.</p>
+</li>
+<li>
+<p>Please do not use someone else's private keys. You must never share
+    your private key, they're called <em>private</em> for a good reason.</p>
+</li>
+</ol>
+<p>{% if OS == windows %}
+If you are using PuTTY and get this error message:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>server unexpectedly closed network connection
+</span></code></pre></div>
+<p>it is possible that the PuTTY version you are using is too old and
+doesn't support some required (security-related) features.</p>
+<p _="%" endif="endif">Make sure you are using the latest PuTTY version if you are encountering
+problems connecting (see <a href="../account/#get-putty-a-free-telnetssh-client">Get PuTTY</a>). If that doesn't help, please contact {{ hpcinfo }}.</p>
+<p>If you've tried all applicable items above and it doesn't solve your
+problem, please contact {{ hpcinfo }} and include the following information:</p>
+<p>{% if OS == windows %}
+Please create a log file of your SSH session by following the steps in
+<a href="https://stackoverflow.com/a/21232019/1467322">this article</a>
+and include it in the email.</p>
+<h3 id="change-putty-private-key-for-a-saved-configuration">Change PuTTY private key for a saved configuration<a class="headerlink" href="#change-putty-private-key-for-a-saved-configuration" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Open PuTTY</p>
+</li>
+<li>
+<p>Single click on the saved configuration</p>
+<p><img alt="image" src="img/831change01.png" /></p>
+</li>
+<li>
+<p>Then click <span class="keys"><kbd>Load</kbd></span> button</p>
+<p><img alt="image" src="img/831change02.png" /></p>
+</li>
+<li>
+<p>Expand SSH category (on the left panel) clicking on the "+" next
+    to SSH</p>
+<p><img alt="image" src="img/831change03.png" /></p>
+</li>
+<li>
+<p>Click on Auth under the SSH category</p>
+<p><img alt="image" src="img/831change04.png" /></p>
+</li>
+<li>
+<p>On the right panel, click <span class="keys"><kbd>Browse</kbd></span> button</p>
+<p><img alt="image" src="img/831change05.png" /></p>
+</li>
+<li>
+<p>Then search your private key on your computer (with the extension
+    ".ppk")</p>
+</li>
+<li>
+<p>Go back to the top of category, and click Session</p>
+<p><img alt="image" src="img/831change06.png" /></p>
+</li>
+<li>
+<p>On the right panel, click on <span class="keys"><kbd>Save</kbd></span> button</p>
+<p><img alt="image" src="img/831change07.png" /></p>
+</li>
+</ol>
+<h3 id="check-whether-your-private-key-in-putty-matches-the-public-key-on-the-accountpage">Check whether your private key in PuTTY matches the public key on the accountpage<a class="headerlink" href="#check-whether-your-private-key-in-putty-matches-the-public-key-on-the-accountpage" title="Permanent link">&para;</a></h3>
+<p>Follow the instructions in <a href="../troubleshooting/#change-putty-private-key-for-a-saved-configuration">Change PuTTY private key for a saved configuration</a> util item 5, then:</p>
+<ol>
+<li>
+<p>Single click on the textbox containing the path to your private key,
+    then select all text (push <span class="keys"><kbd>Ctrl</kbd></span> + <span class="keys"><kbd>a</kbd></span> ), then copy the location of the
+    private key (push <span class="keys"><kbd>Ctrl</kbd></span> + <span class="keys"><kbd>c</kbd></span>)</p>
+<p><img alt="image" src="img/832check05.png" /></p>
+</li>
+<li>
+<p>Open PuTTYgen</p>
+<p><img alt="image" src="img/832check06.png" /></p>
+</li>
+<li>
+<p>Enter menu item "File" and select "Load Private key"</p>
+<p><img alt="image" src="img/832check07.png" /></p>
+</li>
+<li>
+<p>On the "Load private key" popup, click in the textbox next to
+    "File name:", then paste the location of your private key (push <span class="keys"><kbd>Ctrl</kbd></span> + <span class="keys"><kbd>v</kbd></span>), then click <span class="keys"><kbd>Open</kbd></span></p>
+<p><img alt="image" src="img/832check08.png" /></p>
+</li>
+<li>
+<p>Make sure that your Public key from the "Public key for pasting
+    into OpenSSH authorized_keys file" textbox is in your "Public
+    keys" section on the accountpage <a href="https://account.vscentrum.be">https://account.vscentrum.be</a>.
+    (Scroll down to the bottom of "View Account" tab, you will find
+    there the "Public keys" section)</p>
+<p><img alt="image" src="img/832check09.png" /></p>
+</li>
+</ol>
+<p>{% else %}
+Please add <code>-vvv</code> as a flag to <code>ssh</code> like:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ssh -vvv {{ userid }}@{{ loginnode }}
+</span></code></pre></div>
+<p _="%" endif="endif">and include the output of that command in the message.</p>
+<p>{% if site == gent %}</p>
+<h2 id="issues-reaching-servers-from-hpc-infrastructure">Issues reaching servers from HPC infrastructure<a class="headerlink" href="#issues-reaching-servers-from-hpc-infrastructure" title="Permanent link">&para;</a></h2>
+<p>If you have to reach license servers from {{ hpcinfra }} systems or you 
+have to directly load some database here, then it might not work
+(you will get errors like <code>Network connection timed out</code> or <code>Network connection refused</code>).</p>
+<p>Our firewall rules are quite strict, we only allow outging ports 22 (SSH protocol),
+ 80 (HTTP protocol), and 443 (HTTPS protcol), so if your download or license server 
+requires other ports, then we should make a modification in our firewall settings.
+For this, please contact us via &lt;{{ hpcinfo }}&gt;, and send the destination IP and ports. 
+(We only open our firewall for static IP addresses).</p>
+<p>Take into account that the other end may also has a firewall, or that the license server may restrict 
+the incoming IP addresses. In this case you need the outgoing IP address of our systems,
+which is either of:</p>
+<ul>
+<li><code>157.193.240.251</code> (hostname <code>nathpca001.ugent.be</code>), or</li>
+<li _="%" endif="endif"><code>157.193.241.251</code> (hostname <code>nathpcb001.ugent.be</code>)</li>
+</ul>
+<h2 id="security-warning-about-invalid-host-key">Security warning about invalid host key<a class="headerlink" href="#security-warning-about-invalid-host-key" title="Permanent link">&para;</a></h2>
+<p>If you get a warning that looks like the one below, it is possible that
+someone is trying to intercept the connection between you and the system
+you are connecting to. Another possibility is that the host key of the
+system you are connecting to has changed.</p>
+<p>{% if OS == (linux or macos) %}</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>@     WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!    @
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY! 
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>Someone could be
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>eavesdropping on you right now (man-in-the-middle attack)! 
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>It is also possible that a host key has just been changed. 
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>The fingerprint for the ECDSA key sent by the remote host is
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>SHA256:1MNKFTfl1T9sm6tTWAo4sn7zyEfiWFLKbk/mlT+7S5s. 
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>Please contact your system administrator. 
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>Add correct host key in  ~/.ssh/known_hosts to get rid of this message. 
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>Offending ECDSA key in  ~/.ssh/known_hosts:21
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>ECDSA host key for {{ loginnode }} has changed and you have requested strict checking.
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>Host key verification failed.
+</span></code></pre></div>
+<p>You will need to remove the line it's complaining about (in the example,
+line 21). To do that, open <code>~/.ssh/known_hosts</code> in an editor, and remove the
+line. This results in <code>ssh</code> "forgetting" the system you are connecting
+to.</p>
+<p>Alternatively you can use the command that might be shown by the warning under
+<code>remove with:</code> and it should be something like this:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ssh-keygen -f &quot;~/.ssh/known_hosts&quot; -R &quot;{{loginnode}}&quot;
+</span></code></pre></div>
+<p>If the command is not shown, take the file from the "Offending ECDSA key in",
+and the host name from "ECDSA host key for" lines.</p>
+<p>After you've done that, you'll need to connect to the {{ hpc }} again. See <a href="./#warning-message-when-first-connecting-to-new-host">Warning message when first connecting to new host</a> to verify the fingerprints.</p>
+<p>{% else %}
+You will need to verify that the fingerprint shown in the dialog matches
+one of the following fingerprints:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>{{ puttyFirstConnect }}
+</span></code></pre></div>
+<p><strong>Do not click "Yes" until you verified the fingerprint. Do not press "No" in any case.</strong></p>
+<p>If the fingerprint matches, click "Yes".</p>
+<p>If it doesn't (like in the example) or you are in doubt, take a screenshot, press "Cancel" and contact {{ hpcinfo }}.</p>
+<p>{% include "../macros/sshedfingerprintnote.md" %}</p>
+<p><img alt="image" src="img/putty_security_alert.jpg" /></p>
+<p>{% endif %}</p>
+<h2 id="doswindows-text-format">DOS/Windows text format<a class="headerlink" href="#doswindows-text-format" title="Permanent link">&para;</a></h2>
+<p>If you get errors like:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$ qsub fibo.pbs
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>qsub: script is written in DOS/Windows text format
+</span></code></pre></div>
+<p>or</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sbatch: error: Batch script contains DOS line breaks (\r\n)
+</span></code></pre></div>
+<p>It's probably because you transferred the files from a Windows computer.
+See the <a href="../linux-tutorial/uploading_files/#dos2unix">section about <code>dos2unix</code> in Linux tutorial</a> to fix this error.</p>
+<h2 id="warning-message-when-first-connecting-to-new-host">Warning message when first connecting to new host<a class="headerlink" href="#warning-message-when-first-connecting-to-new-host" title="Permanent link">&para;</a></h2>
+<p>{% if OS == (linux or macos) %}</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$ ssh {{userid}}@{{loginnode}}
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>The authenticity of host {{loginnode}} (&lt;IP-adress&gt;) can&#39;t be established. 
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>&lt;algorithm&gt; key fingerprint is &lt;hash&gt;
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>Are you sure you want to continue connecting (yes/no)?
+</span></code></pre></div>
+<p>Now you can check the authenticity by checking if the line that is at
+the place of the underlined piece of text matches one of the following
+lines:</p>
+<p _="%" endif="endif"><div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>{{opensshFirstConnect}}
+</span></code></pre></div></p>
+<p>If it does, type <strong><em>yes</em></strong>. If it doesn't, please contact support: {{hpcinfo}}.</p>
+<p _="%" _.._macros_firsttimeconnection.md_="&quot;../macros/firsttimeconnection.md&quot;" include="include">{% if OS != (linux or macos) %}</p>
+<p>{% endif %}</p>
+<h2 id="memory-limits">Memory limits<a class="headerlink" href="#memory-limits" title="Permanent link">&para;</a></h2>
+<p>To avoid jobs allocating too much memory, there are memory limits in
+place by default. It is possible to specify higher memory limits if your
+jobs require this.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Memory is not the same as storage. Memory or RAM is used for temporary, 
+fast access to data when the program is running, while storage is used for long-term data retention.
+If you are running into problems because you reached your storage quota, see <a href="#out-of-quota-issues">Out of quota issues</a>.</p>
+</div>
+<h3 id="how-will-i-know-if-memory-limits-are-the-cause-of-my-problem">How will I know if memory limits are the cause of my problem?<a class="headerlink" href="#how-will-i-know-if-memory-limits-are-the-cause-of-my-problem" title="Permanent link">&para;</a></h3>
+<p>If your program fails with a memory-related issue, there is a good
+chance it failed because of the memory limits and you should increase
+the memory limits for your job.</p>
+<p>Examples of these error messages are: <code>malloc failed</code>, <code>Out of memory</code>,
+<code>Could not allocate memory</code> or in Java:
+<code>Could not reserve enough space for object heap</code>. Your program can also
+run into a <code>Segmentation fault</code> (or <code>segfault</code>) or crash due to bus
+errors.</p>
+<p>You can check the amount of virtual memory (in Kb) that is available to
+you via the <code>ulimit -v</code> command <em>in your job script</em>.</p>
+<h3 id="how-do-i-specify-the-amount-of-memory-i-need">How do I specify the amount of memory I need?<a class="headerlink" href="#how-do-i-specify-the-amount-of-memory-i-need" title="Permanent link">&para;</a></h3>
+<p>See <a href="../running_batch_jobs/#generic-resource-requirements">Generic resource requirements</a> to set memory and other requirements, see <a href="../fine_tuning_job_specifications/#specifying-memory-requirements">Specifying memory requirements</a> to finetune the amount of
+memory you request.</p>
+<p>{% if site == gent %}</p>
+<h2 id="module-conflicts">Module conflicts<a class="headerlink" href="#module-conflicts" title="Permanent link">&para;</a></h2>
+<p>Modules that are loaded together must use the same toolchain version or common dependencies. In the following
+example, we try to load a module that uses the <code>GCCcore-13.3.0</code> toolchain
+together with one that uses the <code>GCCcore-13.2.0</code> toolchain:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>Python/3.12.3-GCCcore-13.3.0
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>Pillow/10.2.0-GCCcore-13.2.0
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>Lmod<span class="w"> </span>has<span class="w"> </span>detected<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>error:<span class="w">  </span>A<span class="w"> </span>different<span class="w"> </span>version<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span><span class="s1">&#39;GCCcore&#39;</span><span class="w"> </span>module<span class="w"> </span>is<span class="w"> </span>already<span class="w"> </span>loaded<span class="w"> </span><span class="o">(</span>see<span class="w"> </span>output<span class="w"> </span>of<span class="w"> </span><span class="s1">&#39;ml&#39;</span><span class="o">)</span>.
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>You<span class="w"> </span>should<span class="w"> </span>load<span class="w"> </span>another<span class="w"> </span><span class="s1">&#39;Pillow&#39;</span><span class="w"> </span>module<span class="w"> </span><span class="k">for</span><span class="w"> </span>that<span class="w"> </span>is<span class="w"> </span>compatible<span class="w"> </span>with<span class="w"> </span>the<span class="w"> </span>currently<span class="w"> </span>loaded<span class="w"> </span>version<span class="w"> </span>of<span class="w"> </span><span class="s1">&#39;GCCcore&#39;</span>.
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>Use<span class="w"> </span><span class="s1">&#39;ml spider Pillow&#39;</span><span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>an<span class="w"> </span>overview<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>available<span class="w"> </span>versions.
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>If<span class="w"> </span>you<span class="w"> </span>don<span class="err">&#39;</span>t<span class="w"> </span>understand<span class="w"> </span>the<span class="w"> </span>warning<span class="w"> </span>or<span class="w"> </span>error,<span class="w"> </span>contact<span class="w"> </span>the<span class="w"> </span>helpdesk<span class="w"> </span>at<span class="w"> </span>hpc@ugent.be<span class="w"> </span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>While<span class="w"> </span>processing<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>module<span class="o">(</span>s<span class="o">)</span>:
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">    </span>Module<span class="w"> </span>fullname<span class="w">               </span>Module<span class="w"> </span>Filename
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">    </span>---------------<span class="w">               </span>---------------
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">    </span>Pillow/10.2.0-GCCcore-13.2.0<span class="w">  </span>/apps/gent/RHEL8/zen2-ib/modules/all/Pillow/10.2.0-GCCcore-13.2.0.lua
+</span></code></pre></div>
+<p>This resulted in an error because we tried to load two modules with different
+versions of the <code>GCCcore</code> toolchain.</p>
+<p>To fix this, check if there are other versions of the modules you want to load
+that have the same version of common dependencies. You can list all versions of
+a module with <code>module avail</code>: for <code>Pillow</code>, this command is <code>module avail Pillow</code>.</p>
+<p>As a rule of thumb, toolchains in the same row are compatible with each other:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GCCcore-14.3.0</td>
+<td>GCC-14.3.0</td>
+<td>gfbf-2025b/gompi-2025b</td>
+<td>foss-2025b</td>
+</tr>
+<tr>
+<td>GCCcore-14.3.0</td>
+<td>intel-compilers-2025.2.0</td>
+<td>iimkl-2025b/iimpi-2025b</td>
+<td>intel-2025b</td>
+</tr>
+<tr>
+<td>GCCcore-14.2.0</td>
+<td>GCC-14.2.0</td>
+<td>gfbf-2025a/gompi-2025a</td>
+<td>foss-2025a</td>
+</tr>
+<tr>
+<td>GCCcore-14.2.0</td>
+<td>intel-compilers-2025.1.1</td>
+<td>iimkl-2025a/iimpi-2025a</td>
+<td>intel-2025a</td>
+</tr>
+<tr>
+<td>GCCcore-13.3.0</td>
+<td>GCC-13.3.0</td>
+<td>gfbf-2024a/gompi-2024a</td>
+<td>foss-2024a</td>
+</tr>
+<tr>
+<td>GCCcore-13.3.0</td>
+<td>intel-compilers-2024.2.0</td>
+<td>iimkl-2024a/iimpi-2024a</td>
+<td>intel-2024a</td>
+</tr>
+<tr>
+<td>GCCcore-13.2.0</td>
+<td>GCC-13.2.0</td>
+<td>gfbf-2023b/gompi-2023b</td>
+<td>foss-2023b</td>
+</tr>
+<tr>
+<td>GCCcore-13.2.0</td>
+<td>intel-compilers-2023.2.1</td>
+<td>iimkl-2023b/iimpi-2023b</td>
+<td>intel-2023b</td>
+</tr>
+<tr>
+<td>GCCcore-12.3.0</td>
+<td>GCC-12.3.0</td>
+<td>gfbf-2023a/gompi-2023a</td>
+<td>foss-2023a</td>
+</tr>
+<tr>
+<td>GCCcore-12.3.0</td>
+<td>intel-compilers-2023.1.0</td>
+<td>iimkl-2023a/iimpi-2023a</td>
+<td>intel-2023a</td>
+</tr>
+<tr>
+<td>GCCcore-12.2.0</td>
+<td>GCC-12.2.0</td>
+<td>gfbf-2022b/gompi-2022b</td>
+<td>foss-2022b</td>
+</tr>
+<tr>
+<td>GCCcore-12.2.0</td>
+<td>intel-compilers-2022.2.1</td>
+<td>iimkl-2022b/iimpi-2022b</td>
+<td>intel-2022b</td>
+</tr>
+<tr>
+<td>GCCcore-11.3.0</td>
+<td>GCC-11.3.0</td>
+<td>gfbf-2022a/gompi-2022a</td>
+<td>foss-2022a</td>
+</tr>
+<tr>
+<td>GCCcore-11.3.0</td>
+<td>intel-compilers-2022.1.0</td>
+<td>iimkl-2022a/iimpi-2022a</td>
+<td>intel-2022a</td>
+</tr>
+<tr>
+<td>GCCcore-11.2.0</td>
+<td>GCC-11.2.0</td>
+<td>gfbf-2021b/gompi-2021b</td>
+<td>foss-2021b</td>
+</tr>
+<tr>
+<td>GCCcore-11.2.0</td>
+<td>intel-compilers-2021.4.0</td>
+<td>iimkl-2021b/iimpi-2021b</td>
+<td>intel-2021b</td>
+</tr>
+<tr>
+<td>GCCcore-10.3.0</td>
+<td>GCC-10.3.0</td>
+<td>gfbf-2021a/gompi-2021a</td>
+<td>foss-2021a</td>
+</tr>
+<tr>
+<td>GCCcore-10.3.0</td>
+<td>intel-compilers-2021.2.0</td>
+<td>iimkl-2021a/iimpi-2021a</td>
+<td>intel-2021a</td>
+</tr>
+<tr>
+<td>GCCcore-10.2.0</td>
+<td>GCC-10.2.0</td>
+<td>gfbf-2020b/gompi-2020b</td>
+<td>foss-2020b</td>
+</tr>
+<tr>
+<td>GCCcore-10.2.0</td>
+<td>iccifort-2020.4.304</td>
+<td>iimkl-2020b/iimpi-2020b</td>
+<td>intel-2020b</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>we could load the following modules together:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>ml<span class="w"> </span>XGBoost/1.7.2-foss-2022a
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>ml<span class="w"> </span>scikit-learn/1.1.2-foss-2022a
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>ml<span class="w"> </span>cURL/7.83.0-GCCcore-11.3.0
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>ml<span class="w"> </span>JupyterNotebook/6.4.0-GCCcore-11.3.0-IPython-8.5.0
+</span></code></pre></div>
+</div>
+<p>Another common error is:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>$ module load cluster/{{othercluster}}
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>Lmod has detected the following error: A different version of the &#39;cluster&#39; module is already loaded (see output of &#39;ml&#39;).
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>If you don&#39;t understand the warning or error, contact the helpdesk at hpc@ugent.be
+</span></code></pre></div>
+<p _="%" endif="endif">This is because there can only be one <code>cluster</code> module active at a time.
+The correct command is <code>module swap cluster/{{othercluster}}</code>. See also <a href="../running_batch_jobs/#specifying-the-cluster-on-which-to-run">Specifying the cluster on which to run</a>.</p>
+<p>{% if site == gent %}</p>
+<h2 id="illegal-instruction-error"><code>Illegal instruction</code> error<a class="headerlink" href="#illegal-instruction-error" title="Permanent link">&para;</a></h2>
+<h3 id="running-software-that-is-incompatible-with-host">Running software that is incompatible with host<a class="headerlink" href="#running-software-that-is-incompatible-with-host" title="Permanent link">&para;</a></h3>
+<p>When running software provided through modules (see <a href="../running_batch_jobs/#modules">Modules</a>), you may run into
+errors like:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$ module swap cluster/donphan
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>The following have been reloaded with a version change:
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>  1) cluster/doduo =&gt; cluster/donphan         3) env/software/doduo =&gt; env/software/donphan
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>  2) env/slurm/doduo =&gt; env/slurm/donphan     4) env/vsc/doduo =&gt; env/vsc/donphan
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>$ module load Python/3.12.3-GCCcore-13.3.0
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>$ python
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>Illegal instruction (core dumped)
+</span></code></pre></div>
+<p>When we swap to a different cluster, the available modules change so
+they work for that cluster. That means that if the cluster and the login
+nodes have a different CPU architecture, software loaded using modules
+might not work.</p>
+<p>If you want to test software on the login nodes, make sure the
+<code>cluster/{{defaultcluster}}</code> module is loaded (with <code>module swap cluster/{{defaultcluster}}</code>, see <a href="../running_batch_jobs/#specifying-the-cluster-on-which-to-run">Specifying the cluster on which to run</a>), since
+the login nodes and {{defaultcluster}} have the same CPU architecture.</p>
+<p>If modules are already loaded, and then we swap to a different cluster,
+all our modules will get reloaded. This means that all current modules
+will be unloaded and then loaded again, so they'll work on the newly
+loaded cluster. Here's an example of how that would look like:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>$ module load Python/3.12.3-GCCcore-13.3.0
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>$ module swap cluster/donphan
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>Due to MODULEPATH changes, the following have been reloaded:
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>  1) GCCcore/13.3.0                   7) binutils/2.42-GCCcore-13.3.0
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>  2) OpenSSL/3                        8) bzip2/1.0.8-GCCcore-13.3.0
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>  3) Python/3.12.3-GCCcore-13.3.0     9) libffi/3.4.5-GCCcore-13.3.0
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>  4) SQLite/3.45.3-GCCcore-13.3.0    10) libreadline/8.2-GCCcore-13.3.0
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>  5) Tcl/8.6.14-GCCcore-13.3.0       11) ncurses/6.5-GCCcore-13.3.0
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>  6) XZ/5.4.5-GCCcore-13.3.0         12) zlib/1.3.1-GCCcore-13.3.0
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>The following have been reloaded with a version change:
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>  1) cluster/doduo =&gt; cluster/donphan
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>  2) env/slurm/doduo =&gt; env/slurm/donphan
+</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>  3) env/software/doduo =&gt; env/software/donphan
+</span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>  4) env/vsc/doduo =&gt; env/vsc/donphan
+</span></code></pre></div>
+<p>This might result in the same problems as mentioned above. When swapping
+to a different cluster, you can run <code>module purge</code> to unload all modules
+to avoid problems (see <a href="../running_batch_jobs/#purging-all-modules">Purging all modules</a>).</p>
+<h3 id="multi-job-submissions-on-a-non-default-cluster">Multi-job submissions on a non-default cluster<a class="headerlink" href="#multi-job-submissions-on-a-non-default-cluster" title="Permanent link">&para;</a></h3>
+<p>When using a tool that is made available via modules to submit jobs, for example <a href="multi_job_submission.html">Worker</a>,
+you may run into the following error when targeting a non-default cluster:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>$  wsub
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>/apps/gent/.../.../software/worker/.../bin/wsub: line 27: 2152510 Illegal instruction     (core dumped) ${PERL} ${DIR}/../lib/wsub.pl &quot;$@&quot;
+</span></code></pre></div>
+<p>When executing the <code>module swap cluster</code> command, you are not only changing your session environment to submit
+to that specific cluster, but also to use the part of the central software stack that is specific to that cluster.
+In the case of the Worker example above, the latter implies that you are running the <code>wsub</code> command
+on top of a Perl installation that is optimized specifically for the CPUs of the workernodes of that cluster,
+which may not be compatible with the CPUs of the login nodes, triggering the <code>Illegal instruction</code> error.</p>
+<p>The cluster modules are split up into several <code>env/*</code> "submodules" to help deal with this problem.
+For example, by using <code>module swap env/slurm/donphan</code> instead of <code>module swap cluster/donphan</code> (starting from the default environment, the <code>{{defaultcluster}}</code> cluster), you can update your environment to submit jobs to <code>donphan</code>, while still using the software installations that are specific to the <code>{{defaultcluster}}</code> cluster (which are compatible with the login nodes since the <code>{{defaultcluster}}</code> cluster workernodes have the same CPUs).
+The same goes for the other clusters as well of course.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To submit a Worker job to a specific cluster, like the <a href="interactive_debug.html"><code>donphan</code> interactive cluster</a> for instance, use:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>$ module swap env/slurm/donphan 
+</span></code></pre></div>
+instead of
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>$ module swap cluster/donphan 
+</span></code></pre></div></p>
+</div>
+<p>We recommend using a <code>module swap cluster</code> command after submitting the jobs.</p>
+<p>This to "reset" your environment to a sane state, since only having a different <code>env/slurm</code> module loaded can also lead to some surprises if you're not paying close attention.</p>
+<p>{% endif %}</p>
+
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">hpc</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">accountpage</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">adress</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">amd</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">binutils</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">blis</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">cas</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">config</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ddr</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">defaultcluster</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">doduo</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">donphan</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">dsa</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">eb</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ecdsa</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">edu</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ega</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">endif</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ete</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">exe</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">fibo</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">finetune</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">firsttimeconnection</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">fullname</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">gcc</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">gcccore</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">gfbf</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">gil</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">gompi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">hostname</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">hpcinfo</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">hpcinfra</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">hpcname</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">htm</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">https</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">icc</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">iccifort</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ict</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">icu</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">identityfile</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ield</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ifort</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">iimkl</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">iimpi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">imec</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">img</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">imkl</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ip</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ipython</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">isk</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">jpg</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">jupyter</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">jupyternotebook</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">keygen</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">libffi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">libreadline</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">linux</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">lmod</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">loginnode</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">lua</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">macos</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">malloc</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mkl</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mlt</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">modulepath</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mpi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mpirun</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mput</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">mympirun</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ncurses</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">nds</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">nec</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ngs</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">nss</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ntl</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ome</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">omp</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ompi</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ong</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ood</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">openmp</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">openssh</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">opensshfirstconnect</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">openssl</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">othercluster</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ount</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">outging</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">perl</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">png</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ppk</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ppn</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">protcol</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">puttyfirstconnect</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">puttygen</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">py</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">qsub</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">readthedocs</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">rhel</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">rsa</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">rw</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">sbatch</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">scikit</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">slurm</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">sqlite</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">sshedfingerprintnote</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">stackoverflow</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">subsec</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">sys</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">tcl</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">telnetssh</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">textbox</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">tf</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">thu</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">toolchain</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">toolchains</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ua</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">uct</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ud</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ugent</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ulimit</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">url</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">userid</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">ve</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">vsc</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">vscentrum</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">vvv</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">walltime</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">whatis</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">wikipedia</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">workernode</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">workernodes</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">wsub</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">xgboost</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">xtb</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">xz</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">zlib</span>
+      
+    
+  </nav>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        custom footer
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+<h4>Cookie consent</h4>
+<p>    We try not to use any cookies. 
+
+    We do not need your consent.  
+
+    Maybe some third-party cookie harvesters will try to get consent from you.  
+
+    Contact cookies@ugent.be for more information.  
+
+</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Reject</button>
+    
+    
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":".","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.prune","navigation.path","navigation.tabs","navigation.tabs.sticky","navigation.sections","navigation.top","navigation.tracking","search.highlight","toc.follow","toc.integrate","content.action.edit","content.action.view"],"search":"assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.8ffeb9c9.min.js"></script>
+      
+    
+  </body>
+</html>
