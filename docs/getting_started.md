@@ -3,7 +3,7 @@
 # Getting Started
 
 Welcome to the “Getting Started” guide. This chapter will lead you through the
-initial steps of logging into the {{hpcinfra}} and submitting your very first
+initial steps of logging into the UGent HPC infrastructure and submitting your very first
 job. We'll also walk you through the process step by step using a practical
 example.
 
@@ -17,7 +17,7 @@ understanding of the {{ hpcinfra }} and related terminology.
 
 ## Getting Access
 
-To get access to the {{hpcinfra}}, visit [Getting an HPC Account](account.md).
+To get access to the UGent HPC infrastructure, visit [Getting an HPC Account](account.md).
 
 If you have not used Linux before, now would be a good time to follow our [Linux
 Tutorial](linux-tutorial/index.md).
@@ -28,7 +28,7 @@ Commands](useful_linux_commands.md))
 ### A typical workflow
 
 1. Connect to the login nodes
-2. Transfer your files to the {{hpcinfra}}
+2. Transfer your files to the UGent HPC infrastructure
 3. Optional: compile your code and test it
 4. Create a job script and submit your job
 5. Wait for job to be executed
@@ -48,7 +48,7 @@ scripts](https://github.com/hpcugent/vsc_user_docs/tree/main/{{exampleloc}}).
 There are two options to connect
 
 - Using a terminal to connect via SSH (Secure Shell Protocol). See [First Time
-connection to the {{hpcinfra}}](connecting.md#first-time-connection-to-the-hpc-infrastructure))
+connection to the UGent HPC infrastructure](connecting.md#first-time-connection-to-the-hpc-infrastructure))
 - [Using the web portal](web_portal.md)
 
 #### Linux
@@ -81,15 +81,15 @@ If your operating system is **Windows**  it is recommended to use the web
 portal.
 
 The [web portal](web_portal.md) offers a convenient way to upload files and gain
-shell access to the {{hpcinfra}} from a standard web browser (no software
+shell access to the UGent HPC infrastructure from a standard web browser (no software
 installation or configuration required).
 
 See [shell access](web_portal.md#shell-access) when using the web portal, or
 [connection to the
-{{hpcinfra}}](connecting.md#first-time-connection-to-the-hpc-infrastructure)
+UGent HPC infrastructure](connecting.md#first-time-connection-to-the-hpc-infrastructure)
 when using a terminal.
 
-Make sure you can get to a shell access to the {{hpcinfra}} before proceeding
+Make sure you can get to a shell access to the UGent HPC infrastructure before proceeding
 with the next steps.
 
 !!! Info
@@ -100,7 +100,7 @@ with the next steps.
 ### Transfer your files
 
 Now that you can login, it is time to transfer files from your local computer to
-your **home directory** on the {{hpcinfra}}.
+your **home directory** on the UGent HPC infrastructure.
 
 Download following the example scripts to your computer:
 
@@ -152,7 +152,7 @@ ssh  {{userid}}@{{ loginnode }}
     For more information about transfering files or `scp`, see [tranfer files
     from/to hpc](connecting.md#transfer-files-tofrom-the-hpc).
 
-When running `ls` in your session on the {{hpcinfra}}, you should see the two
+When running `ls` in your session on the UGent HPC infrastructure, you should see the two
 files listed in your home directory (`~`):
 
 ```bash
