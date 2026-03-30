@@ -24,6 +24,12 @@ jobs:
       - name: Set up Python
         run: uv python install
         
+      - name: Set up venv
+        run: uv venv
+        
+      - name: Activate venv
+        run: source .venv/bin/activate
+        
       - run: uv pip install zensical
       - run: zensical build --clean 
       - uses: actions/upload-pages-artifact@v4.0.0
