@@ -15,15 +15,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: git config --global init.defaultBranch main
-      - uses: actions/configure-pages@v5
-      - uses: actions/checkout@v5
-      - uses: actions/setup-python@v5
+      - uses: actions/configure-pages@latest
+      - uses: actions/checkout@latest
+      - uses: actions/setup-python@latest
         with:
           python-version: 3.x
       - run: pip install zensical
       - run: zensical build --clean 
-      - uses: actions/upload-pages-artifact@v4
+      - uses: actions/upload-pages-artifact@latest
         with:
           path: site
-      - uses: actions/deploy-pages@v4
+      - uses: actions/deploy-pages@latest
         id: deployment
