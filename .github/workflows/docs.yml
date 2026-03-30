@@ -7,6 +7,10 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  
+env:
+  UV_SYSTEM_PYTHON: 1
+  
 jobs:
   deploy:
     environment:
@@ -23,15 +27,13 @@ jobs:
 
       - name: Set up Python
         run: uv python install
-        
-      - name: Set up venv
-        run: uv venv
-        
-      - name: Activate venv
-        run: source .venv/bin/activate
-        
+
+      - name: Install the project
+        run: uv sync --locked --all-extras --dev        
+
       - run: uv pip install zensical
-      - run: zensical build --clean 
+      - run: zensical build --clean
+
       - uses: actions/upload-pages-artifact@v4.0.0
         with:
           path: site
