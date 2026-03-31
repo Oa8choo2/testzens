@@ -36,8 +36,9 @@ jobs:
       - run: uv pip install zensical
       - run: find /home/runner/work/ -name zensical -ls
       - run: /home/runner/work/testzens/testzens/.venv/bin/zensical --version
-      # run zensical
-      - run: /home/runner/work/testzens/testzens/.venv/bin/zensical build --clean
+      # run zensical debug with python -duv 
+      # - run: /home/runner/work/testzens/testzens/.venv/bin/zensical build --clean
+      - run: python -duv /home/runner/work/testzens/testzens/.venv/bin/zensical build --clean
 
       - uses: actions/upload-pages-artifact@v4.0.0
         with:
