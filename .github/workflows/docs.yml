@@ -26,8 +26,8 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@v7
 
-      - name: update uv
-        run: uv self update
+#      - name: update uv
+#        run: uv self update
       - run: uv self version
 
       - name: Install the project
