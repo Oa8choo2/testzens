@@ -8,6 +8,10 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true 
+  # see https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+
 jobs:
   deploy:
     environment:
