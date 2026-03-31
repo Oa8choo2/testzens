@@ -31,6 +31,7 @@ jobs:
 
       - run: uv pip install zensical
       - run: find /home/runner/work/ -name zensical -ls
+      - run: /home/runner/work/testzens/testzens/.venv/bin/zensical --version
       # run zensical
       - run: /home/runner/work/testzens/testzens/.venv/bin/zensical build --clean
 
