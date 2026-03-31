@@ -26,7 +26,7 @@ jobs:
         run: uv sync --locked --all-extras --dev        
 
       - run: uv pip install zensical
-      - run: ls -al /home/runner/work/_temp/uv-python-dir
+      - run: find /home/runner/work/ -name zensical -ls
       # run zensical
       - run: /home/runner/work/_temp/uv-python-dir/zensical build --clean
 
