@@ -16,3 +16,6 @@ https://oa8choo2.github.io/testzens/
   </script>
   <div class="gcse-search"></div>
 ~~~
+
+note: If you put your README file in your repository's hidden .github, root, or docs directory, GitHub will recognize and automatically surface your README to repository visitors.
+https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes
