@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -vx
+
+cd /tmp/brol2 || exit
+
+rsync -av  ~/repos/github.com/Oa8choo2/p17/docs/ /tmp/brol2/docs/
+
+rm /tmp/brol2/docs/jargon.md
+rm /tmp/brol2/docs/repos.md
+
+while read -r r ; 
+do 
+	echo "$r" | tee -a log2; 
+	rm "$r"  | tee -a log2;
+	# keep building until the build succeeds
+	if zensical build --strict --clean; then
+		echo "last file was $r"
+		exit
+	fi
+ done < <(find /tmp/brol2/docs/ -type f)
+

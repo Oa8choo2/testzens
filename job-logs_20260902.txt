@@ -1,0 +1,574 @@
+﻿2026-09-02T03:26:31.5014555Z Current runner version: '2.337.0'
+2026-09-02T03:26:31.5038576Z ##[group]Runner Image Provisioner
+2026-09-02T03:26:31.5039531Z Hosted Compute Agent
+2026-09-02T03:26:31.5040134Z Version: 20260819.586
+2026-09-02T03:26:31.5040761Z Commit: 3cc4a88dfa507ef76119ad1bb3eccc6378bb2b76
+2026-09-02T03:26:31.5041488Z Build Date: 2026-08-18T23:20:18Z
+2026-09-02T03:26:31.5042148Z Worker ID: {8c12851b-9533-428b-8af1-8866f972c2b9}
+2026-09-02T03:26:31.5042910Z Azure Region: westcentralus
+2026-09-02T03:26:31.5043986Z ##[endgroup]
+2026-09-02T03:26:31.5045387Z ##[group]Operating System
+2026-09-02T03:26:31.5045984Z Ubuntu
+2026-09-02T03:26:31.5046479Z 24.04.4
+2026-09-02T03:26:31.5046995Z LTS
+2026-09-02T03:26:31.5047514Z ##[endgroup]
+2026-09-02T03:26:31.5048024Z ##[group]Runner Image
+2026-09-02T03:26:31.5048626Z Image: ubuntu-24.04
+2026-09-02T03:26:31.5049308Z Version: 20260823.283.1
+2026-09-02T03:26:31.5050566Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260823.283/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-02T03:26:31.5052302Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260823.283
+2026-09-02T03:26:31.5053612Z ##[endgroup]
+2026-09-02T03:26:31.5054731Z ##[group]GITHUB_TOKEN Permissions
+2026-09-02T03:26:31.5057008Z Contents: read
+2026-09-02T03:26:31.5057556Z Metadata: read
+2026-09-02T03:26:31.5058102Z Pages: write
+2026-09-02T03:26:31.5058609Z ##[endgroup]
+2026-09-02T03:26:31.5060508Z Secret source: Actions
+2026-09-02T03:26:31.5061548Z Prepare workflow directory
+2026-09-02T03:26:31.5374849Z Prepare all required actions
+2026-09-02T03:26:31.5423738Z Getting action download info
+2026-09-02T03:26:31.8381829Z Download action repository 'actions/configure-pages@v6' (SHA:45bfe0192ca1faeb007ade9deae92b16b8254a0d)
+2026-09-02T03:26:32.5198267Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-09-02T03:26:32.5566613Z Download action repository 'actions/setup-python@v6' (SHA:ece7cb06caefa5fff74198d8649806c4678c61a1)
+2026-09-02T03:26:32.6459057Z Download action repository 'actions/upload-pages-artifact@v5' (SHA:fc324d3547104276b827a68afc52ff2a11cc49c9)
+2026-09-02T03:26:32.8732367Z Download action repository 'actions/deploy-pages@v5' (SHA:368f82528645a54fb793d4d04e342629a3f51346)
+2026-09-02T03:26:33.7858239Z Getting action download info
+2026-09-02T03:26:33.9220666Z Download action repository 'actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f' (SHA:bbbca2ddaa5d8feaa63e36b76fdaad77386f024f)
+2026-09-02T03:26:34.5033397Z Complete job name: deploy
+2026-09-02T03:26:34.5607711Z ##[group]Run actions/configure-pages@v6
+2026-09-02T03:26:34.5608327Z with:
+2026-09-02T03:26:34.5611066Z   token: ***
+2026-09-02T03:26:34.5611373Z   enablement: false
+2026-09-02T03:26:34.5611843Z ##[endgroup]
+2026-09-02T03:26:34.9919448Z ##[group]Run actions/checkout@v7
+2026-09-02T03:26:34.9919847Z with:
+2026-09-02T03:26:34.9920135Z   repository: Oa8choo2/testzens
+2026-09-02T03:26:34.9922674Z   token: ***
+2026-09-02T03:26:34.9923108Z   ssh-strict: true
+2026-09-02T03:26:34.9923451Z   ssh-user: git
+2026-09-02T03:26:34.9923762Z   persist-credentials: true
+2026-09-02T03:26:34.9924071Z   clean: true
+2026-09-02T03:26:34.9924406Z   sparse-checkout-cone-mode: true
+2026-09-02T03:26:34.9924781Z   fetch-depth: 1
+2026-09-02T03:26:34.9925074Z   fetch-tags: false
+2026-09-02T03:26:34.9925397Z   show-progress: true
+2026-09-02T03:26:34.9925720Z   lfs: false
+2026-09-02T03:26:34.9926049Z   submodules: false
+2026-09-02T03:26:34.9926389Z   set-safe-directory: true
+2026-09-02T03:26:34.9926738Z   allow-unsafe-pr-checkout: false
+2026-09-02T03:26:34.9927087Z env:
+2026-09-02T03:26:34.9927375Z   GITHUB_PAGES: true
+2026-09-02T03:26:34.9927716Z ##[endgroup]
+2026-09-02T03:26:35.0860759Z Syncing repository: Oa8choo2/testzens
+2026-09-02T03:26:35.0863362Z ##[group]Getting Git version info
+2026-09-02T03:26:35.0864193Z Working directory is '/home/runner/work/testzens/testzens'
+2026-09-02T03:26:35.0865228Z [command]/usr/bin/git version
+2026-09-02T03:26:35.0913681Z git version 2.55.0
+2026-09-02T03:26:35.0934722Z ##[endgroup]
+2026-09-02T03:26:35.0944823Z Temporarily overriding HOME='/home/runner/work/_temp/e988fb9d-16af-4bc7-a00f-d93b2c13440e' before making global git config changes
+2026-09-02T03:26:35.0946172Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-02T03:26:35.0950976Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/testzens/testzens
+2026-09-02T03:26:35.3702091Z Deleting the contents of '/home/runner/work/testzens/testzens'
+2026-09-02T03:26:35.3705779Z ##[group]Determining repository object format
+2026-09-02T03:26:35.3707617Z ##[endgroup]
+2026-09-02T03:26:35.3708268Z ##[group]Initializing the repository
+2026-09-02T03:26:35.3712424Z [command]/usr/bin/git init /home/runner/work/testzens/testzens
+2026-09-02T03:26:35.5009003Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-02T03:26:35.5010025Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-02T03:26:35.5010873Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-02T03:26:35.5011588Z hint: call:
+2026-09-02T03:26:35.5011967Z hint:
+2026-09-02T03:26:35.5012558Z hint: 	git config --global init.defaultBranch <name>
+2026-09-02T03:26:35.5013321Z hint:
+2026-09-02T03:26:35.5013822Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-02T03:26:35.5014602Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-02T03:26:35.5015266Z hint:
+2026-09-02T03:26:35.5015709Z hint: 	git branch -m <name>
+2026-09-02T03:26:35.5016140Z hint:
+2026-09-02T03:26:35.5016695Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-02T03:26:35.5017613Z Initialized empty Git repository in /home/runner/work/testzens/testzens/.git/
+2026-09-02T03:26:35.5019241Z [command]/usr/bin/git remote add origin https://github.com/Oa8choo2/testzens
+2026-09-02T03:26:35.5494636Z ##[endgroup]
+2026-09-02T03:26:35.5495481Z ##[group]Disabling automatic garbage collection
+2026-09-02T03:26:35.5500254Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-02T03:26:35.5626713Z ##[endgroup]
+2026-09-02T03:26:35.5627392Z ##[group]Setting up auth
+2026-09-02T03:26:35.5628193Z Removing SSH command configuration
+2026-09-02T03:26:35.5635466Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-02T03:26:35.5671523Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-02T03:26:35.8289129Z Removing HTTP extra header
+2026-09-02T03:26:35.8296629Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-02T03:26:35.8324401Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-02T03:26:35.8529623Z Removing includeIf entries pointing to credentials config files
+2026-09-02T03:26:35.8535975Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-02T03:26:35.8565448Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-02T03:26:35.8750780Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-7bc0e922-e79f-4dbd-9493-29ec8d8b6984.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-02T03:26:35.8998124Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/testzens/testzens/.git.path /home/runner/work/_temp/git-credentials-7bc0e922-e79f-4dbd-9493-29ec8d8b6984.config
+2026-09-02T03:26:35.9241187Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/testzens/testzens/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-7bc0e922-e79f-4dbd-9493-29ec8d8b6984.config
+2026-09-02T03:26:35.9304203Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-7bc0e922-e79f-4dbd-9493-29ec8d8b6984.config
+2026-09-02T03:26:35.9532281Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-7bc0e922-e79f-4dbd-9493-29ec8d8b6984.config
+2026-09-02T03:26:35.9731604Z ##[endgroup]
+2026-09-02T03:26:35.9732499Z ##[group]Fetching the repository
+2026-09-02T03:26:35.9741169Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +30cd4a706255c7903222a27e607c88c1de5415ec:refs/remotes/origin/main
+2026-09-02T03:26:37.2888178Z From https://github.com/Oa8choo2/testzens
+2026-09-02T03:26:37.2888885Z  * [new ref]         30cd4a706255c7903222a27e607c88c1de5415ec -> origin/main
+2026-09-02T03:26:37.2898000Z [command]/usr/bin/git branch --list --remote origin/main
+2026-09-02T03:26:37.2922590Z   origin/main
+2026-09-02T03:26:37.2930876Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-09-02T03:26:37.2953508Z 30cd4a706255c7903222a27e607c88c1de5415ec
+2026-09-02T03:26:37.2956089Z ##[endgroup]
+2026-09-02T03:26:37.2956700Z ##[group]Determining the checkout info
+2026-09-02T03:26:37.2957431Z ##[endgroup]
+2026-09-02T03:26:37.2963365Z [command]/usr/bin/git sparse-checkout disable
+2026-09-02T03:26:37.3475733Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-02T03:26:37.3730414Z ##[group]Checking out the ref
+2026-09-02T03:26:37.3735270Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-09-02T03:26:37.5796919Z Switched to a new branch 'main'
+2026-09-02T03:26:37.6005045Z branch 'main' set up to track 'origin/main'.
+2026-09-02T03:26:37.6009514Z ##[endgroup]
+2026-09-02T03:26:37.6138231Z [command]/usr/bin/git log -1 --format=%H
+2026-09-02T03:26:37.6165341Z 30cd4a706255c7903222a27e607c88c1de5415ec
+2026-09-02T03:26:37.6339431Z ##[group]Run actions/setup-python@v6
+2026-09-02T03:26:37.6339738Z with:
+2026-09-02T03:26:37.6339944Z   python-version: 3.x
+2026-09-02T03:26:37.6340163Z   check-latest: false
+2026-09-02T03:26:37.6342514Z   token: ***
+2026-09-02T03:26:37.6342908Z   update-environment: true
+2026-09-02T03:26:37.6343276Z   allow-prereleases: false
+2026-09-02T03:26:37.6343526Z   freethreaded: false
+2026-09-02T03:26:37.6343733Z env:
+2026-09-02T03:26:37.6343924Z   GITHUB_PAGES: true
+2026-09-02T03:26:37.6344148Z ##[endgroup]
+2026-09-02T03:26:37.7569025Z ##[group]Installed versions
+2026-09-02T03:26:37.7654169Z Successfully set up CPython (3.14.7)
+2026-09-02T03:26:37.7654717Z ##[endgroup]
+2026-09-02T03:26:37.7766758Z ##[group]Run pip install zensical
+2026-09-02T03:26:37.7767153Z [36;1mpip install zensical[0m
+2026-09-02T03:26:37.8232886Z shell: /usr/bin/bash -e {0}
+2026-09-02T03:26:37.8233400Z env:
+2026-09-02T03:26:37.8233615Z   GITHUB_PAGES: true
+2026-09-02T03:26:37.8233908Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.7/x64
+2026-09-02T03:26:37.8234318Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.7/x64/lib/pkgconfig
+2026-09-02T03:26:37.8234740Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64
+2026-09-02T03:26:37.8235089Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64
+2026-09-02T03:26:37.8235435Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64
+2026-09-02T03:26:37.8235788Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.7/x64/lib
+2026-09-02T03:26:37.8236087Z ##[endgroup]
+2026-09-02T03:26:40.6315916Z Collecting zensical
+2026-09-02T03:26:40.7311505Z   Downloading zensical-0.0.57-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+2026-09-02T03:26:40.7662315Z Collecting click>=8.1.8 (from zensical)
+2026-09-02T03:26:40.7850439Z   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+2026-09-02T03:26:40.8213954Z Collecting deepmerge>=2.0 (from zensical)
+2026-09-02T03:26:40.8412009Z   Downloading deepmerge-3.0.1-py3-none-any.whl.metadata (3.6 kB)
+2026-09-02T03:26:40.8705498Z Collecting jinja2>=3.1 (from zensical)
+2026-09-02T03:26:40.8911594Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2026-09-02T03:26:40.9338601Z Collecting markdown>=3.7 (from zensical)
+2026-09-02T03:26:40.9531303Z   Downloading markdown-3.10.3-py3-none-any.whl.metadata (5.1 kB)
+2026-09-02T03:26:40.9849664Z Collecting pygments>=2.20 (from zensical)
+2026-09-02T03:26:41.0039725Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-09-02T03:26:41.0384954Z Collecting pymdown-extensions>=11.0 (from zensical)
+2026-09-02T03:26:41.0593638Z   Downloading pymdown_extensions-11.0.2-py3-none-any.whl.metadata (3.1 kB)
+2026-09-02T03:26:41.1068888Z Collecting pyyaml>=6.0.2 (from zensical)
+2026-09-02T03:26:41.1262248Z   Downloading pyyaml-6.0.3-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-09-02T03:26:41.1649585Z Collecting tomli>=2.4.0 (from zensical)
+2026-09-02T03:26:41.1855807Z   Downloading tomli-2.4.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+2026-09-02T03:26:41.2450848Z Collecting MarkupSafe>=2.0 (from jinja2>=3.1->zensical)
+2026-09-02T03:26:41.2639002Z   Downloading markupsafe-3.0.3-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2026-09-02T03:26:41.2901058Z Downloading zensical-0.0.57-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.2 MB)
+2026-09-02T03:26:41.5977040Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.2/13.2 MB 51.0 MB/s  0:00:00
+2026-09-02T03:26:41.6173934Z Downloading click-8.5.0-py3-none-any.whl (125 kB)
+2026-09-02T03:26:41.6410383Z Downloading deepmerge-3.0.1-py3-none-any.whl (14 kB)
+2026-09-02T03:26:41.6627434Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+2026-09-02T03:26:41.6849325Z Downloading markdown-3.10.3-py3-none-any.whl (110 kB)
+2026-09-02T03:26:41.7061681Z Downloading markupsafe-3.0.3-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (23 kB)
+2026-09-02T03:26:41.7326964Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-09-02T03:26:41.7462840Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 91.9 MB/s  0:00:00
+2026-09-02T03:26:41.7656082Z Downloading pymdown_extensions-11.0.2-py3-none-any.whl (269 kB)
+2026-09-02T03:26:41.7895085Z Downloading pyyaml-6.0.3-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (794 kB)
+2026-09-02T03:26:41.7979837Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 794.2/794.2 kB 83.4 MB/s  0:00:00
+2026-09-02T03:26:41.8197445Z Downloading tomli-2.4.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (252 kB)
+2026-09-02T03:26:42.1534226Z Installing collected packages: tomli, pyyaml, pygments, MarkupSafe, markdown, deepmerge, click, pymdown-extensions, jinja2, zensical
+2026-09-02T03:26:44.9127767Z 
+2026-09-02T03:26:44.9143550Z Successfully installed MarkupSafe-3.0.3 click-8.5.0 deepmerge-3.0.1 jinja2-3.1.6 markdown-3.10.3 pygments-2.21.0 pymdown-extensions-11.0.2 pyyaml-6.0.3 tomli-2.4.1 zensical-0.0.57
+2026-09-02T03:26:44.9876127Z ##[group]Run zensical build --clean
+2026-09-02T03:26:44.9876464Z [36;1mzensical build --clean[0m
+2026-09-02T03:26:44.9900721Z shell: /usr/bin/bash -e {0}
+2026-09-02T03:26:44.9900976Z env:
+2026-09-02T03:26:44.9901168Z   GITHUB_PAGES: true
+2026-09-02T03:26:44.9901446Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.7/x64
+2026-09-02T03:26:44.9901844Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.7/x64/lib/pkgconfig
+2026-09-02T03:26:44.9902227Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64
+2026-09-02T03:26:44.9902572Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64
+2026-09-02T03:26:44.9902916Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64
+2026-09-02T03:26:44.9903447Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.7/x64/lib
+2026-09-02T03:26:44.9903751Z ##[endgroup]
+2026-09-02T03:26:45.2126800Z Build started
+2026-09-02T03:26:45.4165943Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4167193Z    [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:8:51 [38;5;246m][0m
+2026-09-02T03:26:45.4167762Z    [38;5;246m│[0m
+2026-09-02T03:26:45.4178813Z  [38;5;246m8 │[0m [38;5;249mB[0m[38;5;249me[0m[38;5;249mf[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mp[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249mc[0m[38;5;249me[0m[38;5;249me[0m[38;5;249md[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mg[0m[38;5;249m,[0m[38;5;249m [0m[38;5;249mr[0m[38;5;249me[0m[38;5;249ma[0m[38;5;249md[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249mt[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mt[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249md[0m[38;5;249mu[0m[38;5;249mc[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mo[0m[38;5;249m [0m[38;5;249mH[0m[38;5;249mP[0m[38;5;249mC[0m[38;5;249m][0m[38;5;249m([0m[33mi[0m[33mn[0m[33mt[0m[33mr[0m[33mo[0m[33md[0m[33mu[0m[33mc[0m[33mt[0m[33mi[0m[33mo[0m[33mn[0m[33m.[0m[33mm[0m[33md[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mo[0m[38;5;249m [0m[38;5;249mg[0m[38;5;249ma[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249mu[0m[38;5;249mn[0m[38;5;249md[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249ma[0m[38;5;249mn[0m[38;5;249md[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mg[0m[38;5;249m [0m[38;5;249mo[0m[38;5;249mf[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m{[0m[38;5;249m{[0m[38;5;249m [0m[38;5;249mh[0m[38;5;249mp[0m[38;5;249mc[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mf[0m[38;5;249mr[0m[38;5;249ma[0m[38;5;249m [0m[38;5;249m}[0m[38;5;249m}[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249mn[0m[38;5;249md[0m[38;5;249m [0m[38;5;249mr[0m[38;5;249me[0m[38;5;249ml[0m[38;5;249ma[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249md[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249mm[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mo[0m[38;5;249ml[0m[38;5;249mo[0m[38;5;249mg[0m[38;5;249my[0m[38;5;249m.[0m
+2026-09-02T03:26:45.4185609Z  [38;5;240m  │[0m                                                   [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4186924Z  [38;5;240m  │[0m                                                          [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4187697Z [38;5;246m───╯[0m
+2026-09-02T03:26:45.4188053Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4188654Z     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:12:69 [38;5;246m][0m
+2026-09-02T03:26:45.4189198Z     [38;5;246m│[0m
+2026-09-02T03:26:45.4194455Z  [38;5;246m12 │[0m [38;5;249mT[0m[38;5;249mo[0m[38;5;249m [0m[38;5;249mg[0m[38;5;249me[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mc[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249ms[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mo[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m{[0m[38;5;249m{[0m[38;5;249m [0m[38;5;249mh[0m[38;5;249mp[0m[38;5;249mc[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mf[0m[38;5;249mr[0m[38;5;249ma[0m[38;5;249m [0m[38;5;249m}[0m[38;5;249m}[0m[38;5;249m,[0m[38;5;249m [0m[38;5;249mv[0m[38;5;249mi[0m[38;5;249ms[0m[38;5;249mi[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249mG[0m[38;5;249me[0m[38;5;249mt[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mg[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249mH[0m[38;5;249mP[0m[38;5;249mC[0m[38;5;249m [0m[38;5;249mA[0m[38;5;249mc[0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mu[0m[38;5;249mn[0m[38;5;249mt[0m[38;5;249m][0m[38;5;249m([0m[33ma[0m[33mc[0m[33mc[0m[33mo[0m[33mu[0m[33mn[0m[33mt[0m[33m.[0m[33mm[0m[33md[0m[38;5;249m)[0m[38;5;249m.[0m
+2026-09-02T03:26:45.4198736Z  [38;5;240m   │[0m                                                                     [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4199803Z  [38;5;240m   │[0m                                                                          [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4200461Z [38;5;246m────╯[0m
+2026-09-02T03:26:45.4200802Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4201376Z     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:16:57 [38;5;246m][0m
+2026-09-02T03:26:45.4201920Z     [38;5;246m│[0m
+2026-09-02T03:26:45.4206306Z  [38;5;246m16 │[0m [38;5;249mn[0m[38;5;249mo[0m[38;5;249mw[0m[38;5;249m [0m[38;5;249mw[0m[38;5;249mo[0m[38;5;249mu[0m[38;5;249ml[0m[38;5;249md[0m[38;5;249m [0m[38;5;249mb[0m[38;5;249me[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249m [0m[38;5;249mg[0m[38;5;249mo[0m[38;5;249mo[0m[38;5;249md[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mm[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mo[0m[38;5;249m [0m[38;5;249mf[0m[38;5;249mo[0m[38;5;249ml[0m[38;5;249ml[0m[38;5;249mo[0m[38;5;249mw[0m[38;5;249m [0m[38;5;249mo[0m[38;5;249mu[0m[38;5;249mr[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249mL[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mu[0m[38;5;249mx[0m[38;5;249m [0m[38;5;249mT[0m[38;5;249mu[0m[38;5;249mt[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mi[0m[38;5;249ma[0m[38;5;249ml[0m[38;5;249m][0m[38;5;249m([0m[33ml[0m[33mi[0m[33mn[0m[33mu[0m[33mx[0m[33m-[0m[33mt[0m[33mu[0m[33mt[0m[33mo[0m[33mr[0m[33mi[0m[33ma[0m[33ml[0m[33m/[0m[33mi[0m[33mn[0m[33md[0m[33me[0m[33mx[0m[33m.[0m[33mm[0m[33md[0m[38;5;249m)[0m[38;5;249m.[0m
+2026-09-02T03:26:45.4210749Z  [38;5;240m   │[0m                                                         [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4212283Z  [38;5;240m   │[0m                                                                    [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4213232Z [38;5;246m────╯[0m
+2026-09-02T03:26:45.4213574Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4214109Z     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:18:93 [38;5;246m][0m
+2026-09-02T03:26:45.4214482Z     [38;5;246m│[0m
+2026-09-02T03:26:45.4220216Z  [38;5;246m18 │[0m [38;5;249mp[0m[38;5;249ml[0m[38;5;249me[0m[38;5;249ma[0m[38;5;249ms[0m[38;5;249me[0m[38;5;249m [0m[38;5;249ml[0m[38;5;249me[0m[38;5;249ma[0m[38;5;249mr[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mb[0m[38;5;249ma[0m[38;5;249ms[0m[38;5;249mi[0m[38;5;249mc[0m[38;5;249ms[0m[38;5;249m [0m[38;5;249mf[0m[38;5;249mi[0m[38;5;249mr[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mb[0m[38;5;249me[0m[38;5;249mf[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mg[0m[38;5;249m.[0m[38;5;249m [0m[38;5;249m([0m[38;5;249ms[0m[38;5;249me[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249mA[0m[38;5;249mp[0m[38;5;249mp[0m[38;5;249me[0m[38;5;249mn[0m[38;5;249md[0m[38;5;249mi[0m[38;5;249mx[0m[38;5;249m [0m[38;5;249mC[0m[38;5;249m [0m[38;5;249m-[0m[38;5;249m [0m[38;5;249mU[0m[38;5;249ms[0m[38;5;249me[0m[38;5;249mf[0m[38;5;249mu[0m[38;5;249ml[0m[38;5;249m [0m[38;5;249mL[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mu[0m[38;5;249mx[0m[38;5;249m [0m[38;5;249mC[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249mm[0m[38;5;249ma[0m[38;5;249mn[0m[38;5;249md[0m[38;5;249ms[0m[38;5;249m][0m[38;5;249m([0m[33mu[0m[33ms[0m[33me[0m[33mf[0m[33mu[0m[33ml[0m[33m_[0m[33ml[0m[33mi[0m[33mn[0m[33mu[0m[33mx[0m[33m_[0m[33mc[0m[33mo[0m[33mm[0m[33mm[0m[33ma[0m[33mn[0m[33md[0m[33ms[0m[33m.[0m[33mm[0m[33md[0m[38;5;249m)[0m[38;5;249m)[0m
+2026-09-02T03:26:45.4226234Z  [38;5;240m   │[0m                                                                                             [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4227954Z  [38;5;240m   │[0m                                                                                                         [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4228803Z [38;5;246m────╯[0m
+2026-09-02T03:26:45.4229125Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4229681Z     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:38:108 [38;5;246m][0m
+2026-09-02T03:26:45.4230176Z     [38;5;246m│[0m
+2026-09-02T03:26:45.4238416Z  [38;5;246m38 │[0m [38;5;249m-[0m[38;5;249m [0m[38;5;249mU[0m[38;5;249ms[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mg[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249mm[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249ma[0m[38;5;249ml[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mo[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249mn[0m[38;5;249me[0m[38;5;249mc[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mv[0m[38;5;249mi[0m[38;5;249ma[0m[38;5;249m [0m[38;5;249mS[0m[38;5;249mS[0m[38;5;249mH[0m[38;5;249m [0m[38;5;249m([0m[38;5;249mf[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249m [0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mw[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249m [0m[38;5;249mu[0m[38;5;249ms[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249ms[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m([0m[38;5;249ms[0m[38;5;249me[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249mF[0m[38;5;249mi[0m[38;5;249mr[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mT[0m[38;5;249mi[0m[38;5;249mm[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249mn[0m[38;5;249me[0m[38;5;249mc[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mo[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m{[0m[38;5;249m{[0m[38;5;249m [0m[38;5;249mh[0m[38;5;249mp[0m[38;5;249mc[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mf[0m[38;5;249mr[0m[38;5;249ma[0m[38;5;249m [0m[38;5;249m}[0m[38;5;249m}[0m[38;5;249m][0m[38;5;249m([0m[33mc[0m[33mo[0m[33mn[0m[33mn[0m[33me[0m[33mc[0m[33mt[0m[33mi[0m[33mn[0m[33mg[0m[33m.[0m[33mm[0m[33md[0m[33m#[0m[33mf[0m[33mi[0m[33mr[0m[33ms[0m[33mt[0m[33m-[0m[33mt[0m[33mi[0m[33mm[0m[33me[0m[33m-[0m[33mc[0m[33mo[0m[33mn[0m[33mn[0m[33me[0m[33mc[0m[33mt[0m[33mi[0m[33mo[0m[33mn[0m[33m-[0m[33mt[0m[33mo[0m[33m-[0m[33mt[0m[33mh[0m[33me[0m[33m-[0m[33mh[0m[33mp[0m[33mc[0m[33m-[0m[33mi[0m[33mn[0m[33mf[0m[33mr[0m[33ma[0m[33ms[0m[33mt[0m[33mr[0m[33mu[0m[33mc[0m[33mt[0m[33mu[0m[33mr[0m[33me[0m[38;5;249m)[0m[38;5;249m)[0m
+2026-09-02T03:26:45.4247312Z  [38;5;240m   │[0m                                                                                                            [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4251129Z  [38;5;240m   │[0m                                                                                                                                          [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4252594Z [38;5;246m────╯[0m
+2026-09-02T03:26:45.4253097Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4253734Z     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:39:26 [38;5;246m][0m
+2026-09-02T03:26:45.4254265Z     [38;5;246m│[0m
+2026-09-02T03:26:45.4256395Z  [38;5;246m39 │[0m [38;5;249m-[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249mU[0m[38;5;249ms[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mg[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mw[0m[38;5;249me[0m[38;5;249mb[0m[38;5;249m [0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249ma[0m[38;5;249ml[0m[38;5;249m][0m[38;5;249m([0m[33mw[0m[33me[0m[33mb[0m[33m_[0m[33mp[0m[33mo[0m[33mr[0m[33mt[0m[33ma[0m[33ml[0m[33m.[0m[33mm[0m[33md[0m[38;5;249m)[0m
+2026-09-02T03:26:45.4258611Z  [38;5;240m   │[0m                          [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4259718Z  [38;5;240m   │[0m                                [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4260422Z [38;5;246m────╯[0m
+2026-09-02T03:26:45.4260780Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4261448Z     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:58:77 [38;5;246m][0m
+2026-09-02T03:26:45.4262016Z     [38;5;246m│[0m
+2026-09-02T03:26:45.4267993Z  [38;5;246m58 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249mY[0m[38;5;249mo[0m[38;5;249mu[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249ma[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249ml[0m[38;5;249ms[0m[38;5;249mo[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249ml[0m[38;5;249ml[0m[38;5;249m [0m[38;5;249mu[0m[38;5;249ms[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mw[0m[38;5;249me[0m[38;5;249mb[0m[38;5;249m [0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249ma[0m[38;5;249ml[0m[38;5;249m [0m[38;5;249m([0m[38;5;249ms[0m[38;5;249me[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249ms[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249ml[0m[38;5;249ml[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mc[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249ms[0m[38;5;249m [0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249mw[0m[38;5;249me[0m[38;5;249mb[0m[38;5;249m [0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249ma[0m[38;5;249ml[0m[38;5;249m][0m[38;5;249m([0m[33mw[0m[33me[0m[33mb[0m[33m_[0m[33mp[0m[33mo[0m[33mr[0m[33mt[0m[33ma[0m[33ml[0m[33m.[0m[33mm[0m[33md[0m[33m#[0m[33ms[0m[33mh[0m[33me[0m[33ml[0m[33ml[0m[33m-[0m[33ma[0m[33mc[0m[33mc[0m[33me[0m[33ms[0m[33ms[0m[38;5;249m)[0m[38;5;249m)[0m
+2026-09-02T03:26:45.4274145Z  [38;5;240m   │[0m                                                                             [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4276108Z  [38;5;240m   │[0m                                                                                          [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4277066Z [38;5;246m────╯[0m
+2026-09-02T03:26:45.4277425Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4278033Z     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:64:18 [38;5;246m][0m
+2026-09-02T03:26:45.4278625Z     [38;5;246m│[0m
+2026-09-02T03:26:45.4289247Z  [38;5;246m64 │[0m [38;5;249mT[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249mw[0m[38;5;249me[0m[38;5;249mb[0m[38;5;249m [0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249ma[0m[38;5;249ml[0m[38;5;249m][0m[38;5;249m([0m[33mw[0m[33me[0m[33mb[0m[33m_[0m[33mp[0m[33mo[0m[33mr[0m[33mt[0m[33ma[0m[33ml[0m[33m.[0m[33mm[0m[33md[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249mo[0m[38;5;249mf[0m[38;5;249mf[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249ms[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249mv[0m[38;5;249me[0m[38;5;249mn[0m[38;5;249mi[0m[38;5;249me[0m[38;5;249mn[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mw[0m[38;5;249ma[0m[38;5;249my[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mo[0m[38;5;249m [0m[38;5;249mu[0m[38;5;249mp[0m[38;5;249ml[0m[38;5;249mo[0m[38;5;249ma[0m[38;5;249md[0m[38;5;249m [0m[38;5;249mf[0m[38;5;249mi[0m[38;5;249ml[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249mn[0m[38;5;249md[0m[38;5;249m [0m[38;5;249mg[0m[38;5;249ma[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249ml[0m[38;5;249ml[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mc[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249ms[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mo[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m{[0m[38;5;249m{[0m[38;5;249m [0m[38;5;249mh[0m[38;5;249mp[0m[38;5;249mc[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mf[0m[38;5;249mr[0m[38;5;249ma[0m[38;5;249m [0m[38;5;249m}[0m[38;5;249m}[0m[38;5;249m [0m[38;5;249mf[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249ma[0m[38;5;249mn[0m[38;5;249md[0m[38;5;249ma[0m[38;5;249mr[0m[38;5;249md[0m[38;5;249m [0m[38;5;249mw[0m[38;5;249me[0m[38;5;249mb[0m[38;5;249m [0m[38;5;249mb[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249mw[0m[38;5;249ms[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249m [0m[38;5;249m([0m[38;5;249mn[0m[38;5;249mo[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249mo[0m[38;5;249mf[0m[38;5;249mt[0m[38;5;249mw[0m[38;5;249ma[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249ma[0m[38;5;249ml[0m[38;5;249ml[0m[38;5;249ma[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249mf[0m[38;5;249mi[0m[38;5;249mg[0m[38;5;249mu[0m[38;5;249mr[0m[38;5;249ma[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249mr[0m[38;5;249me[0m[38;5;249mq[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249md[0m[38;5;249m)[0m[38;5;249m.[0m
+2026-09-02T03:26:45.4298517Z  [38;5;240m   │[0m                  [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4299604Z  [38;5;240m   │[0m                        [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4300272Z [38;5;246m────╯[0m
+2026-09-02T03:26:45.4300611Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4301228Z     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:66:20 [38;5;246m][0m
+2026-09-02T03:26:45.4301765Z     [38;5;246m│[0m
+2026-09-02T03:26:45.4305777Z  [38;5;246m66 │[0m [38;5;249mS[0m[38;5;249me[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249ms[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249ml[0m[38;5;249ml[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mc[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249ms[0m[38;5;249m][0m[38;5;249m([0m[33mw[0m[33me[0m[33mb[0m[33m_[0m[33mp[0m[33mo[0m[33mr[0m[33mt[0m[33ma[0m[33ml[0m[33m.[0m[33mm[0m[33md[0m[33m#[0m[33ms[0m[33mh[0m[33me[0m[33ml[0m[33ml[0m[33m-[0m[33ma[0m[33mc[0m[33mc[0m[33me[0m[33ms[0m[33ms[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249mw[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249mu[0m[38;5;249ms[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mg[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mw[0m[38;5;249me[0m[38;5;249mb[0m[38;5;249m [0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249ma[0m[38;5;249ml[0m[38;5;249m,[0m[38;5;249m [0m[38;5;249mo[0m[38;5;249mr[0m
+2026-09-02T03:26:45.4310136Z  [38;5;240m   │[0m                    [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4311879Z  [38;5;240m   │[0m                                 [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4312741Z [38;5;246m────╯[0m
+2026-09-02T03:26:45.4313187Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4313793Z     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:67:36 [38;5;246m][0m
+2026-09-02T03:26:45.4314515Z     [38;5;246m│[0m
+2026-09-02T03:26:45.4320258Z  [38;5;246m67 │[0m [38;5;249m[[0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249mn[0m[38;5;249me[0m[38;5;249mc[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mo[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m{[0m[38;5;249m{[0m[38;5;249m [0m[38;5;249mh[0m[38;5;249mp[0m[38;5;249mc[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mf[0m[38;5;249mr[0m[38;5;249ma[0m[38;5;249m [0m[38;5;249m}[0m[38;5;249m}[0m[38;5;249m][0m[38;5;249m([0m[33mc[0m[33mo[0m[33mn[0m[33mn[0m[33me[0m[33mc[0m[33mt[0m[33mi[0m[33mn[0m[33mg[0m[33m.[0m[33mm[0m[33md[0m[33m#[0m[33mf[0m[33mi[0m[33mr[0m[33ms[0m[33mt[0m[33m-[0m[33mt[0m[33mi[0m[33mm[0m[33me[0m[33m-[0m[33mc[0m[33mo[0m[33mn[0m[33mn[0m[33me[0m[33mc[0m[33mt[0m[33mi[0m[33mo[0m[33mn[0m[33m-[0m[33mt[0m[33mo[0m[33m-[0m[33mt[0m[33mh[0m[33me[0m[33m-[0m[33mh[0m[33mp[0m[33mc[0m[33m-[0m[33mi[0m[33mn[0m[33mf[0m[33mr[0m[33ma[0m[33ms[0m[33mt[0m[33mr[0m[33mu[0m[33mc[0m[33mt[0m[33mu[0m[33mr[0m[33me[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249mw[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249mu[0m[38;5;249ms[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mg[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249mm[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249ma[0m[38;5;249ml[0m[38;5;249m.[0m
+2026-09-02T03:26:45.4327175Z  [38;5;240m   │[0m                                    [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4330778Z  [38;5;240m   │[0m                                                                  [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4332246Z [38;5;246m────╯[0m
+2026-09-02T03:26:45.4332587Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4333234Z     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:75:90 [38;5;246m][0m
+2026-09-02T03:26:45.4333870Z     [38;5;246m│[0m
+2026-09-02T03:26:45.4340189Z  [38;5;246m75 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249mW[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249mh[0m[38;5;249ma[0m[38;5;249mv[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mg[0m[38;5;249m [0m[38;5;249mp[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249mb[0m[38;5;249ml[0m[38;5;249me[0m[38;5;249mm[0m[38;5;249ms[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249me[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249mn[0m[38;5;249me[0m[38;5;249mc[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249mi[0m[38;5;249ms[0m[38;5;249ms[0m[38;5;249mu[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249me[0m[38;5;249mc[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249mu[0m[38;5;249mb[0m[38;5;249ml[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249mh[0m[38;5;249mo[0m[38;5;249mo[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mg[0m[38;5;249m [0m[38;5;249mp[0m[38;5;249ma[0m[38;5;249mg[0m[38;5;249me[0m[38;5;249m][0m[38;5;249m([0m[33mt[0m[33mr[0m[33mo[0m[33mu[0m[33mb[0m[33ml[0m[33me[0m[33ms[0m[33mh[0m[33mo[0m[33mo[0m[33mt[0m[33mi[0m[33mn[0m[33mg[0m[33m.[0m[33mm[0m[33md[0m[33m#[0m[33ms[0m[33me[0m[33mc[0m[33m:[0m[33mc[0m[33mo[0m[33mn[0m[33mn[0m[33me[0m[33mc[0m[33mt[0m[33mi[0m[33mn[0m[33mg[0m[33m-[0m[33mi[0m[33ms[0m[33ms[0m[33mu[0m[33me[0m[33ms[0m[38;5;249m)[0m[38;5;249m.[0m
+2026-09-02T03:26:45.4347248Z  [38;5;240m   │[0m                                                                                          [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4349677Z  [38;5;240m   │[0m                                                                                                              [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4350901Z [38;5;246m────╯[0m
+2026-09-02T03:26:45.4351237Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4351829Z     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:92:53 [38;5;246m][0m
+2026-09-02T03:26:45.4352346Z     [38;5;246m│[0m
+2026-09-02T03:26:45.4356591Z  [38;5;246m92 │[0m [38;5;249mF[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249m [0m[38;5;249mm[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mf[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mm[0m[38;5;249ma[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249me[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249mf[0m[38;5;249mi[0m[38;5;249ml[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mb[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249mw[0m[38;5;249ms[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249me[0m[38;5;249mc[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249m][0m[38;5;249m([0m[33mw[0m[33me[0m[33mb[0m[33m_[0m[33mp[0m[33mo[0m[33mr[0m[33mt[0m[33ma[0m[33ml[0m[33m.[0m[33mm[0m[33md[0m[33m#[0m[33mf[0m[33mi[0m[33ml[0m[33me[0m[33m-[0m[33mb[0m[33mr[0m[33mo[0m[33mw[0m[33ms[0m[33me[0m[33mr[0m[38;5;249m)[0m[38;5;249m.[0m
+2026-09-02T03:26:45.4360963Z  [38;5;240m   │[0m                                                     [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4362747Z  [38;5;240m   │[0m                                                                  [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4363692Z [38;5;246m────╯[0m
+2026-09-02T03:26:45.4364018Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4364665Z     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:98:62 [38;5;246m][0m
+2026-09-02T03:26:45.4365160Z     [38;5;246m│[0m
+2026-09-02T03:26:45.4369256Z  [38;5;246m98 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249mA[0m[38;5;249ms[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249ml[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249mn[0m[38;5;249ma[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mv[0m[38;5;249me[0m[38;5;249m,[0m[38;5;249m [0m[38;5;249my[0m[38;5;249mo[0m[38;5;249mu[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249ma[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249mu[0m[38;5;249ms[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mW[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mS[0m[38;5;249mC[0m[38;5;249mP[0m[38;5;249m [0m[38;5;249m([0m[38;5;249ms[0m[38;5;249me[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249mo[0m[38;5;249mu[0m[38;5;249mr[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249me[0m[38;5;249mc[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249m][0m[38;5;249m([0m[33mc[0m[33mo[0m[33mn[0m[33mn[0m[33me[0m[33mc[0m[33mt[0m[33mi[0m[33mn[0m[33mg[0m[33m.[0m[33mm[0m[33md[0m[33m#[0m[33mw[0m[33mi[0m[33mn[0m[33ms[0m[33mc[0m[33mp[0m[38;5;249m)[0m[38;5;249m)[0m
+2026-09-02T03:26:45.4373559Z  [38;5;240m   │[0m                                                              [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4375010Z  [38;5;240m   │[0m                                                                        [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4375797Z [38;5;246m────╯[0m
+2026-09-02T03:26:45.4376166Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4376752Z      [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:123:92 [38;5;246m][0m
+2026-09-02T03:26:45.4377273Z      [38;5;246m│[0m
+2026-09-02T03:26:45.4384077Z  [38;5;246m123 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249mF[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249m [0m[38;5;249mm[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mf[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mm[0m[38;5;249ma[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249mb[0m[38;5;249mo[0m[38;5;249mu[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mr[0m[38;5;249ma[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mf[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mg[0m[38;5;249m [0m[38;5;249mf[0m[38;5;249mi[0m[38;5;249ml[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m [0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249m [0m[38;5;249m`[0m[38;5;249ms[0m[38;5;249mc[0m[38;5;249mp[0m[38;5;249m`[0m[38;5;249m,[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249me[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249mt[0m[38;5;249mr[0m[38;5;249ma[0m[38;5;249mn[0m[38;5;249mf[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249m [0m[38;5;249mf[0m[38;5;249mi[0m[38;5;249ml[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m [0m[38;5;249mf[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249m/[0m[38;5;249mt[0m[38;5;249mo[0m[38;5;249m [0m[38;5;249mh[0m[38;5;249mp[0m[38;5;249mc[0m[38;5;249m][0m[38;5;249m([0m[33mc[0m[33mo[0m[33mn[0m[33mn[0m[33me[0m[33mc[0m[33mt[0m[33mi[0m[33mn[0m[33mg[0m[33m.[0m[33mm[0m[33md[0m[33m#[0m[33mt[0m[33mr[0m[33ma[0m[33mn[0m[33ms[0m[33mf[0m[33me[0m[33mr[0m[33m-[0m[33mf[0m[33mi[0m[33ml[0m[33me[0m[33ms[0m[33m-[0m[33mt[0m[33mo[0m[33mf[0m[33mr[0m[33mo[0m[33mm[0m[33m-[0m[33mt[0m[33mh[0m[33me[0m[33m-[0m[33mh[0m[33mp[0m[33mc[0m[38;5;249m)[0m[38;5;249m.[0m
+2026-09-02T03:26:45.4391074Z  [38;5;240m    │[0m                                                                                            [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4393773Z  [38;5;240m    │[0m                                                                                                                 [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4394972Z [38;5;246m─────╯[0m
+2026-09-02T03:26:45.4395316Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4395896Z      [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:164:117 [38;5;246m][0m
+2026-09-02T03:26:45.4396437Z      [38;5;246m│[0m
+2026-09-02T03:26:45.4405478Z  [38;5;246m164 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249mW[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249mu[0m[38;5;249mb[0m[38;5;249mm[0m[38;5;249mi[0m[38;5;249mt[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mg[0m[38;5;249m [0m[38;5;249mj[0m[38;5;249mo[0m[38;5;249mb[0m[38;5;249ms[0m[38;5;249m [0m[38;5;249mw[0m[38;5;249mi[0m[38;5;249mt[0m[38;5;249mh[0m[38;5;249m [0m[38;5;249ml[0m[38;5;249mi[0m[38;5;249mm[0m[38;5;249mi[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249md[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249mm[0m[38;5;249mo[0m[38;5;249mu[0m[38;5;249mn[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mo[0m[38;5;249mf[0m[38;5;249m [0m[38;5;249mr[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249mo[0m[38;5;249mu[0m[38;5;249mr[0m[38;5;249mc[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m,[0m[38;5;249m [0m[38;5;249mi[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mi[0m[38;5;249ms[0m[38;5;249m [0m[38;5;249mr[0m[38;5;249me[0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249mm[0m[38;5;249me[0m[38;5;249mn[0m[38;5;249md[0m[38;5;249me[0m[38;5;249md[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mo[0m[38;5;249m [0m[38;5;249mu[0m[38;5;249ms[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249md[0m[38;5;249me[0m[38;5;249mb[0m[38;5;249mu[0m[38;5;249mg[0m[38;5;249m/[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mv[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249ml[0m[38;5;249mu[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249m][0m[38;5;249m([0m[33mi[0m[33mn[0m[33mt[0m[33me[0m[33mr[0m[33ma[0m[33mc[0m[33mt[0m[33mi[0m[33mv[0m[33me[0m[33m_[0m[33md[0m[33me[0m[33mb[0m[33mu[0m[33mg[0m[33m.[0m[33mm[0m[33md[0m[33m#[0m[33mi[0m[33mn[0m[33mt[0m[33me[0m[33mr[0m[33ma[0m[33mc[0m[33mt[0m[33mi[0m[33mv[0m[33me[0m[33m-[0m[33ma[0m[33mn[0m[33md[0m[33m-[0m[33md[0m[33me[0m[33mb[0m[33mu[0m[33mg[0m[33m-[0m[33mc[0m[33ml[0m[33mu[0m[33ms[0m[33mt[0m[33me[0m[33mr[0m[38;5;249m)[0m[38;5;249m:[0m[38;5;249m [0m[38;5;249m`[0m[38;5;249md[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249mp[0m[38;5;249mh[0m[38;5;249ma[0m[38;5;249mn[0m[38;5;249m`[0m[38;5;249m.[0m
+2026-09-02T03:26:45.4414457Z  [38;5;240m    │[0m                                                                                                                     [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4417394Z  [38;5;240m    │[0m                                                                                                                                              [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4418706Z [38;5;246m─────╯[0m
+2026-09-02T03:26:45.4418974Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4419408Z      [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:190:81 [38;5;246m][0m
+2026-09-02T03:26:45.4419789Z      [38;5;246m│[0m
+2026-09-02T03:26:45.4424210Z  [38;5;246m190 │[0m [38;5;249mF[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249m [0m[38;5;249md[0m[38;5;249me[0m[38;5;249mt[0m[38;5;249ma[0m[38;5;249mi[0m[38;5;249ml[0m[38;5;249me[0m[38;5;249md[0m[38;5;249m [0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mf[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mm[0m[38;5;249ma[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249mb[0m[38;5;249mo[0m[38;5;249mu[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249m`[0m[38;5;249mm[0m[38;5;249mo[0m[38;5;249md[0m[38;5;249mu[0m[38;5;249ml[0m[38;5;249me[0m[38;5;249m`[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249mm[0m[38;5;249ma[0m[38;5;249mn[0m[38;5;249md[0m[38;5;249ms[0m[38;5;249m,[0m[38;5;249m [0m[38;5;249mr[0m[38;5;249me[0m[38;5;249ma[0m[38;5;249md[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249mr[0m[38;5;249mu[0m[38;5;249mn[0m[38;5;249mn[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mg[0m[38;5;249m [0m[38;5;249mb[0m[38;5;249ma[0m[38;5;249mt[0m[38;5;249mc[0m[38;5;249mh[0m[38;5;249m [0m[38;5;249mj[0m[38;5;249mo[0m[38;5;249mb[0m[38;5;249ms[0m[38;5;249m][0m[38;5;249m([0m[33mr[0m[33mu[0m[33mn[0m[33mn[0m[33mi[0m[33mn[0m[33mg[0m[33m_[0m[33mb[0m[33ma[0m[33mt[0m[33mc[0m[33mh[0m[33m_[0m[33mj[0m[33mo[0m[33mb[0m[33ms[0m[33m.[0m[33mm[0m[33md[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mh[0m[38;5;249ma[0m[38;5;249mp[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249m.[0m
+2026-09-02T03:26:45.4428124Z  [38;5;240m    │[0m                                                                                 [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4429294Z  [38;5;240m    │[0m                                                                                           [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4429885Z [38;5;246m─────╯[0m
+2026-09-02T03:26:45.4430152Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4430585Z      [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:195:32 [38;5;246m][0m
+2026-09-02T03:26:45.4430961Z      [38;5;246m│[0m
+2026-09-02T03:26:45.4434462Z  [38;5;246m195 │[0m [38;5;249m([0m[38;5;249ms[0m[38;5;249me[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249mw[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249mw[0m[38;5;249mi[0m[38;5;249ml[0m[38;5;249ml[0m[38;5;249m [0m[38;5;249mm[0m[38;5;249my[0m[38;5;249m [0m[38;5;249mj[0m[38;5;249mo[0m[38;5;249mb[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249ma[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m?[0m[38;5;249m][0m[38;5;249m([0m[33mr[0m[33mu[0m[33mn[0m[33mn[0m[33mi[0m[33mn[0m[33mg[0m[33m_[0m[33mb[0m[33ma[0m[33mt[0m[33mc[0m[33mh[0m[33m_[0m[33mj[0m[33mo[0m[33mb[0m[33ms[0m[33m.[0m[33mm[0m[33md[0m[33m#[0m[33mw[0m[33mh[0m[33me[0m[33mn[0m[33m-[0m[33mw[0m[33mi[0m[33ml[0m[33ml[0m[33m-[0m[33mm[0m[33my[0m[33m-[0m[33mj[0m[33mo[0m[33mb[0m[33m-[0m[33ms[0m[33mt[0m[33ma[0m[33mr[0m[33mt[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249mf[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249mc[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249md[0m[38;5;249mu[0m[38;5;249ml[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mg[0m[38;5;249m [0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249ml[0m[38;5;249mi[0m[38;5;249mc[0m[38;5;249my[0m[38;5;249m)[0m[38;5;249m.[0m
+2026-09-02T03:26:45.4438378Z  [38;5;240m    │[0m                                [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4440093Z  [38;5;240m    │[0m                                                      [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4440846Z [38;5;246m─────╯[0m
+2026-09-02T03:26:45.4441103Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4441533Z      [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:215:21 [38;5;246m][0m
+2026-09-02T03:26:45.4441908Z      [38;5;246m│[0m
+2026-09-02T03:26:45.4445647Z  [38;5;246m215 │[0m [38;5;249mR[0m[38;5;249me[0m[38;5;249ma[0m[38;5;249md[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249mt[0m[38;5;249mh[0m[38;5;249mi[0m[38;5;249ms[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249me[0m[38;5;249mc[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249m][0m[38;5;249m([0m[33mr[0m[33mu[0m[33mn[0m[33mn[0m[33mi[0m[33mn[0m[33mg[0m[33m_[0m[33mb[0m[33ma[0m[33mt[0m[33mc[0m[33mh[0m[33m_[0m[33mj[0m[33mo[0m[33mb[0m[33ms[0m[33m.[0m[33mm[0m[33md[0m[33m#[0m[33mm[0m[33mo[0m[33mn[0m[33mi[0m[33mt[0m[33mo[0m[33mr[0m[33mi[0m[33mn[0m[33mg[0m[33m-[0m[33ma[0m[33mn[0m[33md[0m[33m-[0m[33mm[0m[33ma[0m[33mn[0m[33ma[0m[33mg[0m[33mi[0m[33mn[0m[33mg[0m[33m-[0m[33my[0m[33mo[0m[33mu[0m[33mr[0m[33m-[0m[33mj[0m[33mo[0m[33mb[0m[33ms[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249mh[0m[38;5;249mo[0m[38;5;249mw[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mo[0m[38;5;249m [0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249mp[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mo[0m[38;5;249mu[0m[38;5;249mt[0m[38;5;249mp[0m[38;5;249mu[0m[38;5;249mt[0m[38;5;249m.[0m
+2026-09-02T03:26:45.4449889Z  [38;5;240m    │[0m                     [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4451891Z  [38;5;240m    │[0m                                                [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4452740Z [38;5;246m─────╯[0m
+2026-09-02T03:26:45.4453084Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4453544Z      [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:230:90 [38;5;246m][0m
+2026-09-02T03:26:45.4453914Z      [38;5;246m│[0m
+2026-09-02T03:26:45.4458852Z  [38;5;246m230 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249mF[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249m [0m[38;5;249mm[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mf[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mm[0m[38;5;249ma[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249mb[0m[38;5;249mo[0m[38;5;249mu[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249md[0m[38;5;249mo[0m[38;5;249mu[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249mn[0m[38;5;249md[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249md[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249mr[0m[38;5;249m [0m[38;5;249mo[0m[38;5;249mu[0m[38;5;249mt[0m[38;5;249mp[0m[38;5;249mu[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mh[0m[38;5;249ma[0m[38;5;249mn[0m[38;5;249mn[0m[38;5;249me[0m[38;5;249ml[0m[38;5;249ms[0m[38;5;249m,[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249me[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mh[0m[38;5;249mi[0m[38;5;249ms[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249ms[0m[38;5;249me[0m[38;5;249mc[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249m][0m[38;5;249m([0m[33ml[0m[33mi[0m[33mn[0m[33mu[0m[33mx[0m[33m-[0m[33mt[0m[33mu[0m[33mt[0m[33mo[0m[33mr[0m[33mi[0m[33ma[0m[33ml[0m[33m/[0m[33mb[0m[33me[0m[33my[0m[33mo[0m[33mn[0m[33md[0m[33m_[0m[33mt[0m[33mh[0m[33me[0m[33m_[0m[33mb[0m[33ma[0m[33ms[0m[33mi[0m[33mc[0m[33ms[0m[33m.[0m[33mm[0m[33md[0m[33m#[0m[33mi[0m[33mn[0m[33mp[0m[33mu[0m[33mt[0m[33mo[0m[33mu[0m[33mt[0m[33mp[0m[33mu[0m[33mt[0m[38;5;249m)[0m[38;5;249m.[0m
+2026-09-02T03:26:45.4464006Z  [38;5;240m    │[0m                                                                                          [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4465958Z  [38;5;240m    │[0m                                                                                                                 [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4466807Z [38;5;246m─────╯[0m
+2026-09-02T03:26:45.4467073Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4467502Z      [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:268:133 [38;5;246m][0m
+2026-09-02T03:26:45.4467913Z      [38;5;246m│[0m
+2026-09-02T03:26:45.4473476Z  [38;5;246m268 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249mW[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249mn[0m[38;5;249m [0m[38;5;249mu[0m[38;5;249ms[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mg[0m[38;5;249m [0m[38;5;249mT[0m[38;5;249me[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mF[0m[38;5;249ml[0m[38;5;249mo[0m[38;5;249mw[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249mp[0m[38;5;249me[0m[38;5;249mc[0m[38;5;249mi[0m[38;5;249mf[0m[38;5;249mi[0m[38;5;249mc[0m[38;5;249ma[0m[38;5;249ml[0m[38;5;249ml[0m[38;5;249my[0m[38;5;249m,[0m[38;5;249m [0m[38;5;249my[0m[38;5;249mo[0m[38;5;249mu[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249mh[0m[38;5;249mo[0m[38;5;249mu[0m[38;5;249ml[0m[38;5;249md[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mt[0m[38;5;249mu[0m[38;5;249ma[0m[38;5;249ml[0m[38;5;249ml[0m[38;5;249my[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249mu[0m[38;5;249mb[0m[38;5;249mm[0m[38;5;249mi[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mj[0m[38;5;249mo[0m[38;5;249mb[0m[38;5;249ms[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249mo[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249m [0m[38;5;249mG[0m[38;5;249mP[0m[38;5;249mU[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249ml[0m[38;5;249mu[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249m [0m[38;5;249mf[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249m [0m[38;5;249mb[0m[38;5;249me[0m[38;5;249mt[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249m [0m[38;5;249mp[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249mf[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mm[0m[38;5;249ma[0m[38;5;249mn[0m[38;5;249mc[0m[38;5;249me[0m[38;5;249m,[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249me[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249mG[0m[38;5;249mP[0m[38;5;249mU[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249ml[0m[38;5;249mu[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249ms[0m[38;5;249m][0m[38;5;249m([0m[33mg[0m[33mp[0m[33mu[0m[33m.[0m[33mm[0m[33md[0m[38;5;249m)[0m[38;5;249m.[0m
+2026-09-02T03:26:45.4478127Z  [38;5;240m    │[0m                                                                                                                                     [33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4478982Z  [38;5;240m    │[0m                                                                                                                                        [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4479550Z [38;5;246m─────╯[0m
+2026-09-02T03:26:45.4479807Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4480242Z      [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:274:30 [38;5;246m][0m
+2026-09-02T03:26:45.4480626Z      [38;5;246m│[0m
+2026-09-02T03:26:45.4482699Z  [38;5;246m274 │[0m [38;5;249m-[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249mR[0m[38;5;249mu[0m[38;5;249mn[0m[38;5;249mn[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mg[0m[38;5;249m [0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mv[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mj[0m[38;5;249mo[0m[38;5;249mb[0m[38;5;249ms[0m[38;5;249m][0m[38;5;249m([0m[33mr[0m[33mu[0m[33mn[0m[33mn[0m[33mi[0m[33mn[0m[33mg[0m[33m_[0m[33mi[0m[33mn[0m[33mt[0m[33me[0m[33mr[0m[33ma[0m[33mc[0m[33mt[0m[33mi[0m[33mv[0m[33me[0m[33m_[0m[33mj[0m[33mo[0m[33mb[0m[33ms[0m[33m.[0m[33mm[0m[33md[0m[38;5;249m)[0m
+2026-09-02T03:26:45.4485048Z  [38;5;240m    │[0m                              [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4486254Z  [38;5;240m    │[0m                                           [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4486857Z [38;5;246m─────╯[0m
+2026-09-02T03:26:45.4487113Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4487553Z      [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:275:41 [38;5;246m][0m
+2026-09-02T03:26:45.4487935Z      [38;5;246m│[0m
+2026-09-02T03:26:45.4490665Z  [38;5;246m275 │[0m [38;5;249m-[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249mR[0m[38;5;249mu[0m[38;5;249mn[0m[38;5;249mn[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mg[0m[38;5;249m [0m[38;5;249mj[0m[38;5;249mo[0m[38;5;249mb[0m[38;5;249ms[0m[38;5;249m [0m[38;5;249mw[0m[38;5;249mi[0m[38;5;249mt[0m[38;5;249mh[0m[38;5;249m [0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mp[0m[38;5;249mu[0m[38;5;249mt[0m[38;5;249m/[0m[38;5;249mo[0m[38;5;249mu[0m[38;5;249mt[0m[38;5;249mp[0m[38;5;249mu[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249md[0m[38;5;249ma[0m[38;5;249mt[0m[38;5;249ma[0m[38;5;249m][0m[38;5;249m([0m[33mr[0m[33mu[0m[33mn[0m[33mn[0m[33mi[0m[33mn[0m[33mg[0m[33m_[0m[33mj[0m[33mo[0m[33mb[0m[33ms[0m[33m_[0m[33mw[0m[33mi[0m[33mt[0m[33mh[0m[33m_[0m[33mi[0m[33mn[0m[33mp[0m[33mu[0m[33mt[0m[33m_[0m[33mo[0m[33mu[0m[33mt[0m[33mp[0m[33mu[0m[33mt[0m[33m_[0m[33md[0m[33ma[0m[33mt[0m[33ma[0m[33m.[0m[33mm[0m[33md[0m[38;5;249m)[0m
+2026-09-02T03:26:45.4493972Z  [38;5;240m    │[0m                                         [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4495580Z  [38;5;240m    │[0m                                                            [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4496410Z [38;5;246m─────╯[0m
+2026-09-02T03:26:45.4496671Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4497108Z      [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:276:40 [38;5;246m][0m
+2026-09-02T03:26:45.4497490Z      [38;5;246m│[0m
+2026-09-02T03:26:45.4499774Z  [38;5;246m276 │[0m [38;5;249m-[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249mM[0m[38;5;249mu[0m[38;5;249ml[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249m [0m[38;5;249mj[0m[38;5;249mo[0m[38;5;249mb[0m[38;5;249ms[0m[38;5;249m/[0m[38;5;249mP[0m[38;5;249ma[0m[38;5;249mr[0m[38;5;249ma[0m[38;5;249ml[0m[38;5;249ml[0m[38;5;249me[0m[38;5;249ml[0m[38;5;249m [0m[38;5;249mC[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mu[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mn[0m[38;5;249mg[0m[38;5;249m][0m[38;5;249m([0m[33mm[0m[33mu[0m[33ml[0m[33mt[0m[33mi[0m[33m_[0m[33mc[0m[33mo[0m[33mr[0m[33me[0m[33m_[0m[33mj[0m[33mo[0m[33mb[0m[33ms[0m[33m.[0m[33mm[0m[33md[0m[38;5;249m)[0m
+2026-09-02T03:26:45.4501973Z  [38;5;240m    │[0m                                        [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4502956Z  [38;5;240m    │[0m                                                 [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4503585Z [38;5;246m─────╯[0m
+2026-09-02T03:26:45.4503856Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4504296Z      [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:277:35 [38;5;246m][0m
+2026-09-02T03:26:45.4504685Z      [38;5;246m│[0m
+2026-09-02T03:26:45.4507581Z  [38;5;246m277 │[0m [38;5;249m-[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249mI[0m[38;5;249mn[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mv[0m[38;5;249me[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249mn[0m[38;5;249md[0m[38;5;249m [0m[38;5;249md[0m[38;5;249me[0m[38;5;249mb[0m[38;5;249mu[0m[38;5;249mg[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249ml[0m[38;5;249mu[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249m][0m[38;5;249m([0m[33mi[0m[33mn[0m[33mt[0m[33me[0m[33mr[0m[33ma[0m[33mc[0m[33mt[0m[33mi[0m[33mv[0m[33me[0m[33m_[0m[33md[0m[33me[0m[33mb[0m[33mu[0m[33mg[0m[33m.[0m[33mm[0m[33md[0m[33m#[0m[33mi[0m[33mn[0m[33mt[0m[33me[0m[33mr[0m[33ma[0m[33mc[0m[33mt[0m[33mi[0m[33mv[0m[33me[0m[33m-[0m[33ma[0m[33mn[0m[33md[0m[33m-[0m[33md[0m[33me[0m[33mb[0m[33mu[0m[33mg[0m[33m-[0m[33mc[0m[33ml[0m[33mu[0m[33ms[0m[33mt[0m[33me[0m[33mr[0m[38;5;249m)[0m
+2026-09-02T03:26:45.4511256Z  [38;5;240m    │[0m                                   [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4513233Z  [38;5;240m    │[0m                                                            [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4514071Z [38;5;246m─────╯[0m
+2026-09-02T03:26:45.4514411Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4514835Z      [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:279:42 [38;5;246m][0m
+2026-09-02T03:26:45.4515196Z      [38;5;246m│[0m
+2026-09-02T03:26:45.4519309Z  [38;5;246m279 │[0m [38;5;249mF[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249m [0m[38;5;249mm[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249m [0m[38;5;249me[0m[38;5;249mx[0m[38;5;249ma[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249ml[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249me[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249mP[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249mg[0m[38;5;249mr[0m[38;5;249ma[0m[38;5;249mm[0m[38;5;249m [0m[38;5;249me[0m[38;5;249mx[0m[38;5;249ma[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249ml[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m][0m[38;5;249m([0m[33mp[0m[33mr[0m[33mo[0m[33mg[0m[33mr[0m[33ma[0m[33mm[0m[33m_[0m[33me[0m[33mx[0m[33ma[0m[33mm[0m[33mp[0m[33ml[0m[33me[0m[33ms[0m[33m.[0m[33mm[0m[33md[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249mn[0m[38;5;249md[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249mJ[0m[38;5;249mo[0m[38;5;249mb[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249mc[0m[38;5;249mr[0m[38;5;249mi[0m[38;5;249mp[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249me[0m[38;5;249mx[0m[38;5;249ma[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249ml[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m][0m[38;5;249m([0m[38;5;249mj[0m[38;5;249mo[0m[38;5;249mb[0m[38;5;249ms[0m[38;5;249mc[0m[38;5;249mr[0m[38;5;249mi[0m[38;5;249mp[0m[38;5;249mt[0m[38;5;249m_[0m[38;5;249me[0m[38;5;249mx[0m[38;5;249ma[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249ml[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m.[0m[38;5;249mm[0m[38;5;249md[0m[38;5;249m)[0m
+2026-09-02T03:26:45.4523163Z  [38;5;240m    │[0m                                          [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4524194Z  [38;5;240m    │[0m                                                   [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4524767Z [38;5;246m─────╯[0m
+2026-09-02T03:26:45.4525024Z [33mWarning:[0m page does not exist
+2026-09-02T03:26:45.4525447Z      [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m getting_started.md:279:89 [38;5;246m][0m
+2026-09-02T03:26:45.4525819Z      [38;5;246m│[0m
+2026-09-02T03:26:45.4530050Z  [38;5;246m279 │[0m [38;5;249mF[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249m [0m[38;5;249mm[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249m [0m[38;5;249me[0m[38;5;249mx[0m[38;5;249ma[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249ml[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249me[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249mP[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249mg[0m[38;5;249mr[0m[38;5;249ma[0m[38;5;249mm[0m[38;5;249m [0m[38;5;249me[0m[38;5;249mx[0m[38;5;249ma[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249ml[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m][0m[38;5;249m([0m[38;5;249mp[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249mg[0m[38;5;249mr[0m[38;5;249ma[0m[38;5;249mm[0m[38;5;249m_[0m[38;5;249me[0m[38;5;249mx[0m[38;5;249ma[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249ml[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m.[0m[38;5;249mm[0m[38;5;249md[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249mn[0m[38;5;249md[0m[38;5;249m [0m[38;5;249m[[0m[38;5;249mJ[0m[38;5;249mo[0m[38;5;249mb[0m[38;5;249m [0m[38;5;249ms[0m[38;5;249mc[0m[38;5;249mr[0m[38;5;249mi[0m[38;5;249mp[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249me[0m[38;5;249mx[0m[38;5;249ma[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249ml[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m][0m[38;5;249m([0m[33mj[0m[33mo[0m[33mb[0m[33ms[0m[33mc[0m[33mr[0m[33mi[0m[33mp[0m[33mt[0m[33m_[0m[33me[0m[33mx[0m[33ma[0m[33mm[0m[33mp[0m[33ml[0m[33me[0m[33ms[0m[33m.[0m[33mm[0m[33md[0m[38;5;249m)[0m
+2026-09-02T03:26:45.4534064Z  [38;5;240m    │[0m                                                                                         [33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m┬[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m  
+2026-09-02T03:26:45.4535257Z  [38;5;240m    │[0m                                                                                                   [33m╰[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m[33m─[0m page does not exist
+2026-09-02T03:26:45.4535886Z [38;5;246m─────╯[0m
+2026-09-02T03:26:45.4536095Z 26 issues found
+2026-09-02T03:26:45.5376443Z Build finished in 0.32s
+2026-09-02T03:26:45.5859844Z ##[group]Run actions/upload-pages-artifact@v5
+2026-09-02T03:26:45.5860150Z with:
+2026-09-02T03:26:45.5860342Z   path: site
+2026-09-02T03:26:45.5860539Z   name: github-pages
+2026-09-02T03:26:45.5860750Z   retention-days: 1
+2026-09-02T03:26:45.5860965Z   include-hidden-files: false
+2026-09-02T03:26:45.5861191Z env:
+2026-09-02T03:26:45.5861370Z   GITHUB_PAGES: true
+2026-09-02T03:26:45.5861640Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.7/x64
+2026-09-02T03:26:45.5862027Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.7/x64/lib/pkgconfig
+2026-09-02T03:26:45.5862407Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64
+2026-09-02T03:26:45.5862751Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64
+2026-09-02T03:26:45.5863227Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64
+2026-09-02T03:26:45.5863580Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.7/x64/lib
+2026-09-02T03:26:45.5863899Z ##[endgroup]
+2026-09-02T03:26:45.5923728Z ##[start-action display=Archive artifact;id=__actions_upload-pages-artifact.__run]
+2026-09-02T03:26:45.5963798Z ##[group]Run echo ::group::Archive artifact
+2026-09-02T03:26:45.5964148Z [36;1mecho ::group::Archive artifact[0m
+2026-09-02T03:26:45.5964416Z [36;1mtar \[0m
+2026-09-02T03:26:45.5964665Z [36;1m  --dereference --hard-dereference \[0m
+2026-09-02T03:26:45.5964966Z [36;1m  --directory "$INPUT_PATH" \[0m
+2026-09-02T03:26:45.5965246Z [36;1m  -cvf "$RUNNER_TEMP/artifact.tar" \[0m
+2026-09-02T03:26:45.5965524Z [36;1m  --exclude=.git \[0m
+2026-09-02T03:26:45.5965777Z [36;1m  --exclude=.github \[0m
+2026-09-02T03:26:45.5966025Z [36;1m  --exclude=.[^/]* \[0m
+2026-09-02T03:26:45.5966253Z [36;1m  .[0m
+2026-09-02T03:26:45.5966456Z [36;1mecho ::endgroup::[0m
+2026-09-02T03:26:45.5988492Z shell: /usr/bin/sh -e {0}
+2026-09-02T03:26:45.5988773Z env:
+2026-09-02T03:26:45.5988968Z   GITHUB_PAGES: true
+2026-09-02T03:26:45.5989417Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.7/x64
+2026-09-02T03:26:45.5989844Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.7/x64/lib/pkgconfig
+2026-09-02T03:26:45.5990253Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64
+2026-09-02T03:26:45.5990596Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64
+2026-09-02T03:26:45.5990935Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64
+2026-09-02T03:26:45.5991281Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.7/x64/lib
+2026-09-02T03:26:45.5991580Z   INPUT_PATH: site
+2026-09-02T03:26:45.5991777Z ##[endgroup]
+2026-09-02T03:26:45.6034359Z ##[group]Archive artifact
+2026-09-02T03:26:45.6046228Z ./
+2026-09-02T03:26:45.6046531Z ./images/
+2026-09-02T03:26:45.6046808Z ./images/favicon.png
+2026-09-02T03:26:45.6047139Z ./fine_tuning_job_specifications.mde
+2026-09-02T03:26:45.6047481Z ./section/
+2026-09-02T03:26:45.6047727Z ./section/index.html
+2026-09-02T03:26:45.6048023Z ./section/page-1.html
+2026-09-02T03:26:45.6048329Z ./stylesheets/
+2026-09-02T03:26:45.6048601Z ./stylesheets/extra.css
+2026-09-02T03:26:45.6048936Z ./software/
+2026-09-02T03:26:45.6049231Z ./software/openFOAM.html
+2026-09-02T03:26:45.6049565Z ./software/index.html
+2026-09-02T03:26:45.6049893Z ./software/torque_frontend_via_jobcli.html
+2026-09-02T03:26:45.6050279Z ./software/torque_options.html
+2026-09-02T03:26:45.6050585Z ./software/MATLAB.html
+2026-09-02T03:26:45.6050863Z ./software/alphafold.html
+2026-09-02T03:26:45.6051152Z ./tags
+2026-09-02T03:26:45.6051542Z ./search.json
+2026-09-02T03:26:45.6051763Z ./extra/
+2026-09-02T03:26:45.6051958Z ./extra/antwerpen.yml
+2026-09-02T03:26:45.6052173Z ./sitemap.xml
+2026-09-02T03:26:45.6052444Z ./package-lock.json
+2026-09-02T03:26:45.6052704Z ./assets/
+2026-09-02T03:26:45.6052940Z ./assets/javascripts/
+2026-09-02T03:26:45.6053345Z ./assets/javascripts/bundle.49251538.min.js
+2026-09-02T03:26:45.6053627Z ./assets/javascripts/LICENSE
+2026-09-02T03:26:45.6058344Z ./assets/javascripts/workers/
+2026-09-02T03:26:45.6058762Z ./assets/javascripts/workers/search.7d14d953.min.js
+2026-09-02T03:26:45.6059368Z ./assets/images/
+2026-09-02T03:26:45.6059943Z ./assets/images/favicon.png
+2026-09-02T03:26:45.6060286Z ./assets/stylesheets/
+2026-09-02T03:26:45.6060592Z ./assets/stylesheets/classic/
+2026-09-02T03:26:45.6060987Z ./assets/stylesheets/classic/palette.c7ab7c71.min.css
+2026-09-02T03:26:45.6061386Z ./assets/stylesheets/classic/main.38807bfb.min.css
+2026-09-02T03:26:45.6061670Z ./assets/stylesheets/modern/
+2026-09-02T03:26:45.6061928Z ./assets/stylesheets/modern/main.5da3a30f.min.css
+2026-09-02T03:26:45.6062241Z ./assets/stylesheets/modern/palette.812a03bb.min.css
+2026-09-02T03:26:45.6062511Z ./q
+2026-09-02T03:26:45.6062682Z ./404.html
+2026-09-02T03:26:45.6062857Z ./objects.inv
+2026-09-02T03:26:45.6063217Z ./getting_started.html
+2026-09-02T03:26:45.6063622Z ##[endgroup]
+2026-09-02T03:26:45.6072259Z ##[end-action id=__actions_upload-pages-artifact.__run;outcome=success;conclusion=success;duration_ms=14]
+2026-09-02T03:26:45.6075491Z ##[start-action display=Archive artifact;id=__actions_upload-pages-artifact.__run_2]
+2026-09-02T03:26:45.6079825Z ##[end-action id=__actions_upload-pages-artifact.__run_2;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-09-02T03:26:45.6081961Z ##[start-action display=Archive artifact;id=__actions_upload-pages-artifact.__run_3]
+2026-09-02T03:26:45.6085312Z ##[end-action id=__actions_upload-pages-artifact.__run_3;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-09-02T03:26:45.6087022Z ##[start-action display=Upload artifact;id=__actions_upload-pages-artifact.upload-artifact]
+2026-09-02T03:26:45.6117666Z ##[group]Run actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
+2026-09-02T03:26:45.6118071Z with:
+2026-09-02T03:26:45.6118278Z   name: github-pages
+2026-09-02T03:26:45.6118535Z   path: /home/runner/work/_temp/artifact.tar
+2026-09-02T03:26:45.6118818Z   retention-days: 1
+2026-09-02T03:26:45.6119117Z   if-no-files-found: error
+2026-09-02T03:26:45.6119358Z   compression-level: 6
+2026-09-02T03:26:45.6119670Z   overwrite: false
+2026-09-02T03:26:45.6119885Z   include-hidden-files: false
+2026-09-02T03:26:45.6120125Z   archive: true
+2026-09-02T03:26:45.6120315Z env:
+2026-09-02T03:26:45.6120501Z   GITHUB_PAGES: true
+2026-09-02T03:26:45.6120780Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.7/x64
+2026-09-02T03:26:45.6121181Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.7/x64/lib/pkgconfig
+2026-09-02T03:26:45.6121585Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64
+2026-09-02T03:26:45.6121935Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64
+2026-09-02T03:26:45.6122278Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64
+2026-09-02T03:26:45.6122625Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.7/x64/lib
+2026-09-02T03:26:45.6122920Z ##[endgroup]
+2026-09-02T03:26:45.7440097Z With the provided path, there will be 1 file uploaded
+2026-09-02T03:26:45.7464237Z Artifact name is valid!
+2026-09-02T03:26:45.7471655Z Root directory input is valid!
+2026-09-02T03:26:46.0827710Z Uploading artifact: github-pages.zip
+2026-09-02T03:26:46.0867493Z Beginning upload of artifact content to blob storage
+2026-09-02T03:26:46.5238225Z Uploaded bytes 154979
+2026-09-02T03:26:46.5860094Z Finished uploading artifact content to blob storage!
+2026-09-02T03:26:46.5860870Z SHA256 digest of uploaded artifact is 22c57191396a4ee7a312f6b49941806629043e02d2c43b0388b2504b9b7d41c1
+2026-09-02T03:26:46.5861553Z Finalizing artifact upload
+2026-09-02T03:26:46.9568190Z Artifact github-pages successfully finalized. Artifact ID 9830436216
+2026-09-02T03:26:46.9568825Z Artifact github-pages has been successfully uploaded! Final size is 154979 bytes. Artifact ID is 9830436216
+2026-09-02T03:26:46.9572294Z Artifact download URL: https://github.com/Oa8choo2/testzens/actions/runs/33587036767/artifacts/9830436216
+2026-09-02T03:26:46.9652003Z ##[end-action id=__actions_upload-pages-artifact.upload-artifact;outcome=success;conclusion=success;duration_ms=1356]
+2026-09-02T03:26:46.9721437Z ##[group]Run actions/deploy-pages@v5
+2026-09-02T03:26:46.9721728Z with:
+2026-09-02T03:26:46.9724053Z   token: ***
+2026-09-02T03:26:46.9724266Z   timeout: 600000
+2026-09-02T03:26:46.9724463Z   error_count: 10
+2026-09-02T03:26:46.9724668Z   reporting_interval: 5000
+2026-09-02T03:26:46.9724907Z   artifact_name: github-pages
+2026-09-02T03:26:46.9725139Z   preview: false
+2026-09-02T03:26:46.9725339Z env:
+2026-09-02T03:26:46.9725519Z   GITHUB_PAGES: true
+2026-09-02T03:26:46.9725914Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.7/x64
+2026-09-02T03:26:46.9726317Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.7/x64/lib/pkgconfig
+2026-09-02T03:26:46.9726719Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64
+2026-09-02T03:26:46.9727073Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64
+2026-09-02T03:26:46.9727423Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64
+2026-09-02T03:26:46.9727783Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.7/x64/lib
+2026-09-02T03:26:46.9728143Z ##[endgroup]
+2026-09-02T03:26:47.1569974Z (node:2256) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-02T03:26:47.1570775Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-02T03:26:47.3629142Z Fetching artifact metadata for "github-pages" in this workflow run
+2026-09-02T03:26:47.5981519Z Found 1 artifact(s)
+2026-09-02T03:26:47.5993302Z Creating Pages deployment with payload:
+2026-09-02T03:26:47.5993726Z {
+2026-09-02T03:26:47.5994029Z 	"artifact_id": 9830436216,
+2026-09-02T03:26:47.5994512Z 	"pages_build_version": "30cd4a706255c7903222a27e607c88c1de5415ec",
+2026-09-02T03:26:47.6025312Z 	"oidc_token": "***"
+2026-09-02T03:26:47.6025639Z }
+2026-09-02T03:26:48.1782277Z Created deployment for 30cd4a706255c7903222a27e607c88c1de5415ec, ID: 30cd4a706255c7903222a27e607c88c1de5415ec
+2026-09-02T03:26:53.1630621Z Getting Pages deployment status...
+2026-09-02T03:26:53.4023892Z Reported success!
+2026-09-02T03:26:53.4200119Z Post job cleanup.
+2026-09-02T03:26:53.5524305Z Post job cleanup.
+2026-09-02T03:26:53.6374607Z [command]/usr/bin/git version
+2026-09-02T03:26:53.6415199Z git version 2.55.0
+2026-09-02T03:26:53.6457333Z Temporarily overriding HOME='/home/runner/work/_temp/e0ab412b-6f75-45fd-ac80-9c0da39f4100' before making global git config changes
+2026-09-02T03:26:53.6458938Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-02T03:26:53.6463870Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/testzens/testzens
+2026-09-02T03:26:53.6544939Z Removing SSH command configuration
+2026-09-02T03:26:53.6552170Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-02T03:26:53.6590235Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-02T03:26:53.6805118Z Removing HTTP extra header
+2026-09-02T03:26:53.6810109Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-02T03:26:53.6841289Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-02T03:26:53.7043416Z Removing includeIf entries pointing to credentials config files
+2026-09-02T03:26:53.7049963Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-02T03:26:53.7080358Z includeif.gitdir:/home/runner/work/testzens/testzens/.git.path
+2026-09-02T03:26:53.7081494Z includeif.gitdir:/home/runner/work/testzens/testzens/.git/worktrees/*.path
+2026-09-02T03:26:53.7082669Z includeif.gitdir:/github/workspace/.git.path
+2026-09-02T03:26:53.7083679Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-09-02T03:26:53.7090046Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/testzens/testzens/.git.path
+2026-09-02T03:26:53.7113943Z /home/runner/work/_temp/git-credentials-7bc0e922-e79f-4dbd-9493-29ec8d8b6984.config
+2026-09-02T03:26:53.7122633Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/testzens/testzens/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-7bc0e922\-e79f\-4dbd\-9493\-29ec8d8b6984\.config
+2026-09-02T03:26:53.7196143Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/testzens/testzens/.git/worktrees/*.path
+2026-09-02T03:26:53.7247886Z /home/runner/work/_temp/git-credentials-7bc0e922-e79f-4dbd-9493-29ec8d8b6984.config
+2026-09-02T03:26:53.7259836Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/testzens/testzens/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-7bc0e922\-e79f\-4dbd\-9493\-29ec8d8b6984\.config
+2026-09-02T03:26:53.7336549Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-09-02T03:26:53.7362122Z /github/runner_temp/git-credentials-7bc0e922-e79f-4dbd-9493-29ec8d8b6984.config
+2026-09-02T03:26:53.7369807Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-7bc0e922\-e79f\-4dbd\-9493\-29ec8d8b6984\.config
+2026-09-02T03:26:53.7476439Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-09-02T03:26:53.7499983Z /github/runner_temp/git-credentials-7bc0e922-e79f-4dbd-9493-29ec8d8b6984.config
+2026-09-02T03:26:53.7509183Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-7bc0e922\-e79f\-4dbd\-9493\-29ec8d8b6984\.config
+2026-09-02T03:26:53.7552872Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-02T03:26:53.7773769Z Removing credentials config '/home/runner/work/_temp/git-credentials-7bc0e922-e79f-4dbd-9493-29ec8d8b6984.config'
+2026-09-02T03:26:53.7908580Z Evaluate and set environment url
+2026-09-02T03:26:53.7912255Z Evaluated environment url: https://oa8choo2.github.io/testzens/
+2026-09-02T03:26:53.7913506Z Cleaning up orphan processes
